@@ -12,21 +12,21 @@
         <meta name="author" content="qhx">
       
       
-        <link rel="canonical" href="https://wiki.lyricn.com/Todo/%E7%88%B1%E4%B8%8A%E8%B7%91%E6%AD%A5%E7%9A%8413%E5%91%A8/">
+        <link rel="canonical" href="https://wiki.lyricn.com/Ops/Nginx/nginx/">
       
-      <link rel="icon" href="../../assets/images/logo.png">
+      <link rel="icon" href="../../../assets/images/logo.png">
       <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.5.8">
     
     
       
-        <title>爱上跑步的13周 - Lyricn Wiki</title>
+        <title>基础 - Lyricn Wiki</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.20d9efc8.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.20d9efc8.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.815d1a91.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.815d1a91.min.css">
         
       
       
@@ -43,7 +43,7 @@
       
     
     
-    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -60,7 +60,7 @@
     
     
     
-    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="pink">
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="" data-md-color-accent="">
   
     
     
@@ -72,7 +72,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#13" class="md-skip">
+        <a href="#nginx" class="md-skip">
           跳转至
         </a>
       
@@ -88,10 +88,10 @@
 
 <header class="md-header md-header--lifted" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="页眉">
-    <a href="../.." title="Lyricn Wiki" class="md-header__button md-logo" aria-label="Lyricn Wiki" data-md-component="logo">
+    <a href="../../.." title="Lyricn Wiki" class="md-header__button md-logo" aria-label="Lyricn Wiki" data-md-component="logo">
       
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M96 0C43 0 0 43 0 96v320c0 53 43 96 96 96h320c17.7 0 32-14.3 32-32s-14.3-32-32-32v-64c17.7 0 32-14.3 32-32V32c0-17.7-14.3-32-32-32H96zm0 384h256v64H96c-17.7 0-32-14.3-32-32s14.3-32 32-32zm32-240c0-8.8 7.2-16 16-16h192c8.8 0 16 7.2 16 16s-7.2 16-16 16H144c-8.8 0-16-7.2-16-16zm16 48h192c8.8 0 16 7.2 16 16s-7.2 16-16 16H144c-8.8 0-16-7.2-16-16s7.2-16 16-16z"/></svg>
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -107,7 +107,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              爱上跑步的13周
+              基础
             
           </span>
         </div>
@@ -118,19 +118,28 @@
         
           
           
-          <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="pink"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+          <input class="md-option" data-md-color-media="(prefers-color-scheme)" data-md-color-scheme="" data-md-color-primary="" data-md-color-accent=""  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
           
-            <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_2" hidden>
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"/></svg>
+            <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_3" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m14.3 16-.7-2h-3.2l-.7 2H7.8L11 7h2l3.2 9h-1.9M20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69m-9.15 3.96h2.3L12 9l-1.15 3.65Z"/></svg>
             </label>
           
         
           
           
-          <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="deep-purple" data-md-color-accent="blue"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_2">
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="pink"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
           
-            <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+            <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5c-.84 0-1.65.15-2.39.42L12 2M3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29L3.34 7m.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14L3.36 17M20.65 7l-1.77 3.79a7.023 7.023 0 0 0-2.38-4.15l4.15.36m-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29L20.64 17M12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44L12 22Z"/></svg>
+            </label>
+          
+        
+          
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="deep-purple" data-md-color-accent="blue"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_3">
+          
+            <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3 3.19.09m3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95 2.06.05m-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31Z"/></svg>
             </label>
           
         
@@ -200,7 +209,7 @@
 
 
   <li class="md-tabs__item">
-    <a href="../.." class="md-tabs__link">
+    <a href="../../.." class="md-tabs__link">
       Home
     </a>
   </li>
@@ -211,23 +220,11 @@
   
 
 
-  <li class="md-tabs__item">
-    <a href="../todo/" class="md-tabs__link">
-      Todo
-    </a>
-  </li>
-
-      
-        
-  
-  
-
-
   
   
   
     <li class="md-tabs__item">
-      <a href="../../wiki_index/" class="md-tabs__link">
+      <a href="../../../wiki_index/" class="md-tabs__link">
         Wiki
       </a>
     </li>
@@ -237,6 +234,8 @@
         
   
   
+    
+  
 
 
   
@@ -253,7 +252,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../Ops/Linux/Linux/0.%E5%9F%BA%E7%A1%80/" class="md-tabs__link">
+      <a href="../../Linux/Linux/0.%E5%9F%BA%E7%A1%80/" class="md-tabs__link md-tabs__link--active">
         Ops
       </a>
     </li>
@@ -278,7 +277,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../ProgramL/PHP/php/" class="md-tabs__link">
+      <a href="../../../ProgramL/Java/idea/" class="md-tabs__link">
         ProgramL
       </a>
     </li>
@@ -301,7 +300,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../VPS/%E5%B8%B8%E7%94%A8%E8%84%9A%E6%9C%AC/" class="md-tabs__link">
+      <a href="../../../VPS/%E5%B8%B8%E7%94%A8%E8%84%9A%E6%9C%AC/" class="md-tabs__link">
         VPS
       </a>
     </li>
@@ -324,7 +323,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../IOS%E5%AD%A6%E4%B9%A0/Swift/0.%E4%BB%8B%E7%BB%8D/" class="md-tabs__link">
+      <a href="../../../IOS%E5%AD%A6%E4%B9%A0/Swift/0.%E4%BB%8B%E7%BB%8D/" class="md-tabs__link">
         IOS
       </a>
     </li>
@@ -342,7 +341,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../Docker/1.%E5%9F%BA%E7%A1%80/" class="md-tabs__link">
+      <a href="../../../Docker/1.%E5%9F%BA%E7%A1%80/" class="md-tabs__link">
         Docker
       </a>
     </li>
@@ -352,15 +351,13 @@
         
   
   
-    
-  
 
 
   
   
   
     <li class="md-tabs__item">
-      <a href="./" class="md-tabs__link md-tabs__link--active">
+      <a href="../../../Book/%E5%9C%A8%E7%BA%BF%E4%B9%A6%E7%B1%8D/" class="md-tabs__link">
         Reading
       </a>
     </li>
@@ -376,7 +373,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../Other/JetBrains/" class="md-tabs__link">
+      <a href="../../../Other/JetBrains/" class="md-tabs__link">
         Other
       </a>
     </li>
@@ -389,8 +386,20 @@
 
 
   <li class="md-tabs__item">
-    <a href="../../Other/tags/" class="md-tabs__link">
+    <a href="../../../Other/tags/" class="md-tabs__link">
       Tags
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../../../Other/Link/" class="md-tabs__link">
+      Links
     </a>
   </li>
 
@@ -436,10 +445,10 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="导航栏" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="Lyricn Wiki" class="md-nav__button md-logo" aria-label="Lyricn Wiki" data-md-component="logo">
+    <a href="../../.." title="Lyricn Wiki" class="md-nav__button md-logo" aria-label="Lyricn Wiki" data-md-component="logo">
       
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M96 0C43 0 0 43 0 96v320c0 53 43 96 96 96h320c17.7 0 32-14.3 32-32s-14.3-32-32-32v-64c17.7 0 32-14.3 32-32V32c0-17.7-14.3-32-32-32H96zm0 384h256v64H96c-17.7 0-32-14.3-32-32s14.3-32 32-32zm32-240c0-8.8 7.2-16 16-16h192c8.8 0 16 7.2 16 16s-7.2 16-16 16H144c-8.8 0-16-7.2-16-16zm16 48h192c8.8 0 16 7.2 16 16s-7.2 16-16 16H144c-8.8 0-16-7.2-16-16s7.2-16 16-16z"/></svg>
 
     </a>
     Lyricn Wiki
@@ -467,23 +476,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../.." class="md-nav__link">
+      <a href="../../.." class="md-nav__link">
         Home
-      </a>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../todo/" class="md-nav__link">
-        Todo
       </a>
     </li>
   
@@ -500,7 +494,7 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
       
       
       
@@ -513,13 +507,13 @@
         
       
       
-        <label class="md-nav__link" for="__nav_3">
+        <label class="md-nav__link" for="__nav_2">
           Wiki
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" aria-label="Wiki" data-md-level="1">
-        <label class="md-nav__title" for="__nav_3">
+        <label class="md-nav__title" for="__nav_2">
           <span class="md-nav__icon md-icon"></span>
           Wiki
         </label>
@@ -531,7 +525,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../wiki_index/" class="md-nav__link">
+      <a href="../../../wiki_index/" class="md-nav__link">
         介绍
       </a>
     </li>
@@ -550,7 +544,7 @@
     <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_3_2" type="checkbox" id="__nav_3_2" checked>
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_2_2" type="checkbox" id="__nav_2_2" checked>
       
       
       
@@ -563,13 +557,13 @@
         
       
       
-        <label class="md-nav__link" for="__nav_3_2">
+        <label class="md-nav__link" for="__nav_2_2">
           GitBook
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" aria-label="GitBook" data-md-level="2">
-        <label class="md-nav__title" for="__nav_3_2">
+        <label class="md-nav__title" for="__nav_2_2">
           <span class="md-nav__icon md-icon"></span>
           GitBook
         </label>
@@ -581,7 +575,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../GitBook/1.NVM%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8/" class="md-nav__link">
+      <a href="../../../GitBook/1.NVM%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8/" class="md-nav__link">
         1.NVM安装使用
       </a>
     </li>
@@ -595,7 +589,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../GitBook/2.GitBook%E6%90%AD%E5%BB%BA/" class="md-nav__link">
+      <a href="../../../GitBook/2.GitBook%E6%90%AD%E5%BB%BA/" class="md-nav__link">
         2.GitBook搭建
       </a>
     </li>
@@ -609,7 +603,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../GitBook/3.GitBook%E6%8F%92%E4%BB%B6/" class="md-nav__link">
+      <a href="../../../GitBook/3.GitBook%E6%8F%92%E4%BB%B6/" class="md-nav__link">
         3.GitBook插件
       </a>
     </li>
@@ -635,7 +629,7 @@
     <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_3_3" type="checkbox" id="__nav_3_3" checked>
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_2_3" type="checkbox" id="__nav_2_3" checked>
       
       
       
@@ -646,13 +640,13 @@
         
       
       
-        <label class="md-nav__link" for="__nav_3_3">
+        <label class="md-nav__link" for="__nav_2_3">
           MkDocs
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" aria-label="MkDocs" data-md-level="2">
-        <label class="md-nav__title" for="__nav_3_3">
+        <label class="md-nav__title" for="__nav_2_3">
           <span class="md-nav__icon md-icon"></span>
           MkDocs
         </label>
@@ -664,7 +658,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../MkDocs/1.MkDocs%E6%90%AD%E5%BB%BA/" class="md-nav__link">
+      <a href="../../../MkDocs/1.MkDocs%E6%90%AD%E5%BB%BA/" class="md-nav__link">
         1.MkDocs搭建
       </a>
     </li>
@@ -678,9 +672,800 @@
   
   
     <li class="md-nav__item">
-      <a href="../../MkDocs/2.mkdocs%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6/" class="md-nav__link">
+      <a href="../../../MkDocs/2.mkdocs%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6/" class="md-nav__link">
         2.mkdocs配置文件
       </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
+      
+      
+      
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_3">
+          Ops
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Ops" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Ops
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+    
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_1" type="checkbox" id="__nav_3_1" checked>
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_3_1">
+          Server
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Server" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_1">
+          <span class="md-nav__icon md-icon"></span>
+          Server
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_3_1_1" type="checkbox" id="__nav_3_1_1" checked>
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_3_1_1">
+          Linux
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Linux" data-md-level="3">
+        <label class="md-nav__title" for="__nav_3_1_1">
+          <span class="md-nav__icon md-icon"></span>
+          Linux
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Linux/Linux/0.%E5%9F%BA%E7%A1%80/" class="md-nav__link">
+        基础
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Linux/Linux/1.%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%AE%89%E5%85%A8/" class="md-nav__link">
+        安全
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Linux/Linux/2.%E9%98%B2%E7%81%AB%E5%A2%99/" class="md-nav__link">
+        防火墙
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Linux/Linux/3.%E8%A7%A3%E5%8E%8B%E7%BC%A9/" class="md-nav__link">
+        解压缩
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Linux/Linux/4.Log/" class="md-nav__link">
+        Log
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Linux/Linux/5.%E6%96%87%E4%BB%B6/" class="md-nav__link">
+        文件
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_3_1_1_7" type="checkbox" id="__nav_3_1_1_7" checked>
+      
+      
+      
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_3_1_1_7">
+          CentOS
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="CentOS" data-md-level="4">
+        <label class="md-nav__title" for="__nav_3_1_1_7">
+          <span class="md-nav__icon md-icon"></span>
+          CentOS
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Linux/Linux/CentOS/%E5%8D%87%E7%BA%A7OpenSSH/" class="md-nav__link">
+        升级OpenSSH
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Linux/Linux/CentOS/%E5%8D%87%E7%BA%A7sudo/" class="md-nav__link">
+        升级sudo
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_3_1_1_8" type="checkbox" id="__nav_3_1_1_8" checked>
+      
+      
+      
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_3_1_1_8">
+          Ubuntu
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Ubuntu" data-md-level="4">
+        <label class="md-nav__title" for="__nav_3_1_1_8">
+          <span class="md-nav__icon md-icon"></span>
+          Ubuntu
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Linux/Linux/Ubuntu/Ubuntu22.04/" class="md-nav__link">
+        Ubuntu22.04
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_3_1_1_9" type="checkbox" id="__nav_3_1_1_9" checked>
+      
+      
+      
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_3_1_1_9">
+          深入理解Linux网络
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="深入理解Linux网络" data-md-level="4">
+        <label class="md-nav__title" for="__nav_3_1_1_9">
+          <span class="md-nav__icon md-icon"></span>
+          深入理解Linux网络
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Linux/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3Linux%E7%BD%91%E7%BB%9C/0.index/" class="md-nav__link">
+        介绍
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Linux/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3Linux%E7%BD%91%E7%BB%9C/1.%E7%BB%AA%E8%AE%BA/" class="md-nav__link">
+        1.绪论
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_3_1_1_10" type="checkbox" id="__nav_3_1_1_10" checked>
+      
+      
+      
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_3_1_1_10">
+          PVE
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="PVE" data-md-level="4">
+        <label class="md-nav__title" for="__nav_3_1_1_10">
+          <span class="md-nav__icon md-icon"></span>
+          PVE
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Linux/PVE/0.%E4%BD%BF%E7%94%A8/" class="md-nav__link">
+        使用
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_3_1_2" type="checkbox" id="__nav_3_1_2" checked>
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_3_1_2">
+          Windows
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Windows" data-md-level="3">
+        <label class="md-nav__title" for="__nav_3_1_2">
+          <span class="md-nav__icon md-icon"></span>
+          Windows
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Windows/1.Windows%E8%BD%AF%E4%BB%B6/" class="md-nav__link">
+        必备软件
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Windows/2.%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/" class="md-nav__link">
+        常用命令
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Windows/0.%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%AE%89%E5%85%A8/" class="md-nav__link">
+        服务器安全
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Windows/3.%E9%81%87%E5%88%B0%E7%9A%84%E9%97%AE%E9%A2%98/" class="md-nav__link">
+        遇到的问题
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Windows/%E8%BD%AF%E4%BB%B6/Windhawk/" class="md-nav__link">
+        软件使用
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_3_1_3" type="checkbox" id="__nav_3_1_3" checked>
+      
+      
+      
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_3_1_3">
+          OpenWrt
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="OpenWrt" data-md-level="3">
+        <label class="md-nav__title" for="__nav_3_1_3">
+          <span class="md-nav__icon md-icon"></span>
+          OpenWrt
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../OpenWrt/0.%E7%BC%96%E8%AF%91/" class="md-nav__link">
+        编译
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../OpenWrt/%E6%8F%92%E4%BB%B6/openclash/" class="md-nav__link">
+        插件
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_1_4" type="checkbox" id="__nav_3_1_4" checked>
+      
+      
+      
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_3_1_4">
+          Nginx
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Nginx" data-md-level="3">
+        <label class="md-nav__title" for="__nav_3_1_4">
+          <span class="md-nav__icon md-icon"></span>
+          Nginx
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          基础
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        基础
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#windows" class="md-nav__link">
+    Windows
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_3_1_5" type="checkbox" id="__nav_3_1_5" checked>
+      
+      
+      
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_3_1_5">
+          Redis
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Redis" data-md-level="3">
+        <label class="md-nav__title" for="__nav_3_1_5">
+          <span class="md-nav__icon md-icon"></span>
+          Redis
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Redis/Redis/" class="md-nav__link">
+        不同环境使用Redis
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
     </li>
   
 
@@ -717,17 +1502,23 @@
         
           
         
+          
+        
+          
+        
+          
+        
       
       
         <label class="md-nav__link" for="__nav_4">
-          Ops
+          ProgramL
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="Ops" data-md-level="1">
+      <nav class="md-nav" aria-label="ProgramL" data-md-level="1">
         <label class="md-nav__title" for="__nav_4">
           <span class="md-nav__icon md-icon"></span>
-          Ops
+          ProgramL
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -751,67 +1542,17 @@
         
           
         
-          
-        
       
       
         <label class="md-nav__link" for="__nav_4_1">
-          Server
+          Java
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="Server" data-md-level="2">
+      <nav class="md-nav" aria-label="Java" data-md-level="2">
         <label class="md-nav__title" for="__nav_4_1">
           <span class="md-nav__icon md-icon"></span>
-          Server
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-              
-  
-  
-  
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_4_1_1" type="checkbox" id="__nav_4_1_1" checked>
-      
-      
-      
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-      
-      
-        <label class="md-nav__link" for="__nav_4_1_1">
-          Linux
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" aria-label="Linux" data-md-level="3">
-        <label class="md-nav__title" for="__nav_4_1_1">
-          <span class="md-nav__icon md-icon"></span>
-          Linux
+          Java
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -821,306 +1562,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Ops/Linux/Linux/0.%E5%9F%BA%E7%A1%80/" class="md-nav__link">
-        基础
+      <a href="../../../ProgramL/Java/idea/" class="md-nav__link">
+        idea
       </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../Ops/Linux/Linux/1.%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%AE%89%E5%85%A8/" class="md-nav__link">
-        安全
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../Ops/Linux/Linux/2.%E9%98%B2%E7%81%AB%E5%A2%99/" class="md-nav__link">
-        防火墙
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../Ops/Linux/Linux/3.%E8%A7%A3%E5%8E%8B%E7%BC%A9/" class="md-nav__link">
-        解压缩
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../Ops/Linux/Linux/4.Log/" class="md-nav__link">
-        Log
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../Ops/Linux/Linux/5.%E6%96%87%E4%BB%B6/" class="md-nav__link">
-        文件
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_4_1_1_7" type="checkbox" id="__nav_4_1_1_7" checked>
-      
-      
-      
-        
-          
-        
-      
-      
-        <label class="md-nav__link" for="__nav_4_1_1_7">
-          CentOS
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" aria-label="CentOS" data-md-level="4">
-        <label class="md-nav__title" for="__nav_4_1_1_7">
-          <span class="md-nav__icon md-icon"></span>
-          CentOS
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../Ops/Linux/Linux/CentOS/%E5%8D%87%E7%BA%A7OpenSSH/" class="md-nav__link">
-        升级OpenSSH
-      </a>
-    </li>
-  
-
-            
-          
-        </ul>
-      </nav>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_4_1_1_8" type="checkbox" id="__nav_4_1_1_8" checked>
-      
-      
-      
-        
-          
-        
-      
-      
-        <label class="md-nav__link" for="__nav_4_1_1_8">
-          Ubuntu
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" aria-label="Ubuntu" data-md-level="4">
-        <label class="md-nav__title" for="__nav_4_1_1_8">
-          <span class="md-nav__icon md-icon"></span>
-          Ubuntu
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../Ops/Linux/Linux/Ubuntu/Ubuntu22.04/" class="md-nav__link">
-        Ubuntu22.04
-      </a>
-    </li>
-  
-
-            
-          
-        </ul>
-      </nav>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_4_1_1_9" type="checkbox" id="__nav_4_1_1_9" checked>
-      
-      
-      
-        
-          
-        
-          
-        
-      
-      
-        <label class="md-nav__link" for="__nav_4_1_1_9">
-          深入理解Linux网络
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" aria-label="深入理解Linux网络" data-md-level="4">
-        <label class="md-nav__title" for="__nav_4_1_1_9">
-          <span class="md-nav__icon md-icon"></span>
-          深入理解Linux网络
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../Ops/Linux/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3Linux%E7%BD%91%E7%BB%9C/0.index/" class="md-nav__link">
-        介绍
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../Ops/Linux/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3Linux%E7%BD%91%E7%BB%9C/1.%E7%BB%AA%E8%AE%BA/" class="md-nav__link">
-        1.绪论
-      </a>
-    </li>
-  
-
-            
-          
-        </ul>
-      </nav>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_4_1_1_10" type="checkbox" id="__nav_4_1_1_10" checked>
-      
-      
-      
-        
-          
-        
-      
-      
-        <label class="md-nav__link" for="__nav_4_1_1_10">
-          PVE
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" aria-label="PVE" data-md-level="4">
-        <label class="md-nav__title" for="__nav_4_1_1_10">
-          <span class="md-nav__icon md-icon"></span>
-          PVE
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../Ops/Linux/PVE/0.%E4%BD%BF%E7%94%A8/" class="md-nav__link">
-        使用
-      </a>
-    </li>
-  
-
-            
-          
-        </ul>
-      </nav>
-    </li>
-  
-
-            
-          
-        </ul>
-      </nav>
     </li>
   
 
@@ -1151,14 +1595,14 @@
       
       
         <label class="md-nav__link" for="__nav_4_1_2">
-          Windows
+          方法
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="Windows" data-md-level="3">
+      <nav class="md-nav" aria-label="方法" data-md-level="3">
         <label class="md-nav__title" for="__nav_4_1_2">
           <span class="md-nav__icon md-icon"></span>
-          Windows
+          方法
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -1168,8 +1612,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Ops/Windows/1.Windows%E8%BD%AF%E4%BB%B6/" class="md-nav__link">
-        必备软件
+      <a href="../../../ProgramL/Java/DateUtils/" class="md-nav__link">
+        DateUtils
       </a>
     </li>
   
@@ -1182,8 +1626,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Ops/Windows/2.%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/" class="md-nav__link">
-        常用命令
+      <a href="../../../ProgramL/Java/Hibernate/" class="md-nav__link">
+        Hibernate
       </a>
     </li>
   
@@ -1196,8 +1640,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Ops/Windows/0.%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%AE%89%E5%85%A8/" class="md-nav__link">
-        服务器安全
+      <a href="../../../ProgramL/Java/AsposeCells/" class="md-nav__link">
+        Aspose Cells
       </a>
     </li>
   
@@ -1210,8 +1654,155 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Ops/Windows/3.%E9%81%87%E5%88%B0%E7%9A%84%E9%97%AE%E9%A2%98/" class="md-nav__link">
-        遇到的问题
+      <a href="../../../ProgramL/Java/List/" class="md-nav__link">
+        List
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_4_2" type="checkbox" id="__nav_4_2" checked>
+      
+      
+      
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_4_2">
+          PHP
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="PHP" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_2">
+          <span class="md-nav__icon md-icon"></span>
+          PHP
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ProgramL/PHP/php/" class="md-nav__link">
+        基础
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_4_3" type="checkbox" id="__nav_4_3" checked>
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_4_3">
+          SQL
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="SQL" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_3">
+          <span class="md-nav__icon md-icon"></span>
+          SQL
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_4_3_1" type="checkbox" id="__nav_4_3_1" checked>
+      
+      
+      
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_4_3_1">
+          MySQL
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="MySQL" data-md-level="3">
+        <label class="md-nav__title" for="__nav_4_3_1">
+          <span class="md-nav__icon md-icon"></span>
+          MySQL
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ProgramL/SQL/MySQL/1.mysql%E5%9F%BA%E7%A1%80/" class="md-nav__link">
+        mysql基础
       </a>
     </li>
   
@@ -1234,7 +1825,7 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_4_1_3" type="checkbox" id="__nav_4_1_3" checked>
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_4_3_2" type="checkbox" id="__nav_4_3_2" checked>
       
       
       
@@ -1243,15 +1834,15 @@
         
       
       
-        <label class="md-nav__link" for="__nav_4_1_3">
-          OpenWrt
+        <label class="md-nav__link" for="__nav_4_3_2">
+          SQLServer
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="OpenWrt" data-md-level="3">
-        <label class="md-nav__title" for="__nav_4_1_3">
+      <nav class="md-nav" aria-label="SQLServer" data-md-level="3">
+        <label class="md-nav__title" for="__nav_4_3_2">
           <span class="md-nav__icon md-icon"></span>
-          OpenWrt
+          SQLServer
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -1261,8 +1852,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Ops/OpenWrt/0.%E7%BC%96%E8%AF%91/" class="md-nav__link">
-        编译
+      <a href="../../../ProgramL/SQL/SQLServer/SQLserver/" class="md-nav__link">
+        SQLServer基础
       </a>
     </li>
   
@@ -1271,6 +1862,110 @@
           
         </ul>
       </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_4_3_3" type="checkbox" id="__nav_4_3_3" checked>
+      
+      
+      
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_4_3_3">
+          phpMyAdmin
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="phpMyAdmin" data-md-level="3">
+        <label class="md-nav__title" for="__nav_4_3_3">
+          <span class="md-nav__icon md-icon"></span>
+          phpMyAdmin
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ProgramL/SQL/phpMyAdmin/%E9%81%87%E5%88%B0%E7%9A%84%E9%97%AE%E9%A2%98/" class="md-nav__link">
+        遇到的问题
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_4_4" type="checkbox" id="__nav_4_4" checked>
+      
+      
+      
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_4_4">
+          Python
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Python" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_4">
+          <span class="md-nav__icon md-icon"></span>
+          Python
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ProgramL/Python/1.Python/" class="md-nav__link">
+        基础
+      </a>
     </li>
   
 
@@ -1314,14 +2009,14 @@
       
       
         <label class="md-nav__link" for="__nav_5">
-          ProgramL
+          VPS
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="ProgramL" data-md-level="1">
+      <nav class="md-nav" aria-label="VPS" data-md-level="1">
         <label class="md-nav__title" for="__nav_5">
           <span class="md-nav__icon md-icon"></span>
-          ProgramL
+          VPS
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -1343,17 +2038,27 @@
         
           
         
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
       
       
         <label class="md-nav__link" for="__nav_5_1">
-          PHP
+          部署
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="PHP" data-md-level="2">
+      <nav class="md-nav" aria-label="部署" data-md-level="2">
         <label class="md-nav__title" for="__nav_5_1">
           <span class="md-nav__icon md-icon"></span>
-          PHP
+          部署
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -1363,8 +2068,78 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ProgramL/PHP/php/" class="md-nav__link">
-        基础
+      <a href="../../../VPS/%E5%B8%B8%E7%94%A8%E8%84%9A%E6%9C%AC/" class="md-nav__link">
+        常用脚本
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../VPS/%E6%9C%8D%E5%8A%A1%E5%95%86/" class="md-nav__link">
+        服务商
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../VPS/Telegram/" class="md-nav__link">
+        Telegram
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../VPS/%E9%81%87%E5%88%B0%E7%9A%84%E9%97%AE%E9%A2%98/" class="md-nav__link">
+        遇到的问题
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../VPS/%E5%A2%9E%E5%8A%A0%E4%BA%A4%E6%8D%A2%E5%86%85%E5%AD%98/" class="md-nav__link">
+        增加交换内存
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../VPS/ZeroTier/" class="md-nav__link">
+        ZeroTier
       </a>
     </li>
   
@@ -1396,49 +2171,17 @@
         
           
         
-          
-        
       
       
         <label class="md-nav__link" for="__nav_5_2">
-          SQL
+          Cloudflare
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="SQL" data-md-level="2">
+      <nav class="md-nav" aria-label="Cloudflare" data-md-level="2">
         <label class="md-nav__title" for="__nav_5_2">
           <span class="md-nav__icon md-icon"></span>
-          SQL
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-              
-  
-  
-  
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_5_2_1" type="checkbox" id="__nav_5_2_1" checked>
-      
-      
-      
-        
-          
-        
-      
-      
-        <label class="md-nav__link" for="__nav_5_2_1">
-          MySQL
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" aria-label="MySQL" data-md-level="3">
-        <label class="md-nav__title" for="__nav_5_2_1">
-          <span class="md-nav__icon md-icon"></span>
-          MySQL
+          Cloudflare
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -1448,67 +2191,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ProgramL/SQL/MySQL/1.mysql%E5%9F%BA%E7%A1%80/" class="md-nav__link">
-        mysql基础
+      <a href="../../../VPS/Cloudflare/Cloudflare%E4%BD%BF%E7%94%A8/" class="md-nav__link">
+        使用
       </a>
-    </li>
-  
-
-            
-          
-        </ul>
-      </nav>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_5_2_2" type="checkbox" id="__nav_5_2_2" checked>
-      
-      
-      
-        
-          
-        
-      
-      
-        <label class="md-nav__link" for="__nav_5_2_2">
-          phpMyAdmin
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" aria-label="phpMyAdmin" data-md-level="3">
-        <label class="md-nav__title" for="__nav_5_2_2">
-          <span class="md-nav__icon md-icon"></span>
-          phpMyAdmin
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../ProgramL/SQL/phpMyAdmin/%E9%81%87%E5%88%B0%E7%9A%84%E9%97%AE%E9%A2%98/" class="md-nav__link">
-        遇到的问题
-      </a>
-    </li>
-  
-
-            
-          
-        </ul>
-      </nav>
     </li>
   
 
@@ -1539,17 +2224,25 @@
         
           
         
+          
+        
+          
+        
+          
+        
+          
+        
       
       
         <label class="md-nav__link" for="__nav_5_3">
-          Python
+          Wordpress
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="Python" data-md-level="2">
+      <nav class="md-nav" aria-label="Wordpress" data-md-level="2">
         <label class="md-nav__title" for="__nav_5_3">
           <span class="md-nav__icon md-icon"></span>
-          Python
+          Wordpress
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -1559,8 +2252,64 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ProgramL/Python/1.Python/" class="md-nav__link">
+      <a href="../../../WordPress/wordpress%E5%9F%BA%E7%A1%80/" class="md-nav__link">
         基础
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../WordPress/wordpress%E5%AE%89%E5%85%A8/" class="md-nav__link">
+        安全
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../WordPress/wordpress%E8%BF%81%E7%A7%BB/" class="md-nav__link">
+        迁移
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../WordPress/wordpress%E6%8F%92%E4%BB%B6/" class="md-nav__link">
+        插件
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../WordPress/wordpress%E9%85%8D%E7%BD%AE/" class="md-nav__link">
+        配置
       </a>
     </li>
   
@@ -1598,21 +2347,17 @@
         
           
         
-          
-        
-          
-        
       
       
         <label class="md-nav__link" for="__nav_6">
-          VPS
+          IOS
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="VPS" data-md-level="1">
+      <nav class="md-nav" aria-label="IOS" data-md-level="1">
         <label class="md-nav__title" for="__nav_6">
           <span class="md-nav__icon md-icon"></span>
-          VPS
+          IOS
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -1634,27 +2379,17 @@
         
           
         
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
       
       
         <label class="md-nav__link" for="__nav_6_1">
-          部署
+          Swift学习
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="部署" data-md-level="2">
+      <nav class="md-nav" aria-label="Swift学习" data-md-level="2">
         <label class="md-nav__title" for="__nav_6_1">
           <span class="md-nav__icon md-icon"></span>
-          部署
+          Swift学习
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -1664,248 +2399,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../../VPS/%E5%B8%B8%E7%94%A8%E8%84%9A%E6%9C%AC/" class="md-nav__link">
-        常用脚本
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../VPS/%E6%9C%8D%E5%8A%A1%E5%95%86/" class="md-nav__link">
-        服务商
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../VPS/Telegram/" class="md-nav__link">
-        Telegram
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../VPS/%E9%81%87%E5%88%B0%E7%9A%84%E9%97%AE%E9%A2%98/" class="md-nav__link">
-        遇到的问题
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../VPS/%E5%A2%9E%E5%8A%A0%E4%BA%A4%E6%8D%A2%E5%86%85%E5%AD%98/" class="md-nav__link">
-        增加交换内存
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../VPS/ZeroTier/" class="md-nav__link">
-        ZeroTier
-      </a>
-    </li>
-  
-
-            
-          
-        </ul>
-      </nav>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    
-      
-    
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
-      
-      
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_6_2" type="checkbox" id="__nav_6_2" checked>
-      
-      
-      
-        
-          
-        
-      
-      
-        <label class="md-nav__link" for="__nav_6_2">
-          Cloudflare
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" aria-label="Cloudflare" data-md-level="2">
-        <label class="md-nav__title" for="__nav_6_2">
-          <span class="md-nav__icon md-icon"></span>
-          Cloudflare
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../VPS/Cloudflare/Cloudflare%E4%BD%BF%E7%94%A8/" class="md-nav__link">
-        使用
-      </a>
-    </li>
-  
-
-            
-          
-        </ul>
-      </nav>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    
-      
-    
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
-      
-      
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_6_3" type="checkbox" id="__nav_6_3" checked>
-      
-      
-      
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-      
-      
-        <label class="md-nav__link" for="__nav_6_3">
-          Wordpress
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" aria-label="Wordpress" data-md-level="2">
-        <label class="md-nav__title" for="__nav_6_3">
-          <span class="md-nav__icon md-icon"></span>
-          Wordpress
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../WordPress/wordpress%E5%9F%BA%E7%A1%80/" class="md-nav__link">
-        基础
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../WordPress/wordpress%E5%AE%89%E5%85%A8/" class="md-nav__link">
-        安全
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../WordPress/wordpress%E8%BF%81%E7%A7%BB/" class="md-nav__link">
-        迁移
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../WordPress/wordpress%E6%8F%92%E4%BB%B6/" class="md-nav__link">
-        插件
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../WordPress/wordpress%E9%85%8D%E7%BD%AE/" class="md-nav__link">
-        配置
+      <a href="../../../IOS%E5%AD%A6%E4%B9%A0/Swift/0.%E4%BB%8B%E7%BB%8D/" class="md-nav__link">
+        介绍
       </a>
     </li>
   
@@ -1943,49 +2438,25 @@
         
           
         
+          
+        
+          
+        
+          
+        
+          
+        
       
       
         <label class="md-nav__link" for="__nav_7">
-          IOS
+          Docker
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="IOS" data-md-level="1">
+      <nav class="md-nav" aria-label="Docker" data-md-level="1">
         <label class="md-nav__title" for="__nav_7">
           <span class="md-nav__icon md-icon"></span>
-          IOS
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-              
-  
-  
-  
-    
-      
-    
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
-      
-      
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_7_1" type="checkbox" id="__nav_7_1" checked>
-      
-      
-      
-        
-          
-        
-      
-      
-        <label class="md-nav__link" for="__nav_7_1">
-          Swift学习
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" aria-label="Swift学习" data-md-level="2">
-        <label class="md-nav__title" for="__nav_7_1">
-          <span class="md-nav__icon md-icon"></span>
-          Swift学习
+          Docker
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -1995,16 +2466,65 @@
   
   
     <li class="md-nav__item">
-      <a href="../../IOS%E5%AD%A6%E4%B9%A0/Swift/0.%E4%BB%8B%E7%BB%8D/" class="md-nav__link">
-        介绍
+      <a href="../../../Docker/1.%E5%9F%BA%E7%A1%80/" class="md-nav__link">
+        1.基础
       </a>
     </li>
   
 
             
           
-        </ul>
-      </nav>
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Docker/2.%E6%B5%81%E7%A8%8B/" class="md-nav__link">
+        2.流程
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Docker/3.%E5%AE%B9%E5%99%A8%E5%AE%89%E8%A3%85/" class="md-nav__link">
+        3.容器安装
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Docker/4.%E5%AD%98%E5%82%A8%E7%9B%AE%E5%BD%95%E8%BF%81%E7%A7%BB/" class="md-nav__link">
+        4.存储目录迁移
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Docker/windows%E4%BD%BF%E7%94%A8docker/" class="md-nav__link">
+        Windows使用
+      </a>
     </li>
   
 
@@ -2036,131 +2556,15 @@
         
           
         
-          
-        
-          
-        
-          
-        
       
       
         <label class="md-nav__link" for="__nav_8">
-          Docker
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" aria-label="Docker" data-md-level="1">
-        <label class="md-nav__title" for="__nav_8">
-          <span class="md-nav__icon md-icon"></span>
-          Docker
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../Docker/1.%E5%9F%BA%E7%A1%80/" class="md-nav__link">
-        1.基础
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../Docker/2.%E6%B5%81%E7%A8%8B/" class="md-nav__link">
-        2.流程
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../Docker/3.%E5%AE%B9%E5%99%A8%E5%AE%89%E8%A3%85/" class="md-nav__link">
-        3.容器安装
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../Docker/4.%E5%AD%98%E5%82%A8%E7%9B%AE%E5%BD%95%E8%BF%81%E7%A7%BB/" class="md-nav__link">
-        4.存储目录迁移
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../Docker/windows%E4%BD%BF%E7%94%A8docker/" class="md-nav__link">
-        Windows使用
-      </a>
-    </li>
-  
-
-            
-          
-        </ul>
-      </nav>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-    
-  
-  
-    
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
-      
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_9" type="checkbox" id="__nav_9" checked>
-      
-      
-      
-        
-          
-        
-      
-      
-        <label class="md-nav__link" for="__nav_9">
           Reading
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" aria-label="Reading" data-md-level="1">
-        <label class="md-nav__title" for="__nav_9">
+        <label class="md-nav__title" for="__nav_8">
           <span class="md-nav__icon md-icon"></span>
           Reading
         </label>
@@ -2170,80 +2574,25 @@
               
   
   
-    
+  
+    <li class="md-nav__item">
+      <a href="../../../Book/%E5%9C%A8%E7%BA%BF%E4%B9%A6%E7%B1%8D/" class="md-nav__link">
+        在线书籍
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
   
   
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          爱上跑步的13周
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+  
+    <li class="md-nav__item">
+      <a href="../../../Book/%E7%88%B1%E4%B8%8A%E8%B7%91%E6%AD%A5%E7%9A%8413%E5%91%A8/" class="md-nav__link">
         爱上跑步的13周
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="目录">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      目录
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    第一周：步伐
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    第二周：建立基础
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
-    第三周：增加跑步的时间
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
-    第四周：放松的恢复周
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
-    第五周：注意“拖着脚慢跑”
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -2266,7 +2615,7 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_10" type="checkbox" id="__nav_10" checked>
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_9" type="checkbox" id="__nav_9" checked>
       
       
       
@@ -2275,13 +2624,13 @@
         
       
       
-        <label class="md-nav__link" for="__nav_10">
+        <label class="md-nav__link" for="__nav_9">
           Other
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" aria-label="Other" data-md-level="1">
-        <label class="md-nav__title" for="__nav_10">
+        <label class="md-nav__title" for="__nav_9">
           <span class="md-nav__icon md-icon"></span>
           Other
         </label>
@@ -2293,7 +2642,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Other/JetBrains/" class="md-nav__link">
+      <a href="../../../Other/JetBrains/" class="md-nav__link">
         JetBrains
       </a>
     </li>
@@ -2315,8 +2664,23 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Other/tags/" class="md-nav__link">
+      <a href="../../../Other/tags/" class="md-nav__link">
         Tags
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Other/Link/" class="md-nav__link">
+        Links
       </a>
     </li>
   
@@ -2356,109 +2720,61 @@
     
       
       
-        <a href="../../Other/tags/#books" class="md-tag">Books</a>
+        <a href="../../../Other/tags/#nginx" class="md-tag">Nginx</a>
       
     
   </nav>
 
 
 
-  <a href="https://github.com/lyricer/love/edit/master/docs/Todo/爱上跑步的13周.md" title="编辑此页" class="md-content__button md-icon">
+  <a href="https://github.com/lyricer/love/edit/master/docs/Ops/Nginx/nginx.md" title="编辑此页" class="md-content__button md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
   </a>
 
 
-<h1 id="13">爱上跑步的13周<a class="headerlink" href="#13" title="Permanent link">&para;</a></h1>
-<h2 id="_1">第一周：步伐<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
-<ul class="task-list">
-<li class="task-list-item">
-<p><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 第1课（34分钟）
-    跑步1分钟，行走2分钟，共做8次。</p>
-</li>
-<li class="task-list-item">
-<p><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 第2课（28分钟）
-    跑步1分钟，行走2分钟，共做6次。</p>
-</li>
-<li class="task-list-item">
-<p><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 第3课（31分钟）
-    跑步1分钟，行走2分钟，共做7次。</p>
-</li>
-</ul>
-<p>尝试“拖着脚慢跑”——挺起胸，手臂摆动范围小一些，用小碎步跑，而不要抬高膝关节。从行走换到跑步要过渡得非常平稳。</p>
-<p>建议：</p>
-<blockquote>
-<p>让步伐变得轻缓，尝试“拖着脚慢跑。技巧——挺起胸，手臂摆动范围小一些，用小碎步跑，想象自己是一名拳击手。</p>
-<p>重心放在脚掌的中前部，从行走到跑步要过渡得非常平稳，反过来也一样。</p>
-</blockquote>
-<hr />
-<h2 id="_2">第二周：建立基础<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
-<ul class="task-list">
-<li class="task-list-item">
-<p><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 第1课（38分钟）3.20
-    跑步2分钟。行走2分钟。共做7次。</p>
-</li>
-<li class="task-list-item">
-<p><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 第2课（31分钟）3.22
-    跑步1分钟。行走2分钟。共做7次。</p>
-</li>
-<li class="task-list-item">
-<p><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 第3课（34分钟）3.23
-    跑步2分钟。行走2分钟。共做6次。</p>
-</li>
-</ul>
-<p>如果你因为一些原因而不能完成当周的训练，最好在下一周重复这周的课程，然后再继续。</p>
-<hr />
-<h2 id="_3">第三周：增加跑步的时间<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
-<ul class="task-list">
-<li class="task-list-item">
-<p><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 第1课（45分钟）3.27
-    跑步3分钟。行走2分钟。共做7次。</p>
-</li>
-<li class="task-list-item">
-<p><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 第2课（34分钟）3.29
-    跑步2分钟。行走2分钟。共做6次。</p>
-</li>
-<li class="task-list-item">
-<p><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 第3课（40分钟）4.1
-    跑步3分钟。行走2分钟。共做6次。</p>
-</li>
-</ul>
-<p>记住手臂的摆动可以帮助你调整节奏和步伐。尝试着让你的肩膀保持笔直和放松。在训练日志上记录你的进程。</p>
-<hr />
-<h2 id="_4">第四周：放松的恢复周<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
-<ul class="task-list">
-<li class="task-list-item">
-<p><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 第1课（40分钟）4.5
-    跑步3分钟。行走2分钟。共做6次。</p>
-</li>
-<li class="task-list-item">
-<p><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 第2课（30分钟）4.7
-    跑步2分钟。行走2分钟。共做5次。</p>
-</li>
-<li class="task-list-item">
-<p><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 第3课（40分钟）4.9
-    跑步2分钟。行走3分钟。共做6次。</p>
-</li>
-</ul>
-<p>要一直尝试积极地思考。把注意力集中到好的事情，耐心一些。</p>
-<hr />
-<h2 id="_5">第五周：注意“拖着脚慢跑”<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
-<ul class="task-list">
-<li class="task-list-item">
-<p><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 第1课（46分钟）4.10
-    跑步3分钟。行走1分钟。共做9次。</p>
-</li>
-<li class="task-list-item">
-<p><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 第2课（34分钟）4.12
-跑步2分钟。行走1分钟。共做8次。</p>
-</li>
-<li class="task-list-item">
-<p><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 第3课（42分钟）4.16
-跑步3分钟。行走1分钟。共做8次。</p>
-</li>
-</ul>
-<p>如果你感觉自己发出呼哧呼哧的声音，明显不能正常交谈了，就必须慢下来。</p>
+<h1 id="nginx">Nginx<a class="headerlink" href="#nginx" title="Permanent link">&para;</a></h1>
+<h2 id="windows">Windows<a class="headerlink" href="#windows" title="Permanent link">&para;</a></h2>
+<p>基础操作
+<div class="highlight"><pre><span></span><code><span class="c1"># nginx升级</span>
+nginx -s quit
+start nginx 
+nginx -v
+nginx -s reload
+</code></pre></div></p>
+<div class="highlight"><pre><span></span><code><span class="c1"># nginx 域名绑定 端口</span>
+server <span class="o">{</span>
+    listen  <span class="m">80</span><span class="p">;</span>  
+    server_name lyricn.com www.lyricn.com<span class="p">;</span> <span class="c1">##，绑定域名</span>
+    location / <span class="o">{</span>  
+         proxy_pass http://127.0.0.1:8000<span class="p">;</span>  <span class="c1">## 指定端口号 8000</span>
+    <span class="o">}</span>  
+</code></pre></div>
+<p>配置多个Tomcat
+<div class="highlight"><pre><span></span><code><span class="c1"># 按下面进行增加和编辑，完成后 :wq 保存。</span>
+http <span class="o">{</span>
+    <span class="c1"># 省略代码....</span>
+
+    <span class="c1"># 增加  upstream, 名称为 serverlist</span>
+    upstream serverlist<span class="o">{</span>
+        server localhost:9081 <span class="nv">weight</span><span class="o">=</span><span class="m">1</span><span class="p">;</span>  <span class="c1"># weigh表示权重，越大访问的机率越多</span>
+        server localhost:9082 <span class="nv">weight</span><span class="o">=</span><span class="m">1</span><span class="p">;</span>
+        server localhost:9083 <span class="nv">weight</span><span class="o">=</span><span class="m">1</span><span class="p">;</span>
+    <span class="o">}</span>
+
+    <span class="c1"># 编辑</span>
+    server <span class="o">{</span>
+        listen       <span class="m">80</span><span class="p">;</span>
+        server_name  www.yourdomian.com<span class="p">;</span>
+
+        location / <span class="o">{</span>
+            <span class="c1"># 这里使用定义 serverlist</span>
+            proxy_pass http://serverlist<span class="p">;</span>
+        <span class="o">}</span>
+
+<span class="c1"># 重启nginx</span>
+/usr/local/nginx/sbin/nginx -s reload
+</code></pre></div></p>
 
 
 
@@ -2484,7 +2800,7 @@
     <nav class="md-footer__inner md-grid" aria-label="页脚" >
       
         
-        <a href="../../Docker/windows%E4%BD%BF%E7%94%A8docker/" class="md-footer__link md-footer__link--prev" aria-label="上一页: Windows使用" rel="prev">
+        <a href="../../OpenWrt/%E6%8F%92%E4%BB%B6/openclash/" class="md-footer__link md-footer__link--prev" aria-label="上一页: 插件" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
           </div>
@@ -2493,20 +2809,20 @@
               <span class="md-footer__direction">
                 上一页
               </span>
-              Windows使用
+              插件
             </div>
           </div>
         </a>
       
       
         
-        <a href="../../Other/JetBrains/" class="md-footer__link md-footer__link--next" aria-label="下一页: JetBrains" rel="next">
+        <a href="../../Redis/Redis/" class="md-footer__link md-footer__link--next" aria-label="下一页: 不同环境使用Redis" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 下一页
               </span>
-              JetBrains
+              不同环境使用Redis
             </div>
           </div>
           <div class="md-footer__button md-icon">
@@ -2535,8 +2851,23 @@
       
       
     
+    <a href="https://lyricn.com" target="_blank" rel="noopener" title="lyricn.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M192 32c0 17.7 14.3 32 32 32 123.7 0 224 100.3 224 224 0 17.7 14.3 32 32 32s32-14.3 32-32C512 128.9 383.1 0 224 0c-17.7 0-32 14.3-32 32zm0 96c0 17.7 14.3 32 32 32 70.7 0 128 57.3 128 128 0 17.7 14.3 32 32 32s32-14.3 32-32c0-106-86-192-192-192-17.7 0-32 14.3-32 32zm-96 16c0-26.5-21.5-48-48-48S0 117.5 0 144v224c0 79.5 64.5 144 144 144s144-64.5 144-144-64.5-144-144-144h-16v96h16c26.5 0 48 21.5 48 48s-21.5 48-48 48-48-21.5-48-48V144z"/></svg>
+    </a>
+  
+    
+    
+      
+      
+    
     <a href="https://twitter.com/qhx1996" target="_blank" rel="noopener" title="twitter.com" class="md-social__link">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg>
+    </a>
+  
+    
+    
+    <a href="mailto:<support@lyricn.com>" target="_blank" rel="noopener" title="" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M498.1 5.6c10.1 7 15.4 19.1 13.5 31.2l-64 416c-1.5 9.7-7.4 18.2-16 23s-18.9 5.4-28 1.6l-126.3-52.5-40.1 74.5c-5.2 9.7-16.3 14.6-27 11.9S192 499 192 488v-96c0-5.3 1.8-10.5 5.1-14.7l165.3-212.6c2.5-7.1-6.5-14.3-13-8.4l-179 161.9-32 28.9c-9.2 8.3-22.3 10.6-33.8 5.8l-85-35.4C8.4 312.8.8 302.2.1 290s5.5-23.7 16.1-29.8l448-256c10.7-6.1 23.9-5.5 34 1.4z"/></svg>
     </a>
   
 </div>
@@ -2550,10 +2881,10 @@
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "../..", "features": ["search.suggest", "search.highlight", "header.autohide", "navigation.top", "navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.expand", "navigation.indexes", "toc.integrate"], "search": "../../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.config.lang": "ja", "search.config.pipeline": "trimmer, stemmer", "search.config.separator": "[\\s\\-\uff0c\u3002]+", "search.placeholder": "\u641c\u7d22", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version.title": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["search.suggest", "search.highlight", "header.autohide", "navigation.top", "navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.expand", "navigation.indexes", "toc.integrate"], "search": "../../../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.config.lang": "ja", "search.config.pipeline": "trimmer, stemmer", "search.config.separator": "[\\s\\-\uff0c\u3002]+", "search.placeholder": "\u641c\u7d22", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version.title": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.d6c3db9e.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.d6c3db9e.min.js"></script>
       
     
   </body>
