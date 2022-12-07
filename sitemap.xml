@@ -81,6 +81,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://wiki.lyricn.com/Ops/Adguard/Adguard/</loc>
+         <lastmod>2022-12-07</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://wiki.lyricn.com/Ops/Github/Github%E5%9B%BE%E5%BA%8A/</loc>
          <lastmod>2022-12-07</lastmod>
          <changefreq>daily</changefreq>
