@@ -1,0 +1,1785 @@
+
+<!DOCTYPE html>
+
+<html class="no-js" lang="zh">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<meta content="陪伴，無論你需不需要我一直都在..." name="description"/>
+<meta content="qhx" name="author"/>
+<link href="https://wiki.lyricn.com/IOS%E5%AD%A6%E4%B9%A0/Objective-C/OC/" rel="canonical"/>
+<link href="../../../assets/images/logo.png" rel="icon"/>
+<meta content="mkdocs-1.4.2, mkdocs-material-8.5.8" name="generator"/>
+<title>OC - Lyricn Wiki</title>
+<link href="../../../assets/stylesheets/main.20d9efc8.min.css" rel="stylesheet"/>
+<link href="../../../assets/stylesheets/palette.815d1a91.min.css" rel="stylesheet"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Ubuntu:300,300i,400,400i,700,700i%7CUbuntu+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
+<style>:root{--md-text-font:"Ubuntu";--md-code-font:"Ubuntu Mono"}</style>
+<script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+<link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+            
+                .gscrollbar-fixer { padding-right: 15px; }
+                .gdesc-inner { font-size: 0.75rem; }
+                body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+                body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+                body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
+                </style><script src="../../../assets/javascripts/glightbox.min.js"></script></head>
+<body data-md-color-accent="" data-md-color-primary="" data-md-color-scheme="" dir="ltr">
+<script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#objective-c">
+          跳转至
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<header class="md-header md-header--lifted" data-md-component="header">
+<nav aria-label="页眉" class="md-header__inner md-grid">
+<a aria-label="Lyricn Wiki" class="md-header__button md-logo" data-md-component="logo" href="../../.." title="Lyricn Wiki">
+<svg viewbox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M96 0C43 0 0 43 0 96v320c0 53 43 96 96 96h320c17.7 0 32-14.3 32-32s-14.3-32-32-32v-64c17.7 0 32-14.3 32-32V32c0-17.7-14.3-32-32-32H96zm0 384h256v64H96c-17.7 0-32-14.3-32-32s14.3-32 32-32zm32-240c0-8.8 7.2-16 16-16h192c8.8 0 16 7.2 16 16s-7.2 16-16 16H144c-8.8 0-16-7.2-16-16zm16 48h192c8.8 0 16 7.2 16 16s-7.2 16-16 16H144c-8.8 0-16-7.2-16-16s7.2-16 16-16z"></path></svg>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
+            Lyricn Wiki
+          </span>
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
+            
+              OC
+            
+          </span>
+</div>
+</div>
+</div>
+<form class="md-header__option" data-md-component="palette">
+<input aria-label="Switch to light mode" class="md-option" data-md-color-accent="" data-md-color-media="(prefers-color-scheme)" data-md-color-primary="" data-md-color-scheme="" id="__palette_1" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_3" hidden="" title="Switch to light mode">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m14.3 16-.7-2h-3.2l-.7 2H7.8L11 7h2l3.2 9h-1.9M20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69m-9.15 3.96h2.3L12 9l-1.15 3.65Z"></path></svg>
+</label>
+<input aria-label="Switch to light mode" class="md-option" data-md-color-accent="pink" data-md-color-media="(prefers-color-scheme: light)" data-md-color-primary="indigo" data-md-color-scheme="default" id="__palette_2" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_1" hidden="" title="Switch to light mode">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5c-.84 0-1.65.15-2.39.42L12 2M3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29L3.34 7m.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14L3.36 17M20.65 7l-1.77 3.79a7.023 7.023 0 0 0-2.38-4.15l4.15.36m-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29L20.64 17M12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44L12 22Z"></path></svg>
+</label>
+<input aria-label="Switch to dark mode" class="md-option" data-md-color-accent="blue" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-primary="deep-purple" data-md-color-scheme="slate" id="__palette_3" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_2" hidden="" title="Switch to dark mode">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3 3.19.09m3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95 2.06.05m-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31Z"></path></svg>
+</label>
+</form>
+<label class="md-header__button md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"></path></svg>
+</label>
+<div class="md-search" data-md-component="search" role="dialog">
+<label class="md-search__overlay" for="__search"></label>
+<div class="md-search__inner" role="search">
+<form class="md-search__form" name="search">
+<input aria-label="搜索" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" name="query" placeholder="搜索" required="" spellcheck="false" type="text"/>
+<label class="md-search__icon md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"></path></svg>
+</label>
+<nav aria-label="查找" class="md-search__options">
+<button aria-label="清空当前内容" class="md-search__icon md-icon" tabindex="-1" title="清空当前内容" type="reset">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"></path></svg>
+</button>
+</nav>
+<div class="md-search__suggest" data-md-component="search-suggest"></div>
+</form>
+<div class="md-search__output">
+<div class="md-search__scrollwrap" data-md-scrollfix="">
+<div class="md-search-result" data-md-component="search-result">
+<div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+<ol class="md-search-result__list"></ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="md-header__source">
+<a class="md-source" data-md-component="source" href="https://github.com/lyricer/love" title="前往仓库">
+<div class="md-source__icon md-icon">
+<svg viewbox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"></path></svg>
+</div>
+<div class="md-source__repository">
+    lyricer/love
+  </div>
+</a>
+</div>
+</nav>
+<nav aria-label="标签" class="md-tabs" data-md-component="tabs">
+<div class="md-tabs__inner md-grid">
+<ul class="md-tabs__list">
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../..">
+      Home
+    </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../../wiki_index/">
+        Wiki
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../../Ops/Linux/Linux/0.%E5%9F%BA%E7%A1%80/">
+        Ops
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../../ProgramL/">
+        ProgramL
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../../VPS/%E5%B8%B8%E7%94%A8%E8%84%9A%E6%9C%AC/">
+        VPS
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../../NAS/QNAP/Docker/Docker/">
+        NAS
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link md-tabs__link--active" href="../../Xcode/Xcode/">
+        IOS
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../../Docker/1.%E5%9F%BA%E7%A1%80/">
+        Docker
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../../Book/%E5%9C%A8%E7%BA%BF%E4%B9%A6%E7%B1%8D/">
+        Reading
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../../Other/JetBrains/">
+        Other
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../../%E6%B8%B8%E6%88%B2/Switch/%E6%80%AA%E7%89%A9%E7%8D%B5%E4%BA%BA/">
+        游戲
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../../%E8%AA%9E%E9%8C%84/Mika/">
+        語錄
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../../Other/tags/">
+      Tags
+    </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../../Other/Link/">
+      Links
+    </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="https://lyricn.com">
+      Blog
+    </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="https://memos.lyricn.com">
+      Memos
+    </a>
+</li>
+</ul>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="导航栏" class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="Lyricn Wiki" class="md-nav__button md-logo" data-md-component="logo" href="../../.." title="Lyricn Wiki">
+<svg viewbox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M96 0C43 0 0 43 0 96v320c0 53 43 96 96 96h320c17.7 0 32-14.3 32-32s-14.3-32-32-32v-64c17.7 0 32-14.3 32-32V32c0-17.7-14.3-32-32-32H96zm0 384h256v64H96c-17.7 0-32-14.3-32-32s14.3-32 32-32zm32-240c0-8.8 7.2-16 16-16h192c8.8 0 16 7.2 16 16s-7.2 16-16 16H144c-8.8 0-16-7.2-16-16zm16 48h192c8.8 0 16 7.2 16 16s-7.2 16-16 16H144c-8.8 0-16-7.2-16-16s7.2-16 16-16z"></path></svg>
+</a>
+    Lyricn Wiki
+  </label>
+<div class="md-nav__source">
+<a class="md-source" data-md-component="source" href="https://github.com/lyricer/love" title="前往仓库">
+<div class="md-source__icon md-icon">
+<svg viewbox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"></path></svg>
+</div>
+<div class="md-source__repository">
+    lyricer/love
+  </div>
+</a>
+</div>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../..">
+        Home
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_2" id="__nav_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2">
+          Wiki
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Wiki" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_2">
+<span class="md-nav__icon md-icon"></span>
+          Wiki
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../wiki_index/">
+        介绍
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--section md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_2_2" id="__nav_2_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2_2">
+          GitBook
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="GitBook" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_2_2">
+<span class="md-nav__icon md-icon"></span>
+          GitBook
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../GitBook/1.NVM%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8/">
+        1.NVM安装使用
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../GitBook/2.GitBook%E6%90%AD%E5%BB%BA/">
+        2.GitBook搭建
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../GitBook/3.GitBook%E6%8F%92%E4%BB%B6/">
+        3.GitBook插件
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--section md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_2_3" id="__nav_2_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2_3">
+          MkDocs
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="MkDocs" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_2_3">
+<span class="md-nav__icon md-icon"></span>
+          MkDocs
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../MkDocs/1.MkDocs%E6%90%AD%E5%BB%BA/">
+        1.MkDocs搭建
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../MkDocs/2.mkdocs%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6/">
+        2.mkdocs配置文件
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_3" id="__nav_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3">
+          Ops
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Ops" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_3">
+<span class="md-nav__icon md-icon"></span>
+          Ops
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--section md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_3_1" id="__nav_3_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_1">
+          Server
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Server" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_3_1">
+<span class="md-nav__icon md-icon"></span>
+          Server
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_3_1_1" id="__nav_3_1_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_1_1">
+          Linux
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Linux" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_3_1_1">
+<span class="md-nav__icon md-icon"></span>
+          Linux
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Ops/Linux/Linux/0.%E5%9F%BA%E7%A1%80/">
+        基础
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Ops/Linux/Linux/1.%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%AE%89%E5%85%A8/">
+        安全
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Ops/Linux/Linux/2.%E9%98%B2%E7%81%AB%E5%A2%99/">
+        防火墙
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Ops/Linux/Linux/3.%E8%A7%A3%E5%8E%8B%E7%BC%A9/">
+        解压缩
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Ops/Linux/Linux/4.Log/">
+        Log
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Ops/Linux/Linux/5.%E6%96%87%E4%BB%B6/">
+        文件
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_3_1_1_7" id="__nav_3_1_1_7" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_1_1_7">
+          命令
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="命令" class="md-nav" data-md-level="4">
+<label class="md-nav__title" for="__nav_3_1_1_7">
+<span class="md-nav__icon md-icon"></span>
+          命令
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Ops/Linux/Linux/%E5%91%BD%E4%BB%A4/Screen/">
+        Screen
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_3_1_1_8" id="__nav_3_1_1_8" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_1_1_8">
+          CentOS
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="CentOS" class="md-nav" data-md-level="4">
+<label class="md-nav__title" for="__nav_3_1_1_8">
+<span class="md-nav__icon md-icon"></span>
+          CentOS
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Ops/Linux/Linux/CentOS/%E5%8D%87%E7%BA%A7OpenSSH/">
+        升级OpenSSH
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Ops/Linux/Linux/CentOS/%E5%8D%87%E7%BA%A7sudo/">
+        升级sudo
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_3_1_1_9" id="__nav_3_1_1_9" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_1_1_9">
+          Ubuntu
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Ubuntu" class="md-nav" data-md-level="4">
+<label class="md-nav__title" for="__nav_3_1_1_9">
+<span class="md-nav__icon md-icon"></span>
+          Ubuntu
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Ops/Linux/Linux/Ubuntu/Ubuntu22.04/">
+        Ubuntu22.04
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_3_1_1_10" id="__nav_3_1_1_10" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_1_1_10">
+          深入理解Linux网络
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="深入理解Linux网络" class="md-nav" data-md-level="4">
+<label class="md-nav__title" for="__nav_3_1_1_10">
+<span class="md-nav__icon md-icon"></span>
+          深入理解Linux网络
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Ops/Linux/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3Linux%E7%BD%91%E7%BB%9C/0.index/">
+        介绍
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Ops/Linux/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3Linux%E7%BD%91%E7%BB%9C/1.%E7%BB%AA%E8%AE%BA/">
+        1.绪论
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_3_1_1_11" id="__nav_3_1_1_11" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_1_1_11">
+          PVE
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="PVE" class="md-nav" data-md-level="4">
+<label class="md-nav__title" for="__nav_3_1_1_11">
+<span class="md-nav__icon md-icon"></span>
+          PVE
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Ops/Linux/PVE/0.%E4%BD%BF%E7%94%A8/">
+        使用
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_3_1_2" id="__nav_3_1_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_1_2">
+          Windows
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Windows" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_3_1_2">
+<span class="md-nav__icon md-icon"></span>
+          Windows
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Ops/Windows/1.Windows%E8%BD%AF%E4%BB%B6/">
+        必备软件
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Ops/Windows/2.%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/">
+        常用命令
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Ops/Windows/0.%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%AE%89%E5%85%A8/">
+        服务器安全
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Ops/Windows/3.%E9%81%87%E5%88%B0%E7%9A%84%E9%97%AE%E9%A2%98/">
+        遇到的问题
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Ops/Windows/%E8%BD%AF%E4%BB%B6/Windhawk/">
+        软件使用
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_3_1_3" id="__nav_3_1_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_1_3">
+          OpenWrt
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="OpenWrt" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_3_1_3">
+<span class="md-nav__icon md-icon"></span>
+          OpenWrt
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Ops/OpenWrt/0.%E7%BC%96%E8%AF%91/">
+        编译
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Ops/OpenWrt/%E6%8F%92%E4%BB%B6/openclash/">
+        插件
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_3_1_4" id="__nav_3_1_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_1_4">
+          Adguard
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Adguard" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_3_1_4">
+<span class="md-nav__icon md-icon"></span>
+          Adguard
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Ops/Adguard/Adguard/">
+        Adguard
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_3_1_5" id="__nav_3_1_5" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_1_5">
+          SSH
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="SSH" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_3_1_5">
+<span class="md-nav__icon md-icon"></span>
+          SSH
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Ops/SSH/FinalShell/">
+        FinalShell
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--section md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_3_2" id="__nav_3_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_2">
+          Tools
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Tools" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_3_2">
+<span class="md-nav__icon md-icon"></span>
+          Tools
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_3_2_1" id="__nav_3_2_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_2_1">
+          Github
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Github" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_3_2_1">
+<span class="md-nav__icon md-icon"></span>
+          Github
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Ops/Github/Github%E5%9B%BE%E5%BA%8A/">
+        图床
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_3_2_2" id="__nav_3_2_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_2_2">
+          Nginx
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Nginx" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_3_2_2">
+<span class="md-nav__icon md-icon"></span>
+          Nginx
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Ops/Nginx/nginx/">
+        基础
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_3_2_3" id="__nav_3_2_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_2_3">
+          Redis
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Redis" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_3_2_3">
+<span class="md-nav__icon md-icon"></span>
+          Redis
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Ops/Redis/Redis/">
+        不同环境使用Redis
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_4" id="__nav_4" type="checkbox"/>
+<div class="md-nav__link md-nav__link--index">
+<a href="../../../ProgramL/">ProgramL</a>
+<label for="__nav_4">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-label="ProgramL" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_4">
+<span class="md-nav__icon md-icon"></span>
+          ProgramL
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--section md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_4_2" id="__nav_4_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_4_2">
+          AI
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="AI" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_4_2">
+<span class="md-nav__icon md-icon"></span>
+          AI
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgramL/AI/ChatGPT/">
+        ChatGPT
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--section md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_4_3" id="__nav_4_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_4_3">
+          Java
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Java" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_4_3">
+<span class="md-nav__icon md-icon"></span>
+          Java
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgramL/Java/idea/">
+        idea
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_4_3_2" id="__nav_4_3_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_4_3_2">
+          方法
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="方法" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_4_3_2">
+<span class="md-nav__icon md-icon"></span>
+          方法
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgramL/Java/DateUtils/">
+        DateUtils
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgramL/Java/Hibernate/">
+        Hibernate
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgramL/Java/AsposeCells/">
+        Aspose Cells
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgramL/Java/List/">
+        List
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--section md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_4_4" id="__nav_4_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_4_4">
+          PHP
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="PHP" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_4_4">
+<span class="md-nav__icon md-icon"></span>
+          PHP
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgramL/PHP/php/">
+        基础
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--section md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_4_5" id="__nav_4_5" type="checkbox"/>
+<label class="md-nav__link" for="__nav_4_5">
+          SQL
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="SQL" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_4_5">
+<span class="md-nav__icon md-icon"></span>
+          SQL
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_4_5_1" id="__nav_4_5_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_4_5_1">
+          MySQL
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="MySQL" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_4_5_1">
+<span class="md-nav__icon md-icon"></span>
+          MySQL
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgramL/SQL/MySQL/1.mysql%E5%9F%BA%E7%A1%80/">
+        mysql基础
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_4_5_2" id="__nav_4_5_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_4_5_2">
+          SQLServer
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="SQLServer" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_4_5_2">
+<span class="md-nav__icon md-icon"></span>
+          SQLServer
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgramL/SQL/SQLServer/SQLserver/">
+        SQLServer基础
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_4_5_3" id="__nav_4_5_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_4_5_3">
+          phpMyAdmin
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="phpMyAdmin" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_4_5_3">
+<span class="md-nav__icon md-icon"></span>
+          phpMyAdmin
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgramL/SQL/phpMyAdmin/%E9%81%87%E5%88%B0%E7%9A%84%E9%97%AE%E9%A2%98/">
+        遇到的问题
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--section md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_4_6" id="__nav_4_6" type="checkbox"/>
+<label class="md-nav__link" for="__nav_4_6">
+          Python
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Python" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_4_6">
+<span class="md-nav__icon md-icon"></span>
+          Python
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgramL/Python/1.Python/">
+        基础
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_5" id="__nav_5" type="checkbox"/>
+<label class="md-nav__link" for="__nav_5">
+          VPS
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="VPS" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_5">
+<span class="md-nav__icon md-icon"></span>
+          VPS
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--section md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_5_1" id="__nav_5_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_5_1">
+          部署
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="部署" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_5_1">
+<span class="md-nav__icon md-icon"></span>
+          部署
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../VPS/%E5%B8%B8%E7%94%A8%E8%84%9A%E6%9C%AC/">
+        常用脚本
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../VPS/%E6%9C%8D%E5%8A%A1%E5%95%86/">
+        服务商
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../VPS/Telegram/">
+        Telegram
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../VPS/%E9%81%87%E5%88%B0%E7%9A%84%E9%97%AE%E9%A2%98/">
+        遇到的问题
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../VPS/%E5%A2%9E%E5%8A%A0%E4%BA%A4%E6%8D%A2%E5%86%85%E5%AD%98/">
+        增加交换内存
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../VPS/ZeroTier/">
+        ZeroTier
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--section md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_5_2" id="__nav_5_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_5_2">
+          Cloudflare
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Cloudflare" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_5_2">
+<span class="md-nav__icon md-icon"></span>
+          Cloudflare
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../VPS/Cloudflare/Cloudflare%E4%BD%BF%E7%94%A8/">
+        使用
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--section md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_5_3" id="__nav_5_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_5_3">
+          Wordpress
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Wordpress" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_5_3">
+<span class="md-nav__icon md-icon"></span>
+          Wordpress
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../WordPress/wordpress%E5%9F%BA%E7%A1%80/">
+        基础
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../WordPress/wordpress%E5%AE%89%E5%85%A8/">
+        安全
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../WordPress/wordpress%E8%BF%81%E7%A7%BB/">
+        迁移
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../WordPress/wordpress%E6%8F%92%E4%BB%B6/">
+        插件
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../WordPress/wordpress%E9%85%8D%E7%BD%AE/">
+        配置
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_6" id="__nav_6" type="checkbox"/>
+<label class="md-nav__link" for="__nav_6">
+          NAS
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="NAS" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_6">
+<span class="md-nav__icon md-icon"></span>
+          NAS
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--section md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_6_1" id="__nav_6_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_6_1">
+          QNAP
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="QNAP" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_6_1">
+<span class="md-nav__icon md-icon"></span>
+          QNAP
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../NAS/QNAP/Docker/Docker/">
+        Docker
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../NAS/QNAP/TeamViewer/TeamViewer/">
+        TeamViewer
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../NAS/QNAP/%E8%AE%BE%E5%A4%87/">
+        設備
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" id="__nav_7" type="checkbox"/>
+<label class="md-nav__link" for="__nav_7">
+          IOS
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="IOS" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_7">
+<span class="md-nav__icon md-icon"></span>
+          IOS
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--section md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_7_1" id="__nav_7_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_7_1">
+          Xcode
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Xcode" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_7_1">
+<span class="md-nav__icon md-icon"></span>
+          Xcode
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Xcode/Xcode/">
+        Xcode
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_7_2" id="__nav_7_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_7_2">
+          Objective-C
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Objective-C" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_7_2">
+<span class="md-nav__icon md-icon"></span>
+          Objective-C
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+          OC
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
+        OC
+      </a>
+<nav aria-label="目录" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_1">
+    一、基礎
+  </a>
+<nav aria-label="一、基礎" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#import">
+    import 指令
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#foundation">
+    Foundation 框架
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#autoreleasepool">
+    @autoreleasepool
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#nslog">
+    NSLog函数
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#nsstring">
+    NSString
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#ns">
+    NS前缀
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#oc">
+    OC中的注释
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_2">
+    函数的定义和调用
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#occ">
+    二、OC与C的对比
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_3">
+    三、数据类型
+  </a>
+<nav aria-label="三、数据类型" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_4">
+    基本数据类型 ：
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_5">
+    构造类型:
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_6">
+    指针类型:
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_7">
+    空类型:
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_8">
+    自定义类型：
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#bool">
+    BOOL类型
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#boolean">
+    Boolean类型
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#class">
+    class 类
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#id">
+    id 万能指针
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#nilnilnullnsnull">
+    nil、Nil、NULL、NSNull的區別
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_9">
+    四、运算
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_10">
+    五、面向过程与面向对象
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_11">
+    六、代码世界的面向过程与面向对象
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_12">
+    七、使用面向对象的思维解决问题
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_13">
+    八、类与对象
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_14">
+    九、类的定义
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_15">
+    十、类的对象的创建和使用
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--section md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_7_3" id="__nav_7_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_7_3">
+          Swift学习
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Swift学习" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_7_3">
+<span class="md-nav__icon md-icon"></span>
+          Swift学习
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Swift/0.%E4%BB%8B%E7%BB%8D/">
+        介绍
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--section md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_7_4" id="__nav_7_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_7_4">
+          tools
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="tools" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_7_4">
+<span class="md-nav__icon md-icon"></span>
+          tools
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../tools/CocoaPods/">
+        CocoaPods
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_8" id="__nav_8" type="checkbox"/>
+<label class="md-nav__link" for="__nav_8">
+          Docker
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Docker" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_8">
+<span class="md-nav__icon md-icon"></span>
+          Docker
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Docker/1.%E5%9F%BA%E7%A1%80/">
+        1.基础
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Docker/2.%E6%B5%81%E7%A8%8B/">
+        2.流程
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Docker/3.%E5%AE%B9%E5%99%A8%E5%AE%89%E8%A3%85/">
+        3.容器安装
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Docker/4.%E5%AD%98%E5%82%A8%E7%9B%AE%E5%BD%95%E8%BF%81%E7%A7%BB/">
+        4.存储目录迁移
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Docker/windows%E4%BD%BF%E7%94%A8docker/">
+        Windows使用
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--section md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_8_6" id="__nav_8_6" type="checkbox"/>
+<label class="md-nav__link" for="__nav_8_6">
+          服務
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="服務" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_8_6">
+<span class="md-nav__icon md-icon"></span>
+          服務
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Docker/%E6%9C%8D%E5%8A%A1/memos/">
+        memos
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_9" id="__nav_9" type="checkbox"/>
+<label class="md-nav__link" for="__nav_9">
+          Reading
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Reading" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_9">
+<span class="md-nav__icon md-icon"></span>
+          Reading
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Book/%E5%9C%A8%E7%BA%BF%E4%B9%A6%E7%B1%8D/">
+        在线书籍
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Book/%E7%88%B1%E4%B8%8A%E8%B7%91%E6%AD%A5%E7%9A%8413%E5%91%A8/">
+        爱上跑步的13周
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_10" id="__nav_10" type="checkbox"/>
+<label class="md-nav__link" for="__nav_10">
+          Other
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Other" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_10">
+<span class="md-nav__icon md-icon"></span>
+          Other
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Other/JetBrains/">
+        JetBrains
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Other/timetogo/">
+        TimeToGo
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_11" id="__nav_11" type="checkbox"/>
+<label class="md-nav__link" for="__nav_11">
+          游戲
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="游戲" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_11">
+<span class="md-nav__icon md-icon"></span>
+          游戲
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--section md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_11_1" id="__nav_11_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_11_1">
+          Switch
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Switch" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_11_1">
+<span class="md-nav__icon md-icon"></span>
+          Switch
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../%E6%B8%B8%E6%88%B2/Switch/%E6%80%AA%E7%89%A9%E7%8D%B5%E4%BA%BA/">
+        怪物獵人
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_12" id="__nav_12" type="checkbox"/>
+<label class="md-nav__link" for="__nav_12">
+          語錄
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="語錄" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_12">
+<span class="md-nav__icon md-icon"></span>
+          語錄
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../%E8%AA%9E%E9%8C%84/Mika/">
+        Mika
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Other/tags/">
+        Tags
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Other/Link/">
+        Links
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="https://lyricn.com">
+        Blog
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="https://memos.lyricn.com">
+        Memos
+      </a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<article class="md-content__inner md-typeset">
+<nav class="md-tags">
+<a class="md-tag" href="../../../Other/tags/#ios">IOS</a>
+<a class="md-tag" href="../../../Other/tags/#objective-c">Objective-C</a>
+</nav>
+<a class="md-content__button md-icon" href="https://github.com/lyricer/love/edit/master/docs/IOS学习/Objective-C/OC.md" title="编辑此页">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"></path></svg>
+</a>
+<h1 id="objective-c">Objective-C<a class="headerlink" href="#objective-c" title="Permanent link">¶</a></h1>
+<p>Objective-C简称Obj-C或者OC。
+Obiective是面向对象的意思，所以Objective-C就是面向对象的C语言。</p>
+<h2 id="_1">一、基礎<a class="headerlink" href="#_1" title="Permanent link">¶</a></h2>
+<p>OC相对于C多了一些什么：</p>
+<ul>
+<li>在C的基础上新增了一小部分面向对象的语法</li>
+<li>将C复杂的、繁琐的的语法封装得更为简单</li>
+<li>OC完全兼容C语言</li>
+</ul>
+<p>OC程序的源文件后缀名是.m，m代表message代表OC中最重要的一个机制，消息机制。
+int类型的返回值，代表程序的结束状态。
+main 函数的参数仍然可以接受用户在运行程序的时候传递数据给程序，同样也可以不写。</p>
+<hr/>
+<h3 id="import">import 指令<a class="headerlink" href="#import" title="Permanent link">¶</a></h3>
+<p>以#开头，所以是一个预处理指令。</p>
+<p>作用：是#include指令的增强版，将文件的内容在预编译的时候拷贝到写指令的地方。</p>
+<p>那么# import 增强在哪里呢？</p>
+<p>同一个文件无论# import 多少次，都只会包含一次。而#include则单独做不到这点，必须配合条件编译指令来实现。</p>
+<p>能做到这一点的简要原理是：# import 指令在包含文件的时候，底层会先判断这个文件是否被包含，如果被包含会略过，否则才会包含。</p>
+<hr/>
+<h3 id="foundation">Foundation 框架<a class="headerlink" href="#foundation" title="Permanent link">¶</a></h3>
+<p>Foundation 是基础和基本的意思，言下之意在 Foundation 框架中提供了一些最基础的功能、输入和输出，还有一些数据类型。</p>
+<p>所以# import &lt; Foundation / Foundation .h&gt;代表的是引入 Foundation 框架中的 Foundation .h头文件拷贝过来。</p>
+<p>Foundation .h这个文件中包含了 Foundation 框架中的其他所有头文件，所以我们只要包含了这个文件就相当于包含了 Foundation 框架中所有的头文件， Foundation 框架中的所有函数和类就都可以直接使用了。</p>
+<hr/>
+<h3 id="autoreleasepool">@autoreleasepool<a class="headerlink" href="#autoreleasepool" title="Permanent link">¶</a></h3>
+<p>这是自动释放池。</p>
+<hr/>
+<h3 id="nslog">NSLog函数<a class="headerlink" href="#nslog" title="Permanent link">¶</a></h3>
+<p>作用：这个函数相当于C语言中的printf函数的增强版。向控制台输出信息。</p>
+<p>语法格式：NSLog(@“格式控制字符串”,变量列表);</p>
+<p>那么相对于printf函数，它增强的地方有哪些？</p>
+<p>NSLog会输出一些调试的相关信息：
+2020-07-18 16:18:44.675601+0800 First OC[1504:49178] Hello, World!</p>
+<ul>
+<li>会显示程序代码执行的时间</li>
+<li>会显示程序的名称</li>
+<li>会显示内存的进程编号和线程编号</li>
+<li>会自动换行</li>
+<li>OC中新增了一些数据类型，这些新增的数据类型只能使用NSLog输出</li>
+<li>NSLog的用法和printf基本相似，一样可以输出变量的值，并且占位符的用法也一样，但是要注意：NSLog函数的第一个参数前面必须要加一个@符号</li>
+<li>如果在字符串的末尾加了一个’\n’，那么NSLog函数的自动换行功能就会失效。</li>
+</ul>
+<hr/>
+<h3 id="nsstring">NSString<a class="headerlink" href="#nsstring" title="Permanent link">¶</a></h3>
+<p>NSString类型的指针变量，专门用来存储OC字符串的地址。
+这里要注意OC的字符串常量，必须要使用1个前缀@符号。</p>
+<p>“Jack”，这是一个C语言的字符串
+@“Jack”，这是一个OC的字符串常量</p>
+<p>NSString类型的指针变量，只能存储OC字符串的地址。</p>
+<p>语法格式：NSString *变量名 = @字符串常量;</p>
+<p>注意：如果一个字符串常量前面没有@符号就表明这个字符串常量是一个C字符串，有@符号就是OC字符串常量。在使用NSString定义字符串时，必须要使用带有@前缀的字符串常量。NSString类型的指针变量，只能存储OC字符串。</p>
+<p>所以，使用NSLog函数输出OC字符串指针时，要如何操作？</p>
+<p>我们知道C语言中输出字符串可以用%s占位符来实现，而NSLog函数中输出OC字符串则需要使用%@占位符来实现。</p>
+<hr/>
+<h3 id="ns">NS前缀<a class="headerlink" href="#ns" title="Permanent link">¶</a></h3>
+<p>由于OC是Steve Jobs在创建NeXT公司时倡导使用的编程工具，后来在NextStep中使用，再后来NextStep更名为Cocoa，由于Cocoa框架中很多源代码来自NextStep库中的 Foundation 和AppKit，工程师们选择使用NS来作为他们的类前缀，并沿用至今。</p>
+<p>@符号</p>
+<p>作用：将C字符串转换为OC字符串，OC中的绝大部份的关键字都是以@符号开头</p>
+<hr/>
+<h3 id="oc">OC中的注释<a class="headerlink" href="#oc" title="Permanent link">¶</a></h3>
+<p>和C语言一样，OC的注释也分单行注释和多行注释，使用方法以及快捷方式都一样。</p>
+<hr/>
+<h3 id="_2">函数的定义和调用<a class="headerlink" href="#_2" title="Permanent link">¶</a></h3>
+<p>OC中的函数定义和调用方法与C语言中函数方法一致！</p>
+<hr/>
+<h2 id="occ">二、OC与C的对比<a class="headerlink" href="#occ" title="Permanent link">¶</a></h2>
+<p>OC程序的编译、链接和执行步骤和C语言基本一致：</p>
+<p>以在终端中建立OC语言文件为例：</p>
+<ol>
+<li>在当前工作文件夹下，用 touch 命令建立一个.m的OC语言程序文件</li>
+<li>在.m文件中写上符合OC语法规范的源代码</li>
+<li>使用cc -c命令将源代码编译为目标文件.o文件</li>
+<li>使用cc命令将.o文件链接源文件</li>
+</ol>
+<p>但这里与C语言略有不同，必须要告诉编译器去哪一个框架中找OC文件中使用的函数或者类。</p>
+<p>所以命令如下：</p>
+<p><code>cc xx.o - framework 框架名称</code></p>
+<p>程序中用到了哪一个框架中的功能，就把框架名称替换为哪一个框架名字。</p>
+<p>例如：</p>
+<p><code>cc first.o - framework Foundation</code></p>
+<p>链接成功后，就会生成一个a.out可执行文件了，执行这个文件即可。</p>
+<hr/>
+<h2 id="_3">三、数据类型<a class="headerlink" href="#_3" title="Permanent link">¶</a></h2>
+<p>OC中支持C语言中的所有的数据类型。</p>
+<h3 id="_4">基本数据类型 ：<a class="headerlink" href="#_4" title="Permanent link">¶</a></h3>
+<p><code>int double float char</code></p>
+<h3 id="_5">构造类型:<a class="headerlink" href="#_5" title="Permanent link">¶</a></h3>
+<p><code>数组 结构体 枚举</code></p>
+<h3 id="_6">指针类型:<a class="headerlink" href="#_6" title="Permanent link">¶</a></h3>
+<p><code>int* double* float * char*</code></p>
+<h3 id="_7">空类型:<a class="headerlink" href="#_7" title="Permanent link">¶</a></h3>
+<p><code>void</code></p>
+<h3 id="_8">自定义类型：<a class="headerlink" href="#_8" title="Permanent link">¶</a></h3>
+<p><code>typedef</code></p>
+<p>OC支持以上所有类型</p>
+<p>另外，OC还建立了一些新的数据类型：</p>
+<h3 id="bool">BOOL类型<a class="headerlink" href="#bool" title="Permanent link">¶</a></h3>
+<p>可以存储YES或者NO中的任意一个数据（YES和NO都是大写的）</p>
+<p>一般情况下BOOL类型的变量用来存储条件表达式的结果。如果条件表达式成立就是YES，条件表达式不成立就是NO。</p>
+<p>BOOL类型的本质是typedef signed char BOOL</p>
+<p>实际上BOOL类型的变量就是一个有符号的char变量</p>
+<p>进一步查看其定义内容会发现：</p>
+<p><div class="highlight"><pre><span></span><code><span class="cp">#define YES ((BOOL)1)</span>
+<span class="cp">#define NO ((BOOL)0)</span>
+</code></pre></div>
+所以我们得知，YES实际上就时1，NO实际上就是0。</p>
+<h3 id="boolean">Boolean类型<a class="headerlink" href="#boolean" title="Permanent link">¶</a></h3>
+<p>可以存储true或者false中的任意一个数据。</p>
+<p>一般情况下Boolean类型的变量用来存储条件表达式的结果。如果条件表达式成立就是true，条件表达式不成立就是false。</p>
+<p>Boolean类型的本质是typedef unsigned char Boolean;</p>
+<p>实际上Boolean类型的变量就是一个无符号的char变量。</p>
+<p>进一步查看其定义内容会发现：</p>
+<div class="highlight"><pre><span></span><code><span class="cp">#define true 1</span>
+<span class="cp">#define false 0</span>
+</code></pre></div>
+<p>所以我们得知，true实际上就时1，false实际上就是0。</p>
+<h3 id="class">class 类<a class="headerlink" href="#class" title="Permanent link">¶</a></h3>
+<h3 id="id">id 万能指针<a class="headerlink" href="#id" title="Permanent link">¶</a></h3>
+<h3 id="nilnilnullnsnull">nil、Nil、NULL、NSNull的區別<a class="headerlink" href="#nilnilnullnsnull" title="Permanent link">¶</a></h3>
+<p>nil:指向Objective-C語言中物件的空指標,其定義值為(id)0。</p>
+<p>Nil:指向Objective-C語言中類(Class)的空指標,其定義值為(Class)0。</p>
+<p>NULL:指向C語言中的標準空指標,其定義值為(void *)0。</p>
+<p>NSNull:在Objective-C語言的集合物件中,表示空值的物件,其定義值為[NSNull null]。[NSNull null]是一個物件,用在不能使用nil的場合。</p>
+<p>因為在NSArray和NSDictionary中nil有特殊的含義(表示列表結束),所以不能在集合中放入nil值。如要確實需要儲存一個表示“什麼都沒有”的值,可以使用NSNull類。例:[NSMutableArrayObj addObject:[NSNull null]];</p>
+<p>若obj為nil:[obj message]將返回NO,而不是NSException。</p>
+<p>若obj為NSNull:[obj message]將丟擲異常NSException。</p>
+<p>正常來說 nil，它所指的是一個物件對象，而這個對象的指標指向空 Empty，而 Nil 則是用來區別所指向的對象是一個類別 Class 而非物件，NULL 則指的是任何指向空值的指標。</p>
+<p>SEL 方法选择器</p>
+<p>block 代码段</p>
+<hr/>
+<h2 id="_9">四、运算<a class="headerlink" href="#_9" title="Permanent link">¶</a></h2>
+<p>OC支持C语言中的所有的运算符</p>
+<p><code>+、-、*、/、&amp;&amp;、||</code>等等全部都支持</p>
+<p>OC支持C语言中的所有控制语句</p>
+<p>if结构、switch-case结构、while循环等等全部都支持。</p>
+<p>OC支持C语言中的全部的关键字</p>
+<p>OC新增了一些关键字，OC新增的关键字绝大多数都是以@符号开头。例如：</p>
+<p><code>@interface</code></p>
+<p><code>@ implementation</code></p>
+<p><code>@ public</code></p>
+<p>OC函数的定义和调用与C语言完全一致</p>
+<hr/>
+<h2 id="_10">五、面向过程与面向对象<a class="headerlink" href="#_10" title="Permanent link">¶</a></h2>
+<p>在编程领域</p>
+<p>如果在解决一件事情的时候，每一个步骤都是我们自己亲自去一步步实现，那么解决问题的这种思路就叫做面向过程的解决思路。</p>
+<p>如果在解决一件事情的时候，自己并不亲自去做每一件事，而是找一个专家来帮助我们做，这样解决问题的思路，我们称之为面向对象的解决思路。</p>
+<hr/>
+<h2 id="_11">六、代码世界的面向过程与面向对象<a class="headerlink" href="#_11" title="Permanent link">¶</a></h2>
+<p>这两种方法的优缺点。</p>
+<p>首先，C语言是一门面向过程的语言，有功能的概念，但是没有去做事的人的概念；</p>
+<p>而OC事一门面向对象的语言。</p>
+<p>面向过程的方法的缺点：后期的维护和修改很不方便，而面向对象的方法在后期维护和修改十分方便。</p>
+<hr/>
+<h2 id="_12">七、使用面向对象的思维解决问题<a class="headerlink" href="#_12" title="Permanent link">¶</a></h2>
+<h2 id="_13">八、类与对象<a class="headerlink" href="#_13" title="Permanent link">¶</a></h2>
+<hr/>
+<h2 id="_14">九、类的定义<a class="headerlink" href="#_14" title="Permanent link">¶</a></h2>
+<p>那么如何去定义一个类呢？</p>
+<p>定义类的语法：</p>
+<p>位置：直接写在源文件中，不要写在 main 函数中
+语法：分两部分，一个是类的声明，另一个是类的实现。</p>
+<p>类的声明：
+<div class="highlight"><pre><span></span><code><span class="k">@interface</span> <span class="err">类名 : </span><span class="bp">NSObject</span>
+<span class="p">{</span><span class="w"></span>
+<span class="w"> </span><span class="n">这类事物具有的共同的特征</span><span class="err">，</span><span class="n">将它们定义为变量</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+<span class="n">功能就是一个方法</span><span class="err">，</span><span class="n">将方法的声明写在这里</span><span class="w"></span>
+<span class="k">@end</span><span class="w"></span>
+</code></pre></div></p>
+<p>类的实现：
+<div class="highlight"><pre><span></span><code><span class="k">@implementation</span> <span class="err">类名</span>
+<span class="n">将方法的实现写在这里</span><span class="w"></span>
+<span class="k">@end</span><span class="w"></span>
+</code></pre></div></p>
+<div class="highlight"><pre><span></span><code><span class="k">@interface</span> <span class="nc">Person</span> : <span class="bp">NSObject</span>
+<span class="p">{</span><span class="w"></span>
+<span class="w"> </span><span class="bp">NSString</span><span class="w"> </span><span class="o">*</span><span class="n">_name</span><span class="p">;</span><span class="w"></span>
+<span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">_age</span><span class="p">;</span><span class="w"></span>
+<span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">_height</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+
+<span class="k">@end</span><span class="w"></span>
+
+
+<span class="k">@implementation</span> <span class="nc">Person</span><span class="w"></span>
+
+<span class="k">@end</span><span class="w"></span>
+</code></pre></div>
+<ul>
+<li>类必须要有声明和实现</li>
+<li>类名用你描述的事物的名称来命名就可以了，类名的每一个单词的首字母必须要以大写开头</li>
+<li>用来表示这类事物的共同特征的变量必须要定义在@interface的大括号中</li>
+<li>定义在大括号之中的用来表示这类事物共同的特征的变量，我们叫做属性、成员变量、实例变量或字段</li>
+<li>定义的属性的名称必须要以下划线开头，这是编程规范</li>
+</ul>
+<hr/>
+<h2 id="_15">十、类的对象的创建和使用<a class="headerlink" href="#_15" title="Permanent link">¶</a></h2>
+<p>这里必须要事先声明，光是定义了类，类是无法直接使用的。如果非要使用的话，就必须要先找到这个类的一个具体存在，也就是找到这个类中的一个对象，才能具体使用。</p>
+<p>类和对象的关系是：类中有的东西，这个类的对象也有，不会多也不会少。</p>
+<p>如何创建一个类的对象？</p>
+<p>语法：<code>类名 *对象名 = [类名 new];</code></p>
+<p>例子：<code>Person *p1 = [Person new];</code></p>
+<p>这表示根据Person这个类的模板，创建了一个对象的名字叫做p1。</p>
+<p>p1对象的特点：</p>
+<ul>
+<li>可以直接使用</li>
+<li>类Person中定义的内容，这个对象p1中也有，不会多也不会少</li>
+</ul>
+</article>
+</div>
+</div>
+<a class="md-top md-icon" data-md-component="top" hidden="" href="#">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"></path></svg>
+            回到页面顶部
+          </a>
+</main>
+<footer class="md-footer">
+<nav aria-label="页脚" class="md-footer__inner md-grid">
+<a aria-label="上一页: Xcode" class="md-footer__link md-footer__link--prev" href="../../Xcode/Xcode/" rel="prev">
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"></path></svg>
+</div>
+<div class="md-footer__title">
+<div class="md-ellipsis">
+<span class="md-footer__direction">
+                上一页
+              </span>
+              Xcode
+            </div>
+</div>
+</a>
+<a aria-label="下一页: 介绍" class="md-footer__link md-footer__link--next" href="../../Swift/0.%E4%BB%8B%E7%BB%8D/" rel="next">
+<div class="md-footer__title">
+<div class="md-ellipsis">
+<span class="md-footer__direction">
+                下一页
+              </span>
+              介绍
+            </div>
+</div>
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"></path></svg>
+</div>
+</a>
+</nav>
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" rel="noopener" target="_blank">
+      Material for MkDocs
+    </a>
+</div>
+<div class="md-social">
+<a class="md-social__link" href="https://lyricn.com" rel="noopener" target="_blank" title="lyricn.com">
+<svg viewbox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M192 32c0 17.7 14.3 32 32 32 123.7 0 224 100.3 224 224 0 17.7 14.3 32 32 32s32-14.3 32-32C512 128.9 383.1 0 224 0c-17.7 0-32 14.3-32 32zm0 96c0 17.7 14.3 32 32 32 70.7 0 128 57.3 128 128 0 17.7 14.3 32 32 32s32-14.3 32-32c0-106-86-192-192-192-17.7 0-32 14.3-32 32zm-96 16c0-26.5-21.5-48-48-48S0 117.5 0 144v224c0 79.5 64.5 144 144 144s144-64.5 144-144-64.5-144-144-144h-16v96h16c26.5 0 48 21.5 48 48s-21.5 48-48 48-48-21.5-48-48V144z"></path></svg>
+</a>
+<a class="md-social__link" href="https://twitter.com/qhx1996" rel="noopener" target="_blank" title="twitter.com">
+<svg viewbox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"></path></svg>
+</a>
+<a class="md-social__link" href="mailto:&lt;support@lyricn.com&gt;" rel="noopener" target="_blank" title="">
+<svg viewbox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M498.1 5.6c10.1 7 15.4 19.1 13.5 31.2l-64 416c-1.5 9.7-7.4 18.2-16 23s-18.9 5.4-28 1.6l-126.3-52.5-40.1 74.5c-5.2 9.7-16.3 14.6-27 11.9S192 499 192 488v-96c0-5.3 1.8-10.5 5.1-14.7l165.3-212.6c2.5-7.1-6.5-14.3-13-8.4l-179 161.9-32 28.9c-9.2 8.3-22.3 10.6-33.8 5.8l-85-35.4C8.4 312.8.8 302.2.1 290s5.5-23.7 16.1-29.8l448-256c10.7-6.1 23.9-5.5 34 1.4z"></path></svg>
+</a>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<script id="__config" type="application/json">{"base": "../../..", "features": ["search.suggest", "search.highlight", "header.autohide", "navigation.top", "navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.expand", "navigation.indexes", "toc.integrate"], "search": "../../../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.config.lang": "ja", "search.config.pipeline": "trimmer, stemmer", "search.config.separator": "[\\s\\-\uff0c\u3002]+", "search.placeholder": "\u641c\u7d22", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version.title": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+<script src="../../../assets/javascripts/bundle.d6c3db9e.min.js"></script>
+<script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
+</html>
