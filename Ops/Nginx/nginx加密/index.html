@@ -7,17 +7,17 @@
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <meta content="陪伴，無論你需不需要我一直都在..." name="description"/>
 <meta content="qhx" name="author"/>
-<link href="https://wiki.lyricn.com/VPS/ZeroTier/" rel="canonical"/>
-<link href="../../assets/images/logo.png" rel="icon"/>
+<link href="https://wiki.lyricn.com/Ops/Nginx/nginx%E5%8A%A0%E5%AF%86/" rel="canonical"/>
+<link href="../../../assets/images/logo.png" rel="icon"/>
 <meta content="mkdocs-1.4.2, mkdocs-material-8.5.8" name="generator"/>
-<title>ZeroTier - Lyricn Wiki</title>
-<link href="../../assets/stylesheets/main.20d9efc8.min.css" rel="stylesheet"/>
-<link href="../../assets/stylesheets/palette.815d1a91.min.css" rel="stylesheet"/>
+<title>加密 - Lyricn Wiki</title>
+<link href="../../../assets/stylesheets/main.20d9efc8.min.css" rel="stylesheet"/>
+<link href="../../../assets/stylesheets/palette.815d1a91.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css?family=Ubuntu:300,300i,400,400i,700,700i%7CUbuntu+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
 <style>:root{--md-text-font:"Ubuntu";--md-code-font:"Ubuntu Mono"}</style>
-<script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
-<link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+<script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+<link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
             html.glightbox-open { overflow: initial; height: 100%; }
             .gslide-title { margin-top: 0px; user-select: text; }
             .gslide-desc { color: #666; user-select: text; }
@@ -28,14 +28,14 @@
                 body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
                 body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
                 body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
-                </style><script src="../../assets/javascripts/glightbox.min.js"></script></head>
+                </style><script src="../../../assets/javascripts/glightbox.min.js"></script></head>
 <body data-md-color-accent="" data-md-color-primary="" data-md-color-scheme="" dir="ltr">
 <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
 <input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#zerotier">
+<a class="md-skip" href="#nginx">
           跳转至
         </a>
 </div>
@@ -43,7 +43,7 @@
 </div>
 <header class="md-header md-header--lifted" data-md-component="header">
 <nav aria-label="页眉" class="md-header__inner md-grid">
-<a aria-label="Lyricn Wiki" class="md-header__button md-logo" data-md-component="logo" href="../.." title="Lyricn Wiki">
+<a aria-label="Lyricn Wiki" class="md-header__button md-logo" data-md-component="logo" href="../../.." title="Lyricn Wiki">
 <svg viewbox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M96 0C43 0 0 43 0 96v320c0 53 43 96 96 96h320c17.7 0 32-14.3 32-32s-14.3-32-32-32v-64c17.7 0 32-14.3 32-32V32c0-17.7-14.3-32-32-32H96zm0 384h256v64H96c-17.7 0-32-14.3-32-32s14.3-32 32-32zm32-240c0-8.8 7.2-16 16-16h192c8.8 0 16 7.2 16 16s-7.2 16-16 16H144c-8.8 0-16-7.2-16-16zm16 48h192c8.8 0 16 7.2 16 16s-7.2 16-16 16H144c-8.8 0-16-7.2-16-16s7.2-16 16-16z"></path></svg>
 </a>
 <label class="md-header__button md-icon" for="__drawer">
@@ -59,7 +59,7 @@
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              ZeroTier
+              加密
             
           </span>
 </div>
@@ -125,72 +125,72 @@
 <div class="md-tabs__inner md-grid">
 <ul class="md-tabs__list">
 <li class="md-tabs__item">
-<a class="md-tabs__link" href="../..">
+<a class="md-tabs__link" href="../../..">
       Home
     </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link" href="../../wiki_index/">
+<a class="md-tabs__link" href="../../../wiki_index/">
         Wiki
       </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link" href="../../Ops/Linux/Linux/0.%E5%9F%BA%E7%A1%80/">
+<a class="md-tabs__link md-tabs__link--active" href="../../Linux/Linux/0.%E5%9F%BA%E7%A1%80/">
         Ops
       </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link" href="../../ProgramL/">
+<a class="md-tabs__link" href="../../../ProgramL/">
         ProgramL
       </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link md-tabs__link--active" href="../%E5%B8%B8%E7%94%A8%E8%84%9A%E6%9C%AC/">
+<a class="md-tabs__link" href="../../../VPS/%E5%B8%B8%E7%94%A8%E8%84%9A%E6%9C%AC/">
         VPS
       </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link" href="../../NAS/QNAP/Docker/Docker/">
+<a class="md-tabs__link" href="../../../NAS/QNAP/Docker/Docker/">
         NAS
       </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link" href="../../IOS%E5%AD%A6%E4%B9%A0/IOS/">
+<a class="md-tabs__link" href="../../../IOS%E5%AD%A6%E4%B9%A0/IOS/">
         IOS
       </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link" href="../../Docker/1.%E5%9F%BA%E7%A1%80/">
+<a class="md-tabs__link" href="../../../Docker/1.%E5%9F%BA%E7%A1%80/">
         Docker
       </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link" href="../../Book/%E5%9C%A8%E7%BA%BF%E4%B9%A6%E7%B1%8D/">
+<a class="md-tabs__link" href="../../../Book/%E5%9C%A8%E7%BA%BF%E4%B9%A6%E7%B1%8D/">
         Reading
       </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link" href="../../Other/JetBrains/">
+<a class="md-tabs__link" href="../../../Other/JetBrains/">
         Other
       </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link" href="../../%E6%B8%B8%E6%88%B2/Switch/%E6%80%AA%E7%89%A9%E7%8D%B5%E4%BA%BA/">
+<a class="md-tabs__link" href="../../../%E6%B8%B8%E6%88%B2/Switch/%E6%80%AA%E7%89%A9%E7%8D%B5%E4%BA%BA/">
         游戲
       </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link" href="../../%E8%AA%9E%E9%8C%84/Mika/">
+<a class="md-tabs__link" href="../../../%E8%AA%9E%E9%8C%84/Mika/">
         語錄
       </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link" href="../../Other/tags/">
+<a class="md-tabs__link" href="../../../Other/tags/">
       Tags
     </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link" href="../../Other/Link/">
+<a class="md-tabs__link" href="../../../Other/Link/">
       Links
     </a>
 </li>
@@ -216,7 +216,7 @@
 <div class="md-sidebar__inner">
 <nav aria-label="导航栏" class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" data-md-level="0">
 <label class="md-nav__title" for="__drawer">
-<a aria-label="Lyricn Wiki" class="md-nav__button md-logo" data-md-component="logo" href="../.." title="Lyricn Wiki">
+<a aria-label="Lyricn Wiki" class="md-nav__button md-logo" data-md-component="logo" href="../../.." title="Lyricn Wiki">
 <svg viewbox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M96 0C43 0 0 43 0 96v320c0 53 43 96 96 96h320c17.7 0 32-14.3 32-32s-14.3-32-32-32v-64c17.7 0 32-14.3 32-32V32c0-17.7-14.3-32-32-32H96zm0 384h256v64H96c-17.7 0-32-14.3-32-32s14.3-32 32-32zm32-240c0-8.8 7.2-16 16-16h192c8.8 0 16 7.2 16 16s-7.2 16-16 16H144c-8.8 0-16-7.2-16-16zm16 48h192c8.8 0 16 7.2 16 16s-7.2 16-16 16H144c-8.8 0-16-7.2-16-16s7.2-16 16-16z"></path></svg>
 </a>
     Lyricn Wiki
@@ -233,7 +233,7 @@
 </div>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../..">
+<a class="md-nav__link" href="../../..">
         Home
       </a>
 </li>
@@ -250,7 +250,7 @@
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../wiki_index/">
+<a class="md-nav__link" href="../../../wiki_index/">
         介绍
       </a>
 </li>
@@ -267,17 +267,17 @@
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../GitBook/1.NVM%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8/">
+<a class="md-nav__link" href="../../../GitBook/1.NVM%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8/">
         1.NVM安装使用
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../GitBook/2.GitBook%E6%90%AD%E5%BB%BA/">
+<a class="md-nav__link" href="../../../GitBook/2.GitBook%E6%90%AD%E5%BB%BA/">
         2.GitBook搭建
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../GitBook/3.GitBook%E6%8F%92%E4%BB%B6/">
+<a class="md-nav__link" href="../../../GitBook/3.GitBook%E6%8F%92%E4%BB%B6/">
         3.GitBook插件
       </a>
 </li>
@@ -297,12 +297,12 @@
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../MkDocs/1.MkDocs%E6%90%AD%E5%BB%BA/">
+<a class="md-nav__link" href="../../../MkDocs/1.MkDocs%E6%90%AD%E5%BB%BA/">
         1.MkDocs搭建
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../MkDocs/2.mkdocs%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6/">
+<a class="md-nav__link" href="../../../MkDocs/2.mkdocs%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6/">
         2.mkdocs配置文件
       </a>
 </li>
@@ -312,8 +312,8 @@
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--nested">
-<input checked="" class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_3" id="__nav_3" type="checkbox"/>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" id="__nav_3" type="checkbox"/>
 <label class="md-nav__link" for="__nav_3">
           Ops
           <span class="md-nav__icon md-icon"></span>
@@ -349,32 +349,32 @@
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../Ops/Linux/Linux/0.%E5%9F%BA%E7%A1%80/">
+<a class="md-nav__link" href="../../Linux/Linux/0.%E5%9F%BA%E7%A1%80/">
         基础
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../Ops/Linux/Linux/1.%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%AE%89%E5%85%A8/">
+<a class="md-nav__link" href="../../Linux/Linux/1.%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%AE%89%E5%85%A8/">
         安全
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../Ops/Linux/Linux/2.%E9%98%B2%E7%81%AB%E5%A2%99/">
+<a class="md-nav__link" href="../../Linux/Linux/2.%E9%98%B2%E7%81%AB%E5%A2%99/">
         防火墙
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../Ops/Linux/Linux/3.%E8%A7%A3%E5%8E%8B%E7%BC%A9/">
+<a class="md-nav__link" href="../../Linux/Linux/3.%E8%A7%A3%E5%8E%8B%E7%BC%A9/">
         解压缩
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../Ops/Linux/Linux/4.Log/">
+<a class="md-nav__link" href="../../Linux/Linux/4.Log/">
         Log
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../Ops/Linux/Linux/5.%E6%96%87%E4%BB%B6/">
+<a class="md-nav__link" href="../../Linux/Linux/5.%E6%96%87%E4%BB%B6/">
         文件
       </a>
 </li>
@@ -391,7 +391,7 @@
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../Ops/Linux/Linux/%E5%91%BD%E4%BB%A4/Screen/">
+<a class="md-nav__link" href="../../Linux/Linux/%E5%91%BD%E4%BB%A4/Screen/">
         Screen
       </a>
 </li>
@@ -411,12 +411,12 @@
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../Ops/Linux/Linux/CentOS/%E5%8D%87%E7%BA%A7OpenSSH/">
+<a class="md-nav__link" href="../../Linux/Linux/CentOS/%E5%8D%87%E7%BA%A7OpenSSH/">
         升级OpenSSH
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../Ops/Linux/Linux/CentOS/%E5%8D%87%E7%BA%A7sudo/">
+<a class="md-nav__link" href="../../Linux/Linux/CentOS/%E5%8D%87%E7%BA%A7sudo/">
         升级sudo
       </a>
 </li>
@@ -436,12 +436,12 @@
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../Ops/Linux/Linux/Ubuntu/Ubuntu22.04/">
+<a class="md-nav__link" href="../../Linux/Linux/Ubuntu/Ubuntu22.04/">
         Ubuntu22.04
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../Ops/Linux/Linux/Ubuntu/UFW/">
+<a class="md-nav__link" href="../../Linux/Linux/Ubuntu/UFW/">
         UFW
       </a>
 </li>
@@ -461,12 +461,12 @@
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../Ops/Linux/Linux/software/frp/">
+<a class="md-nav__link" href="../../Linux/Linux/software/frp/">
         frp
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../Ops/Linux/Linux/software/rsync/">
+<a class="md-nav__link" href="../../Linux/Linux/software/rsync/">
         rsync
       </a>
 </li>
@@ -486,12 +486,12 @@
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../Ops/Linux/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3Linux%E7%BD%91%E7%BB%9C/0.index/">
+<a class="md-nav__link" href="../../Linux/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3Linux%E7%BD%91%E7%BB%9C/0.index/">
         介绍
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../Ops/Linux/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3Linux%E7%BD%91%E7%BB%9C/1.%E7%BB%AA%E8%AE%BA/">
+<a class="md-nav__link" href="../../Linux/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3Linux%E7%BD%91%E7%BB%9C/1.%E7%BB%AA%E8%AE%BA/">
         1.绪论
       </a>
 </li>
@@ -511,7 +511,7 @@
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../Ops/Linux/PVE/0.%E4%BD%BF%E7%94%A8/">
+<a class="md-nav__link" href="../../Linux/PVE/0.%E4%BD%BF%E7%94%A8/">
         使用
       </a>
 </li>
@@ -534,22 +534,22 @@
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../Ops/Windows/1.Windows%E8%BD%AF%E4%BB%B6/">
+<a class="md-nav__link" href="../../Windows/1.Windows%E8%BD%AF%E4%BB%B6/">
         必备软件
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../Ops/Windows/2.%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/">
+<a class="md-nav__link" href="../../Windows/2.%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/">
         常用命令
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../Ops/Windows/0.%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%AE%89%E5%85%A8/">
+<a class="md-nav__link" href="../../Windows/0.%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%AE%89%E5%85%A8/">
         服务器安全
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../Ops/Windows/3.%E9%81%87%E5%88%B0%E7%9A%84%E9%97%AE%E9%A2%98/">
+<a class="md-nav__link" href="../../Windows/3.%E9%81%87%E5%88%B0%E7%9A%84%E9%97%AE%E9%A2%98/">
         遇到的问题
       </a>
 </li>
@@ -566,17 +566,17 @@
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../Ops/Windows/%E8%BD%AF%E4%BB%B6/Windhawk/">
+<a class="md-nav__link" href="../../Windows/%E8%BD%AF%E4%BB%B6/Windhawk/">
         Windhawk
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../Ops/Windows/%E8%BD%AF%E4%BB%B6/tomcat/">
+<a class="md-nav__link" href="../../Windows/%E8%BD%AF%E4%BB%B6/tomcat/">
         Tomcat
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../Ops/Windows/%E8%BD%AF%E4%BB%B6/bat/">
+<a class="md-nav__link" href="../../Windows/%E8%BD%AF%E4%BB%B6/bat/">
         bat
       </a>
 </li>
@@ -599,7 +599,7 @@
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../Ops/Mac/brew/">
+<a class="md-nav__link" href="../../Mac/brew/">
         brew
       </a>
 </li>
@@ -619,12 +619,12 @@
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../Ops/OpenWrt/0.%E7%BC%96%E8%AF%91/">
+<a class="md-nav__link" href="../../OpenWrt/0.%E7%BC%96%E8%AF%91/">
         编译
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../Ops/OpenWrt/%E6%8F%92%E4%BB%B6/openclash/">
+<a class="md-nav__link" href="../../OpenWrt/%E6%8F%92%E4%BB%B6/openclash/">
         插件
       </a>
 </li>
@@ -644,7 +644,7 @@
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../Ops/Microsoft/Microsoft%20365/">
+<a class="md-nav__link" href="../../Microsoft/Microsoft%20365/">
         Microsoft 365
       </a>
 </li>
@@ -664,7 +664,7 @@
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../Ops/Adguard/Adguard/">
+<a class="md-nav__link" href="../../Adguard/Adguard/">
         Adguard
       </a>
 </li>
@@ -684,7 +684,7 @@
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../Ops/SSH/FinalShell/">
+<a class="md-nav__link" href="../../SSH/FinalShell/">
         FinalShell
       </a>
 </li>
@@ -694,8 +694,8 @@
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--section md-nav__item--nested">
-<input checked="" class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_3_2" id="__nav_3_2" type="checkbox"/>
+<li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2" id="__nav_3_2" type="checkbox"/>
 <label class="md-nav__link" for="__nav_3_2">
           Tools
           <span class="md-nav__icon md-icon"></span>
@@ -719,15 +719,15 @@
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../Ops/Github/Github%E5%9B%BE%E5%BA%8A/">
+<a class="md-nav__link" href="../../Github/Github%E5%9B%BE%E5%BA%8A/">
         图床
       </a>
 </li>
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--nested">
-<input checked="" class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_3_2_2" id="__nav_3_2_2" type="checkbox"/>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2_2" id="__nav_3_2_2" type="checkbox"/>
 <label class="md-nav__link" for="__nav_3_2_2">
           Nginx
           <span class="md-nav__icon md-icon"></span>
@@ -739,14 +739,56 @@
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../Ops/Nginx/nginx/">
+<a class="md-nav__link" href="../nginx/">
         基础
       </a>
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../Ops/Nginx/nginx%E5%8A%A0%E5%AF%86/">
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+          加密
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
         加密
       </a>
+<nav aria-label="目录" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#nginx_1">
+    nginx 开启访问验证
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#htpasswd">
+    htpasswd 命令
+  </a>
+<nav aria-label="htpasswd 命令" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#htpasswd_1">
+    htpasswd选项参数:
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#htpasswd_2">
+    htpasswd命令选项参数说明:
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#htpasswd_3">
+    htpasswd例子
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
 </li>
 </ul>
 </nav>
@@ -764,7 +806,7 @@
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../Ops/Redis/Redis/">
+<a class="md-nav__link" href="../../Redis/Redis/">
         不同环境使用Redis
       </a>
 </li>
@@ -780,7 +822,7 @@
 <li class="md-nav__item md-nav__item--nested">
 <input checked="" class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_4" id="__nav_4" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../../ProgramL/">ProgramL</a>
+<a href="../../../ProgramL/">ProgramL</a>
 <label for="__nav_4">
 <span class="md-nav__icon md-icon"></span>
 </label>
@@ -804,7 +846,7 @@
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../ProgramL/AI/ChatGPT/">
+<a class="md-nav__link" href="../../../ProgramL/AI/ChatGPT/">
         ChatGPT
       </a>
 </li>
@@ -824,7 +866,7 @@
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../ProgramL/Java/idea/">
+<a class="md-nav__link" href="../../../ProgramL/Java/idea/">
         idea
       </a>
 </li>
@@ -841,22 +883,22 @@
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../ProgramL/Java/DateUtils/">
+<a class="md-nav__link" href="../../../ProgramL/Java/DateUtils/">
         DateUtils
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../ProgramL/Java/Hibernate/">
+<a class="md-nav__link" href="../../../ProgramL/Java/Hibernate/">
         Hibernate
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../ProgramL/Java/AsposeCells/">
+<a class="md-nav__link" href="../../../ProgramL/Java/AsposeCells/">
         Aspose Cells
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../ProgramL/Java/List/">
+<a class="md-nav__link" href="../../../ProgramL/Java/List/">
         List
       </a>
 </li>
@@ -879,7 +921,7 @@
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../ProgramL/PHP/php/">
+<a class="md-nav__link" href="../../../ProgramL/PHP/php/">
         基础
       </a>
 </li>
@@ -911,7 +953,7 @@
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../ProgramL/SQL/MySQL/1.mysql%E5%9F%BA%E7%A1%80/">
+<a class="md-nav__link" href="../../../ProgramL/SQL/MySQL/1.mysql%E5%9F%BA%E7%A1%80/">
         mysql基础
       </a>
 </li>
@@ -931,7 +973,7 @@
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../ProgramL/SQL/SQLServer/SQLserver/">
+<a class="md-nav__link" href="../../../ProgramL/SQL/SQLServer/SQLserver/">
         SQLServer基础
       </a>
 </li>
@@ -951,7 +993,7 @@
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../ProgramL/SQL/phpMyAdmin/%E9%81%87%E5%88%B0%E7%9A%84%E9%97%AE%E9%A2%98/">
+<a class="md-nav__link" href="../../../ProgramL/SQL/phpMyAdmin/%E9%81%87%E5%88%B0%E7%9A%84%E9%97%AE%E9%A2%98/">
         遇到的问题
       </a>
 </li>
@@ -974,12 +1016,12 @@
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../ProgramL/Python/python/">
+<a class="md-nav__link" href="../../../ProgramL/Python/python/">
         基础
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../ProgramL/Python/pip/">
+<a class="md-nav__link" href="../../../ProgramL/Python/pip/">
         pip
       </a>
 </li>
@@ -999,7 +1041,7 @@
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../ProgramL/Shell/shell/">
+<a class="md-nav__link" href="../../../ProgramL/Shell/shell/">
         Shell
       </a>
 </li>
@@ -1009,8 +1051,8 @@
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--active md-nav__item--nested">
-<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" id="__nav_5" type="checkbox"/>
+<li class="md-nav__item md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_5" id="__nav_5" type="checkbox"/>
 <label class="md-nav__link" for="__nav_5">
           VPS
           <span class="md-nav__icon md-icon"></span>
@@ -1021,8 +1063,8 @@
           VPS
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
-<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_1" id="__nav_5_1" type="checkbox"/>
+<li class="md-nav__item md-nav__item--section md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_5_1" id="__nav_5_1" type="checkbox"/>
 <label class="md-nav__link" for="__nav_5_1">
           部署
           <span class="md-nav__icon md-icon"></span>
@@ -1034,91 +1076,34 @@
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../%E5%B8%B8%E7%94%A8%E8%84%9A%E6%9C%AC/">
+<a class="md-nav__link" href="../../../VPS/%E5%B8%B8%E7%94%A8%E8%84%9A%E6%9C%AC/">
         常用脚本
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../%E6%9C%8D%E5%8A%A1%E5%95%86/">
+<a class="md-nav__link" href="../../../VPS/%E6%9C%8D%E5%8A%A1%E5%95%86/">
         服务商
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../Telegram/">
+<a class="md-nav__link" href="../../../VPS/Telegram/">
         Telegram
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../%E9%81%87%E5%88%B0%E7%9A%84%E9%97%AE%E9%A2%98/">
+<a class="md-nav__link" href="../../../VPS/%E9%81%87%E5%88%B0%E7%9A%84%E9%97%AE%E9%A2%98/">
         遇到的问题
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../%E5%A2%9E%E5%8A%A0%E4%BA%A4%E6%8D%A2%E5%86%85%E5%AD%98/">
+<a class="md-nav__link" href="../../../VPS/%E5%A2%9E%E5%8A%A0%E4%BA%A4%E6%8D%A2%E5%86%85%E5%AD%98/">
         增加交换内存
       </a>
 </li>
-<li class="md-nav__item md-nav__item--active">
-<input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
-<label class="md-nav__link md-nav__link--active" for="__toc">
-          ZeroTier
-          <span class="md-nav__icon md-icon"></span>
-</label>
-<a class="md-nav__link md-nav__link--active" href="./">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../VPS/ZeroTier/">
         ZeroTier
       </a>
-<nav aria-label="目录" class="md-nav md-nav--secondary">
-<label class="md-nav__title" for="__toc">
-<span class="md-nav__icon md-icon"></span>
-      目录
-    </label>
-<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#mac">
-    Mac
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#ubuntu">
-    Ubuntu
-  </a>
-<nav aria-label="Ubuntu" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#ubuntu2204zerotierupdate">
-    Ubuntu22.04安装zerotier,在update时会报错
-  </a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#openwrt">
-    OpenWrt
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#qnap">
-    QNAP
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#docker">
-    Docker部署
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#zerotier_1">
-    如何卸载Zerotier
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_1">
-    遇到的问题
-  </a>
-</li>
-</ul>
-</nav>
 </li>
 </ul>
 </nav>
@@ -1136,7 +1121,7 @@
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../Cloudflare/Cloudflare%E4%BD%BF%E7%94%A8/">
+<a class="md-nav__link" href="../../../VPS/Cloudflare/Cloudflare%E4%BD%BF%E7%94%A8/">
         使用
       </a>
 </li>
@@ -1156,32 +1141,32 @@
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../WordPress/%E5%9F%BA%E7%A1%80%E6%93%8D%E4%BD%9C/">
+<a class="md-nav__link" href="../../../WordPress/%E5%9F%BA%E7%A1%80%E6%93%8D%E4%BD%9C/">
         基础操作
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../WordPress/wordpress%E5%9F%BA%E7%A1%80/">
+<a class="md-nav__link" href="../../../WordPress/wordpress%E5%9F%BA%E7%A1%80/">
         基础
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../WordPress/wordpress%E5%AE%89%E5%85%A8/">
+<a class="md-nav__link" href="../../../WordPress/wordpress%E5%AE%89%E5%85%A8/">
         安全
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../WordPress/wordpress%E8%BF%81%E7%A7%BB/">
+<a class="md-nav__link" href="../../../WordPress/wordpress%E8%BF%81%E7%A7%BB/">
         迁移
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../WordPress/wordpress%E6%8F%92%E4%BB%B6/">
+<a class="md-nav__link" href="../../../WordPress/wordpress%E6%8F%92%E4%BB%B6/">
         插件
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../WordPress/wordpress%E9%85%8D%E7%BD%AE/">
+<a class="md-nav__link" href="../../../WordPress/wordpress%E9%85%8D%E7%BD%AE/">
         配置
       </a>
 </li>
@@ -1216,17 +1201,17 @@
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../NAS/QNAP/Docker/Docker/">
+<a class="md-nav__link" href="../../../NAS/QNAP/Docker/Docker/">
         Docker
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../NAS/QNAP/TeamViewer/TeamViewer/">
+<a class="md-nav__link" href="../../../NAS/QNAP/TeamViewer/TeamViewer/">
         TeamViewer
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../NAS/QNAP/%E8%AE%BE%E5%A4%87/">
+<a class="md-nav__link" href="../../../NAS/QNAP/%E8%AE%BE%E5%A4%87/">
         設備
       </a>
 </li>
@@ -1249,7 +1234,7 @@
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../IOS%E5%AD%A6%E4%B9%A0/IOS/">
+<a class="md-nav__link" href="../../../IOS%E5%AD%A6%E4%B9%A0/IOS/">
         IOS
       </a>
 </li>
@@ -1266,7 +1251,7 @@
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../IOS%E5%AD%A6%E4%B9%A0/Xcode/Xcode/">
+<a class="md-nav__link" href="../../../IOS%E5%AD%A6%E4%B9%A0/Xcode/Xcode/">
         Xcode
       </a>
 </li>
@@ -1286,12 +1271,12 @@
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../IOS%E5%AD%A6%E4%B9%A0/Objective-C/OC/">
+<a class="md-nav__link" href="../../../IOS%E5%AD%A6%E4%B9%A0/Objective-C/OC/">
         OC
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../IOS%E5%AD%A6%E4%B9%A0/Objective-C/%E5%85%B3%E4%BA%8EOC/">
+<a class="md-nav__link" href="../../../IOS%E5%AD%A6%E4%B9%A0/Objective-C/%E5%85%B3%E4%BA%8EOC/">
         关于OC
       </a>
 </li>
@@ -1311,7 +1296,7 @@
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../IOS%E5%AD%A6%E4%B9%A0/Swift/0.%E4%BB%8B%E7%BB%8D/">
+<a class="md-nav__link" href="../../../IOS%E5%AD%A6%E4%B9%A0/Swift/0.%E4%BB%8B%E7%BB%8D/">
         介绍
       </a>
 </li>
@@ -1331,7 +1316,7 @@
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../IOS%E5%AD%A6%E4%B9%A0/tools/CocoaPods/">
+<a class="md-nav__link" href="../../../IOS%E5%AD%A6%E4%B9%A0/tools/CocoaPods/">
         CocoaPods
       </a>
 </li>
@@ -1354,27 +1339,27 @@
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../Docker/1.%E5%9F%BA%E7%A1%80/">
+<a class="md-nav__link" href="../../../Docker/1.%E5%9F%BA%E7%A1%80/">
         1.基础
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../Docker/2.%E6%B5%81%E7%A8%8B/">
+<a class="md-nav__link" href="../../../Docker/2.%E6%B5%81%E7%A8%8B/">
         2.流程
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../Docker/3.%E5%AE%B9%E5%99%A8%E5%AE%89%E8%A3%85/">
+<a class="md-nav__link" href="../../../Docker/3.%E5%AE%B9%E5%99%A8%E5%AE%89%E8%A3%85/">
         3.容器安装
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../Docker/4.%E5%AD%98%E5%82%A8%E7%9B%AE%E5%BD%95%E8%BF%81%E7%A7%BB/">
+<a class="md-nav__link" href="../../../Docker/4.%E5%AD%98%E5%82%A8%E7%9B%AE%E5%BD%95%E8%BF%81%E7%A7%BB/">
         4.存储目录迁移
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../Docker/windows%E4%BD%BF%E7%94%A8docker/">
+<a class="md-nav__link" href="../../../Docker/windows%E4%BD%BF%E7%94%A8docker/">
         Windows使用
       </a>
 </li>
@@ -1391,17 +1376,17 @@
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../Docker/%E6%9C%8D%E5%8A%A1/memos/">
+<a class="md-nav__link" href="../../../Docker/%E6%9C%8D%E5%8A%A1/memos/">
         Memos
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../Docker/%E6%9C%8D%E5%8A%A1/TTRSS/">
+<a class="md-nav__link" href="../../../Docker/%E6%9C%8D%E5%8A%A1/TTRSS/">
         TTRSS
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../Docker/%E6%9C%8D%E5%8A%A1/flarum/">
+<a class="md-nav__link" href="../../../Docker/%E6%9C%8D%E5%8A%A1/flarum/">
         Flarmu
       </a>
 </li>
@@ -1424,12 +1409,12 @@
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../Book/%E5%9C%A8%E7%BA%BF%E4%B9%A6%E7%B1%8D/">
+<a class="md-nav__link" href="../../../Book/%E5%9C%A8%E7%BA%BF%E4%B9%A6%E7%B1%8D/">
         在线书籍
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../Book/%E7%88%B1%E4%B8%8A%E8%B7%91%E6%AD%A5%E7%9A%8413%E5%91%A8/">
+<a class="md-nav__link" href="../../../Book/%E7%88%B1%E4%B8%8A%E8%B7%91%E6%AD%A5%E7%9A%8413%E5%91%A8/">
         爱上跑步的13周
       </a>
 </li>
@@ -1449,22 +1434,22 @@
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../Other/JetBrains/">
+<a class="md-nav__link" href="../../../Other/JetBrains/">
         JetBrains
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../Other/timetogo/">
+<a class="md-nav__link" href="../../../Other/timetogo/">
         TimeToGo
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../Other/RSS/RSS/">
+<a class="md-nav__link" href="../../../Other/RSS/RSS/">
         RSS
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../Other/%E8%B5%84%E6%BA%90%E4%B8%8B%E8%BD%BD/">
+<a class="md-nav__link" href="../../../Other/%E8%B5%84%E6%BA%90%E4%B8%8B%E8%BD%BD/">
         资源
       </a>
 </li>
@@ -1496,7 +1481,7 @@
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../%E6%B8%B8%E6%88%B2/Switch/%E6%80%AA%E7%89%A9%E7%8D%B5%E4%BA%BA/">
+<a class="md-nav__link" href="../../../%E6%B8%B8%E6%88%B2/Switch/%E6%80%AA%E7%89%A9%E7%8D%B5%E4%BA%BA/">
         怪物獵人
       </a>
 </li>
@@ -1516,7 +1501,7 @@
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../%E6%B8%B8%E6%88%B2/Xbox/DOA5LR/">
+<a class="md-nav__link" href="../../../%E6%B8%B8%E6%88%B2/Xbox/DOA5LR/">
         DOA5LR
       </a>
 </li>
@@ -1539,7 +1524,7 @@
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../%E8%AA%9E%E9%8C%84/Mika/">
+<a class="md-nav__link" href="../../../%E8%AA%9E%E9%8C%84/Mika/">
         Mika
       </a>
 </li>
@@ -1547,12 +1532,12 @@
 </nav>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../Other/tags/">
+<a class="md-nav__link" href="../../../Other/tags/">
         Tags
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../Other/Link/">
+<a class="md-nav__link" href="../../../Other/Link/">
         Links
       </a>
 </li>
@@ -1574,93 +1559,82 @@
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
 <nav class="md-tags">
-<a class="md-tag" href="../../Other/tags/#vps">VPS</a>
-<a class="md-tag" href="../../Other/tags/#zerotier">ZeroTier</a>
+<a class="md-tag" href="../../../Other/tags/#nginx">Nginx</a>
 </nav>
-<a class="md-content__button md-icon" href="https://github.com/lyricer/love/edit/master/docs/VPS/ZeroTier.md" title="编辑此页">
+<a class="md-content__button md-icon" href="https://github.com/lyricer/love/edit/master/docs/Ops/Nginx/nginx加密.md" title="编辑此页">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"></path></svg>
 </a>
-<h1 id="zerotier">ZeroTier<a class="headerlink" href="#zerotier" title="Permanent link">¶</a></h1>
-<p>最近发现一个十分好用的工具，可以帮我进行内网穿透</p>
-<h2 id="mac">Mac<a class="headerlink" href="#mac" title="Permanent link">¶</a></h2>
-<div class="highlight"><pre><span></span><code>sudo launchctl unload /Library/LaunchDaemons/com.zerotier.one.plist
-sudo launchctl load -w /Library/LaunchDaemons/com.zerotier.one.plist
+<h1 id="nginx">Nginx 加密<a class="headerlink" href="#nginx" title="Permanent link">¶</a></h1>
+<p>nginx配置访问密码，输入用户名和密码才能访问</p>
+<h2 id="nginx_1">nginx 开启访问验证<a class="headerlink" href="#nginx_1" title="Permanent link">¶</a></h2>
+<p>在 nginx 下，提供了 ngx_http_auth_basic_module 模块实现让用户只有输入正确的用户名密码才允许访问web内容。默认情况下，nginx 已经安装了该模块。所以整体的一个过程就是先用第三方工具（ htpasswd，或者使用 openssl）设置用户名、密码（其中密码已经加过密），然后保存到文件中，接着在 nginx 配置文件中根据之前事先保存的文件开启访问验证。</p>
+<div class="highlight"><pre><span></span><code>安装 htpasswd 工具
+<span class="c1"># CentOS</span>
+yum install -y httpd-tools
+<span class="c1"># Ubuntu</span>
+apt install apache2-utils
+<span class="c1"># 设置用户名和密码，并把他们保存到指定文件中</span>
+mkdir -p /usr/local/nginx/passwd
+htpasswd -cs /usr/local/nginx/passwd/passwd admin
+<span class="c1"># /usr/local/nginx/passwd/passwd 是生成密码文件的路径，然后admin是用户名，你可以根据需要自行设置成其它用户名。运行命令后，会要求你连续输入两次密码。输入成功后，会提示已经为admin这个用户添加了密码</span>
 </code></pre></div>
-<h2 id="ubuntu">Ubuntu<a class="headerlink" href="#ubuntu" title="Permanent link">¶</a></h2>
-<div class="highlight"><pre><span></span><code>curl -s https://install.zerotier.com <span class="p">|</span> sudo bash
-sudo zerotier-cli join 你的network ID
-<span class="c1"># 查看状态</span>
-sudo zerotier-cli status
-<span class="c1"># 查看节点列表</span>
-sudo zerotier-cli listpeers
+<div class="highlight"><pre><span></span><code><span class="c1"># 修改 nginx 配置文件</span>
+server <span class="o">{</span>
+    listen <span class="m">80</span><span class="p">;</span>
+    server_name  localhost<span class="p">;</span>
+    .......
+    <span class="c1">#新增下面两行</span>
+    auth_basic <span class="s2">"Please input password"</span><span class="p">;</span> <span class="c1">#这里是验证时的提示信息</span>
+    auth_basic_user_file /usr/local/nginx/passwd/passwd<span class="p">;</span>
+    location /<span class="o">{</span>
+    .......
+<span class="o">}</span>
+<span class="c1"># 也可以在location中加</span>
+<span class="c1"># 重启nginx</span>
+nginx -t
+nginx -s relaod
 </code></pre></div>
-<h3 id="ubuntu2204zerotierupdate">Ubuntu22.04安装zerotier,在update时会报错<a class="headerlink" href="#ubuntu2204zerotierupdate" title="Permanent link">¶</a></h3>
+<h2 id="htpasswd">htpasswd 命令<a class="headerlink" href="#htpasswd" title="Permanent link">¶</a></h2>
+<h3 id="htpasswd_1">htpasswd选项参数:<a class="headerlink" href="#htpasswd_1" title="Permanent link">¶</a></h3>
+<ul>
+<li>htpasswd [-cmdpsD] passwordfile username</li>
+<li>htpasswd -b[cmdpsD] passwordfile username password</li>
+<li>htpasswd -n[mdps] username</li>
+<li>htpasswd -nb[mdps] username password</li>
+</ul>
+<h3 id="htpasswd_2">htpasswd命令选项参数说明:<a class="headerlink" href="#htpasswd_2" title="Permanent link">¶</a></h3>
+<ul>
+<li>-c 创建一个加密文件</li>
+<li>-n 不更新加密文件，只将htpasswd命令加密后的用户名密码显示在屏幕上</li>
+<li>-m 默认htpassswd命令采用MD5算法对密码进行加密</li>
+<li>-d htpassswd命令采用CRYPT算法对密码进行加密</li>
+<li>-p htpassswd命令不对密码进行进行加密，即明文密码</li>
+<li>-s htpassswd命令采用SHA算法对密码进行加密</li>
+<li>-b htpassswd命令行中一并输入用户名和密码而不是根据提示输入密码</li>
+<li>-D 删除指定的用户</li>
+</ul>
+<h3 id="htpasswd_3">htpasswd例子<a class="headerlink" href="#htpasswd_3" title="Permanent link">¶</a></h3>
+<p>a、如何利用htpasswd命令添加用户？</p>
 <blockquote>
-<p>W: <a href="http://download.zerotier.com/debian/jammy/dists/jammy/InRelease">http://download.zerotier.com/debian/jammy/dists/jammy/InRelease</a>: Key is stored in legacy trusted.gpg keyring (/etc/apt/trusted.gpg), see the DEPRECATION section in apt-key(8) for details.</p>
+<p>htpasswd -bc ./.passwd admin pass 在当前目录下生成一个.passwd文件，用户名admin，密码：pass，默认采用MD5加密方式</p>
 </blockquote>
-<p><div class="highlight"><pre><span></span><code>curl -s http://download.zerotier.com/contact%40zerotier.com.gpg <span class="p">|</span> gpg --dearmor <span class="p">|</span> sudo tee /etc/apt/trusted.gpg.d/zerotier.com.gpg &gt; /dev/null
-</code></pre></div>
-忽略报错，下次更新<code>update</code>时，zerotier就不会报错</p>
-<h2 id="openwrt">OpenWrt<a class="headerlink" href="#openwrt" title="Permanent link">¶</a></h2>
-<div class="highlight"><pre><span></span><code><span class="c1"># 先安装 zerotier</span>
-opkg update <span class="o">&amp;&amp;</span> opkg install zerotier
-<span class="c1"># 运行zerotier</span>
-zerotier-cli join ID
-<span class="c1"># 重启</span>
-reboot
-</code></pre></div>
-<p>到zeroTier管理中心配置Manged Routes添加规则：</p>
-<p>路由器lan端ip端 via zerotier分配到ip</p>
-<p>之后再在路由器防火墙设置，在【网络】→【防火墙】→【自定义规则】中添加如下规则，【重启防火墙】：
-<div class="highlight"><pre><span></span><code>iptables -I FORWARD -i ztyqbub6jp -j ACCEPT
-iptables -I FORWARD -o ztyqbub6jp -j ACCEPT
-iptables -t nat -I POSTROUTING -o ztrfyps3rm -j MASQUERADE
-<span class="c1"># ztrfyps3rm 在ssh中用zerotier-cli listnetworks查询</span>
-</code></pre></div></p>
-<h2 id="qnap">QNAP<a class="headerlink" href="#qnap" title="Permanent link">¶</a></h2>
-<p>直接上传zerotier的安装包安装，然后进行以下操作：
-<div class="highlight"><pre><span></span><code><span class="c1"># 使用WinSCP进行连接</span>
-<span class="c1"># 找到对应目录 share—CACHEDEV1 DATA—.qpkg—Zerotier</span>
-<span class="c1"># 输入命令运行zerotier</span>
-zerotier-cli join ID
-</code></pre></div></p>
-<p>或者使用docker安装：
-<div class="highlight"><pre><span></span><code>使用bltavares/zerotier镜像，配置文件设置：
-1. “Network”下，Network Mode（网络模式）选中“Host”：
-2.“Device”项下，选中“Run containers in privileged mode”（使用高权限执行）。
-</code></pre></div></p>
-<h2 id="docker">Docker部署<a class="headerlink" href="#docker" title="Permanent link">¶</a></h2>
-<div class="highlight"><pre><span></span><code>docker run -d --restart unless-stopped --name zerotier-one --device /dev/net/tun --net host --cap-add NET_ADMIN --cap-add SYS_ADMIN -v /var/lib/zerotier-one:/var/lib/zerotier-one henrist/zerotier-one
-
-docker <span class="nb">exec</span> zerotier-one zerotier-cli status
-docker <span class="nb">exec</span> zerotier-one zerotier-cli join NETWORK-ID
-</code></pre></div>
-<h2 id="zerotier_1">如何卸载Zerotier<a class="headerlink" href="#zerotier_1" title="Permanent link">¶</a></h2>
-<div class="highlight"><pre><span></span><code>sudo dpkg -P zerotier-one
-sudo rm -rf /var/lib/zerotier-one/
-</code></pre></div>
-<h2 id="_1">遇到的问题<a class="headerlink" href="#_1" title="Permanent link">¶</a></h2>
+<p>b、如何在原有密码文件中增加下一个用户？</p>
 <blockquote>
-<p>安装出现<code>Err:4 http://download.zerotier.com/debian/buster buster InRelease
-The following signatures couldn't be verified because the public key is not available: NO_PUBKEY 1657198823E52A61</code></p>
+<p>htpasswd -b ./.passwd admin1 pass 去掉c选项，即可在第一个用户之后添加第二个用户，依此类推</p>
 </blockquote>
-<div class="highlight"><pre><span></span><code>sudo apt-get update
-sudo apt-get install -y apt-transport-https gnupg
-<span class="c1">#sudo mv -f /tmp/zt-sources-list /etc/apt/sources.list.d/zerotier.list</span>
-<span class="c1">#sudo chown 0 /etc/apt/sources.list.d/zerotier.list</span>
-<span class="c1">#sudo chgrp 0 /etc/apt/sources.list.d/zerotier.list</span>
-</code></pre></div>
+<p>c、如何不更新密码文件，只显示加密后的用户名和密码？</p>
 <blockquote>
-<p>ZeroTier内网主机互ping时出现destination host unreachable的解决方案</p>
+<p>htpasswd -nb admin pass 不更新.passwd文件，只在屏幕上输出用户名和经过加密后的密码</p>
 </blockquote>
-<p>部分主机虽然成功连接了ZeroTier并且获得了IP，但是内网中其他主机在ping此IP时，可能会提示Destination host unreachable，可能还伴有端口无法访问等问题
-其中Linux主机占多数。这是由于Linux内部回环机制造成的问题, 我们可以通过在<code>nano /etc/sysctl.conf</code>中添加如下配置来解决问题：</p>
-<div class="highlight"><pre><span></span><code>net.ipv4.conf.default.rp_filter <span class="o">=</span> <span class="m">0</span>
-net.ipv4.conf.all.rp_filter <span class="o">=</span> <span class="m">0</span>
-net.ipv4.conf.eth0.rp_filter <span class="o">=</span> <span class="m">0</span>
-<span class="c1"># net.ipv4.conf.eth1.rp_filter = 0</span>
-</code></pre></div>
-<p>添加完成后，执行：<code>sysctl -p</code>，一切完成。可以通过其他主机ping本机进行测试。</p>
+<p>d、如何利用htpasswd命令删除用户名和密码？</p>
+<blockquote>
+<p>htpasswd -D .passwd admin1</p>
+</blockquote>
+<p>e、如何利用 htpasswd 命令修改密码？</p>
+<blockquote>
+<p>htpasswd -D .passwd admin1</p>
+<p>htpasswd -b .passwd admin1 pass</p>
+</blockquote>
 </article>
 </div>
 </div>
@@ -1671,7 +1645,7 @@ net.ipv4.conf.eth0.rp_filter <span class="o">=</span> <span class="m">0</span>
 </main>
 <footer class="md-footer">
 <nav aria-label="页脚" class="md-footer__inner md-grid">
-<a aria-label="上一页: 增加交换内存" class="md-footer__link md-footer__link--prev" href="../%E5%A2%9E%E5%8A%A0%E4%BA%A4%E6%8D%A2%E5%86%85%E5%AD%98/" rel="prev">
+<a aria-label="上一页: 基础" class="md-footer__link md-footer__link--prev" href="../nginx/" rel="prev">
 <div class="md-footer__button md-icon">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"></path></svg>
 </div>
@@ -1680,17 +1654,17 @@ net.ipv4.conf.eth0.rp_filter <span class="o">=</span> <span class="m">0</span>
 <span class="md-footer__direction">
                 上一页
               </span>
-              增加交换内存
+              基础
             </div>
 </div>
 </a>
-<a aria-label="下一页: 使用" class="md-footer__link md-footer__link--next" href="../Cloudflare/Cloudflare%E4%BD%BF%E7%94%A8/" rel="next">
+<a aria-label="下一页: 不同环境使用Redis" class="md-footer__link md-footer__link--next" href="../../Redis/Redis/" rel="next">
 <div class="md-footer__title">
 <div class="md-ellipsis">
 <span class="md-footer__direction">
                 下一页
               </span>
-              使用
+              不同环境使用Redis
             </div>
 </div>
 <div class="md-footer__button md-icon">
@@ -1726,7 +1700,7 @@ net.ipv4.conf.eth0.rp_filter <span class="o">=</span> <span class="m">0</span>
 <div class="md-dialog" data-md-component="dialog">
 <div class="md-dialog__inner md-typeset"></div>
 </div>
-<script id="__config" type="application/json">{"base": "../..", "features": ["search.suggest", "search.highlight", "header.autohide", "navigation.top", "navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.expand", "navigation.indexes", "toc.integrate"], "search": "../../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.config.lang": "ja", "search.config.pipeline": "trimmer, stemmer", "search.config.separator": "[\\s\\-\uff0c\u3002]+", "search.placeholder": "\u641c\u7d22", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version.title": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
-<script src="../../assets/javascripts/bundle.d6c3db9e.min.js"></script>
+<script id="__config" type="application/json">{"base": "../../..", "features": ["search.suggest", "search.highlight", "header.autohide", "navigation.top", "navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.expand", "navigation.indexes", "toc.integrate"], "search": "../../../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.config.lang": "ja", "search.config.pipeline": "trimmer, stemmer", "search.config.separator": "[\\s\\-\uff0c\u3002]+", "search.placeholder": "\u641c\u7d22", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version.title": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+<script src="../../../assets/javascripts/bundle.d6c3db9e.min.js"></script>
 <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
 </html>
