@@ -10,7 +10,7 @@
 <link href="https://wiki.lyricn.com/Software/SQL/MySQL/mysql%E5%9F%BA%E7%A1%80/" rel="canonical"/>
 <link href="../../../../assets/images/logo.png" rel="icon"/>
 <meta content="mkdocs-1.4.2, mkdocs-material-8.5.8" name="generator"/>
-<title>mysql基础 - Lyricn Wiki</title>
+<title>基础 - Lyricn Wiki</title>
 <link href="../../../../assets/stylesheets/main.20d9efc8.min.css" rel="stylesheet"/>
 <link href="../../../../assets/stylesheets/palette.815d1a91.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
@@ -59,7 +59,7 @@
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              mysql基础
+              基础
             
           </span>
 </div>
@@ -387,6 +387,11 @@
         图片生成
       </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../AI/%E5%85%B6%E4%BB%96%E8%A1%8D%E7%94%9F/">
+        其他衍生
+      </a>
+</li>
 </ul>
 </nav>
 </li>
@@ -442,14 +447,19 @@
         Windows使用
       </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Docker/DockerSwarm/">
+        DockerSwarm
+      </a>
+</li>
 <li class="md-nav__item md-nav__item--nested">
-<input checked="" class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_4_4_5" id="__nav_4_4_5" type="checkbox"/>
-<label class="md-nav__link" for="__nav_4_4_5">
+<input checked="" class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_4_4_6" id="__nav_4_4_6" type="checkbox"/>
+<label class="md-nav__link" for="__nav_4_4_6">
           服務
           <span class="md-nav__icon md-icon"></span>
 </label>
 <nav aria-label="服務" class="md-nav" data-md-level="3">
-<label class="md-nav__title" for="__nav_4_4_5">
+<label class="md-nav__title" for="__nav_4_4_6">
 <span class="md-nav__icon md-icon"></span>
           服務
         </label>
@@ -957,11 +967,11 @@
 <li class="md-nav__item md-nav__item--active">
 <input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
 <label class="md-nav__link md-nav__link--active" for="__toc">
-          mysql基础
+          基础
           <span class="md-nav__icon md-icon"></span>
 </label>
 <a class="md-nav__link md-nav__link--active" href="./">
-        mysql基础
+        基础
       </a>
 <nav aria-label="目录" class="md-nav md-nav--secondary">
 <label class="md-nav__title" for="__toc">
@@ -1011,6 +1021,11 @@
 </li>
 </ul>
 </nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../mysql%E6%9F%A5%E8%AF%A2/">
+        查询
+      </a>
 </li>
 </ul>
 </nav>
@@ -1573,6 +1588,11 @@
         资源
       </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../Other/Secret/">
+        Secret
+      </a>
+</li>
 </ul>
 </nav>
 </li>
@@ -1624,6 +1644,7 @@
 <p><code>mysql -u root -p</code></p>
 <h2 id="_2">基础命令 启动|停止|重启服务|重新加载|状态<a class="headerlink" href="#_2" title="Permanent link">¶</a></h2>
 <p><code>service mysqld {start|stop|restart|reload|status}</code></p>
+<hr/>
 <h2 id="root-host">修改 root 账户的 Host<a class="headerlink" href="#root-host" title="Permanent link">¶</a></h2>
 <div class="highlight"><pre><span></span><code><span class="c1"># 使用 mysql 数据库</span><span class="w"></span>
 <span class="k">use</span><span class="w"> </span><span class="n">mysql</span><span class="p">;</span><span class="w"></span>
@@ -1635,6 +1656,7 @@
 <span class="k">update</span><span class="w"> </span><span class="k">user</span><span class="w"> </span><span class="k">set</span><span class="w"> </span><span class="k">Host</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'%'</span><span class="w"> </span><span class="k">where</span><span class="w"> </span><span class="k">Host</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'localhost'</span><span class="w"> </span><span class="k">and</span><span class="w"> </span><span class="k">User</span><span class="o">=</span><span class="s1">'root'</span><span class="p">;</span><span class="w"></span>
 <span class="k">flush</span><span class="w"> </span><span class="k">privileges</span><span class="p">;</span><span class="w"></span>
 </code></pre></div>
+<hr/>
 <h2 id="root">修改root密码<a class="headerlink" href="#root" title="Permanent link">¶</a></h2>
 <p>忘记root 密码下如何修改密码
 <div class="highlight"><pre><span></span><code><span class="c1"># nano /etc/my.cnf，添加 skip-grant-table（跳过权限验证）</span><span class="w"></span>
@@ -1654,6 +1676,7 @@
 <span class="c1"># Mysql8.0之前：</span><span class="w"></span>
 <span class="k">update</span><span class="w"> </span><span class="k">user</span><span class="w"> </span><span class="k">set</span><span class="w"> </span><span class="k">password</span><span class="o">=</span><span class="k">password</span><span class="p">(</span><span class="s1">'password123456'</span><span class="p">)</span><span class="w"> </span><span class="k">where</span><span class="w"> </span><span class="k">user</span><span class="o">=</span><span class="s1">'root'</span><span class="p">;</span><span class="w"></span>
 </code></pre></div></p>
+<hr/>
 <h2 id="_3">新建用户<a class="headerlink" href="#_3" title="Permanent link">¶</a></h2>
 <blockquote>
 <p>注意：主机名=％，这意味着您可以从任何主机地址访问此数据库服务器</p>
@@ -1668,6 +1691,7 @@
 <span class="k">GRANT</span><span class="w"> </span><span class="k">ALL</span><span class="w"> </span><span class="k">PRIVILEGES</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="p">.</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">TO</span><span class="w"> </span><span class="s1">'newUser'</span><span class="nv">@'192.168.1.％'</span><span class="p">;</span><span class="w"></span>
 </code></pre></div>
 <p><a href="https://dev.mysql.com/doc/refman/8.0/en/connection-access.html" target="_blank">host可填参数</a></p>
+<hr/>
 <h2 id="mysqlbinlog">mysql清理binlog<a class="headerlink" href="#mysqlbinlog" title="Permanent link">¶</a></h2>
 <div class="highlight"><pre><span></span><code><span class="o">//</span><span class="n">查看binlog是否开启，log_bin的状态未ON，表明binlog日志开启</span><span class="w"></span>
 <span class="k">show</span><span class="w"> </span><span class="k">variables</span><span class="w"> </span><span class="k">like</span><span class="w"> </span><span class="s1">'log_%'</span><span class="p">;</span><span class="w"></span>
@@ -1733,13 +1757,13 @@ skip-log-bin
             </div>
 </div>
 </a>
-<a aria-label="下一页: SQLServer基础" class="md-footer__link md-footer__link--next" href="../../SQLServer/SQLserver/" rel="next">
+<a aria-label="下一页: 查询" class="md-footer__link md-footer__link--next" href="../mysql%E6%9F%A5%E8%AF%A2/" rel="next">
 <div class="md-footer__title">
 <div class="md-ellipsis">
 <span class="md-footer__direction">
                 下一页
               </span>
-              SQLServer基础
+              查询
             </div>
 </div>
 <div class="md-footer__button md-icon">
