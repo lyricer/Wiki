@@ -479,6 +479,11 @@
         Flarmu
       </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Docker/%E6%9C%8D%E5%8A%A1/PicHome/">
+        PicHome
+      </a>
+</li>
 </ul>
 </nav>
 </li>
@@ -660,23 +665,33 @@
   </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#_4">
+    清理历史命令
+  </a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#ipv4">
     优先使用IPv4
   </a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#ipv6">
+    优先使用IPv6
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#ipv6_1">
     禁用IPv6
   </a>
 <nav aria-label="禁用IPv6" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#ipv6_1">
+<a class="md-nav__link" href="#ipv6_2">
     为什么关闭IPv6
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#ipv6_2">
+<a class="md-nav__link" href="#ipv6_3">
     IPv6可以做什么
   </a>
 </li>
@@ -711,6 +726,11 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="../%E5%91%BD%E4%BB%A4/Screen/">
         Screen
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../%E5%91%BD%E4%BB%A4/rsync/">
+        Rsync
       </a>
 </li>
 <li class="md-nav__item">
@@ -1021,17 +1041,42 @@
         查询
       </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../SQL/MySQL/mysql%E8%A1%A8%E5%88%86%E5%8C%BA/">
+        表分区
+      </a>
+</li>
 </ul>
 </nav>
 </li>
 <li class="md-nav__item md-nav__item--nested">
 <input checked="" class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_4_14_2" id="__nav_4_14_2" type="checkbox"/>
 <label class="md-nav__link" for="__nav_4_14_2">
+          MariaDB
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="MariaDB" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_4_14_2">
+<span class="md-nav__icon md-icon"></span>
+          MariaDB
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../SQL/MariaDB/mariadb/">
+        mariadb
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_4_14_3" id="__nav_4_14_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_4_14_3">
           SQLServer
           <span class="md-nav__icon md-icon"></span>
 </label>
 <nav aria-label="SQLServer" class="md-nav" data-md-level="3">
-<label class="md-nav__title" for="__nav_4_14_2">
+<label class="md-nav__title" for="__nav_4_14_3">
 <span class="md-nav__icon md-icon"></span>
           SQLServer
         </label>
@@ -1045,13 +1090,13 @@
 </nav>
 </li>
 <li class="md-nav__item md-nav__item--nested">
-<input checked="" class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_4_14_3" id="__nav_4_14_3" type="checkbox"/>
-<label class="md-nav__link" for="__nav_4_14_3">
+<input checked="" class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_4_14_4" id="__nav_4_14_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_4_14_4">
           phpMyAdmin
           <span class="md-nav__icon md-icon"></span>
 </label>
 <nav aria-label="phpMyAdmin" class="md-nav" data-md-level="3">
-<label class="md-nav__title" for="__nav_4_14_3">
+<label class="md-nav__title" for="__nav_4_14_4">
 <span class="md-nav__icon md-icon"></span>
           phpMyAdmin
         </label>
@@ -1633,6 +1678,11 @@
       </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="../../../../Other/%E6%B5%8F%E8%A7%88%E5%99%A8/">
+        浏览器
+      </a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="../../../../Other/Secret/">
         Secret
       </a>
@@ -1718,6 +1768,9 @@ find / -name php.ini
 <span class="c1"># 使用which命令，就可以看到某个系统命令是否存在，以及执行的到底是哪一个位置的命令。</span>
 which ssh
 </code></pre></div>
+<h2 id="_4">清理历史命令<a class="headerlink" href="#_4" title="Permanent link">¶</a></h2>
+<div class="highlight"><pre><span></span><code><span class="nb">history</span> -c
+</code></pre></div>
 <h2 id="ipv4">优先使用IPv4<a class="headerlink" href="#ipv4" title="Permanent link">¶</a></h2>
 <p>Debian及Ubuntu：</p>
 <div class="highlight"><pre><span></span><code><span class="c1"># 修改 /etc/gai.conf，</span>
@@ -1726,7 +1779,12 @@ nano /etc/gai.conf
 precedence ::ffff:0:0/96 <span class="m">100</span>
 <span class="c1"># 注：::ffff:0:0/96 为IPv4/IPv6转换地址 (IPv4-mapped IPv6 address)</span>
 </code></pre></div>
-<h2 id="ipv6">禁用IPv6<a class="headerlink" href="#ipv6" title="Permanent link">¶</a></h2>
+<h2 id="ipv6">优先使用IPv6<a class="headerlink" href="#ipv6" title="Permanent link">¶</a></h2>
+<div class="highlight"><pre><span></span><code><span class="c1">#编辑 /etc/gai.conf 文件，在末尾添加下面这行配置：</span>
+nano /etc/gai.conf
+label <span class="m">2002</span>::/16   <span class="m">2</span>
+</code></pre></div>
+<h2 id="ipv6_1">禁用IPv6<a class="headerlink" href="#ipv6_1" title="Permanent link">¶</a></h2>
 <p>查看VPS的IPv6信息
 <div class="highlight"><pre><span></span><code><span class="c1"># 输入命令: </span>
 ip -6 addr show scope global
@@ -1743,11 +1801,11 @@ sysctl -w net.ipv6.conf.all.disable_ipv6<span class="o">=</span><span class="m">
 sysctl --system <span class="c1"># reload sysctl</span>
 <span class="c1"># 如果重载, 还无效果, 可能要 reboot 重启下.</span>
 </code></pre></div></p>
-<h3 id="ipv6_1">为什么关闭IPv6<a class="headerlink" href="#ipv6_1" title="Permanent link">¶</a></h3>
+<h3 id="ipv6_2">为什么关闭IPv6<a class="headerlink" href="#ipv6_2" title="Permanent link">¶</a></h3>
 <blockquote>
 <p>在拥有IPv6地址之后, 网络协议规定优先使用IPv6, IPv6的线路质量可能不如IPv4, 目前还有很多网站目前还没支持IPv6.</p>
 </blockquote>
-<h3 id="ipv6_2">IPv6可以做什么<a class="headerlink" href="#ipv6_2" title="Permanent link">¶</a></h3>
+<h3 id="ipv6_3">IPv6可以做什么<a class="headerlink" href="#ipv6_3" title="Permanent link">¶</a></h3>
 <blockquote>
 <p>突破封锁(有些站点仅能ipv6访问, 或VPS的ipv4被封, 或者用ipv6解锁流媒体等)
 突破限制(比如有些网络ipv6表现更优)</p>
