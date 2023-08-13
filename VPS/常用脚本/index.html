@@ -1522,12 +1522,22 @@
     一键DD脚本
   </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#warp">
+    WARP+脚本
+  </a>
+</li>
 </ul>
 </nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../%E6%9C%8D%E5%8A%A1%E5%95%86/">
         服务商
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../%E5%9F%9F%E5%90%8D/">
+        域名
       </a>
 </li>
 <li class="md-nav__item">
@@ -1885,6 +1895,9 @@ wget -P /root -N --no-check-certificate <span class="s2">"https://www.v2ray-agen
 apt update
 apt-get install -y xz-utils openssl gawk file
 wget -N --no-check-certificate https://raw.githubusercontent.com/veip007/dd/master/InstallNET.sh <span class="o">&amp;&amp;</span> chmod +x InstallNET.sh <span class="o">&amp;&amp;</span> ./InstallNET.sh -d <span class="m">11</span> -v <span class="m">64</span> -p <span class="s2">"自定义root密码"</span> -port <span class="s2">"自定义ssh端口"</span>
+</code></pre></div>
+<h2 id="warp">WARP+脚本<a class="headerlink" href="#warp" title="Permanent link">¶</a></h2>
+<div class="highlight"><pre><span></span><code>wget -N https://raw.githubusercontent.com/fscarmen/warp/main/warp-go.sh <span class="o">&amp;&amp;</span> bash warp-go.sh
 </code></pre></div>
 </article>
 </div>
