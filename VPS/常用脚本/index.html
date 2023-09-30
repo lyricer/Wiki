@@ -1430,18 +1430,6 @@
           VPS
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
-<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_7_1" id="__nav_7_1" type="checkbox"/>
-<label class="md-nav__link" for="__nav_7_1">
-          部署
-          <span class="md-nav__icon md-icon"></span>
-</label>
-<nav aria-label="部署" class="md-nav" data-md-level="2">
-<label class="md-nav__title" for="__nav_7_1">
-<span class="md-nav__icon md-icon"></span>
-          部署
-        </label>
-<ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item md-nav__item--active">
 <input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
 <label class="md-nav__link md-nav__link--active" for="__toc">
@@ -1459,6 +1447,12 @@
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
 <a class="md-nav__link" href="#_2">
+    脚本
+  </a>
+<nav aria-label="脚本" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_3">
     可用流媒体测试
   </a>
 </li>
@@ -1473,17 +1467,17 @@
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#_3">
+<a class="md-nav__link" href="#_4">
     服务器性能检测
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#_4">
+<a class="md-nav__link" href="#_5">
     检测三网回程
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#_5">
+<a class="md-nav__link" href="#_6">
     服务器回程路由
   </a>
 </li>
@@ -1503,6 +1497,11 @@
   </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#_7">
+    测速脚本
+  </a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#vasma">
     vasma
   </a>
@@ -1513,7 +1512,7 @@
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#_6">
+<a class="md-nav__link" href="#_8">
     八合一一键脚本
   </a>
 </li>
@@ -1531,6 +1530,9 @@
 <a class="md-nav__link" href="#warp">
     WARP+脚本
   </a>
+</li>
+</ul>
+</nav>
 </li>
 </ul>
 </nav>
@@ -1574,9 +1576,6 @@
 <a class="md-nav__link" href="../ipv6/">
         IPv6
       </a>
-</li>
-</ul>
-</nav>
 </li>
 </ul>
 </nav>
@@ -1779,48 +1778,7 @@
 <a class="md-content__button md-icon" href="https://github.com/lyricer/love/edit/master/docs/VPS/常用脚本.md" title="编辑此页">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"></path></svg>
 </a>
-<h1 id="_1">常用脚本&amp;网站<a class="headerlink" href="#_1" title="Permanent link">¶</a></h1>
-<h2 id="_2">可用流媒体测试<a class="headerlink" href="#_2" title="Permanent link">¶</a></h2>
-<div class="highlight"><pre><span></span><code>bash &lt;<span class="o">(</span>curl -L -s https://raw.githubusercontent.com/lmc999/RegionRestrictionCheck/main/check.sh<span class="o">)</span>
-</code></pre></div>
-<h2 id="bbr">开启bbr<a class="headerlink" href="#bbr" title="Permanent link">¶</a></h2>
-<div class="highlight"><pre><span></span><code>wget <span class="s2">"https://github.com/cx9208/Linux-NetSpeed/raw/master/tcp.sh"</span> <span class="o">&amp;&amp;</span> chmod +x tcp.sh <span class="o">&amp;&amp;</span> ./tcp.sh
-</code></pre></div>
-<h2 id="bbr_1">bbr优化<a class="headerlink" href="#bbr_1" title="Permanent link">¶</a></h2>
-<div class="highlight"><pre><span></span><code><span class="c1"># BBR开启和选择模式脚本 </span>
-wget -N --no-check-certificate <span class="s2">"https://github.000060000.xyz/tcpx.sh"</span> <span class="o">&amp;&amp;</span> chmod +x tcpx.sh <span class="o">&amp;&amp;</span> ./tcpx.sh 
-
-<span class="c1"># BBR优化脚本 </span>
-bash &lt;<span class="o">(</span>curl -Ls https://github.com/lanziii/bbr-/releases/download/123/tools.sh<span class="o">)</span>
-</code></pre></div>
-<h2 id="_3">服务器性能检测<a class="headerlink" href="#_3" title="Permanent link">¶</a></h2>
-<div class="highlight"><pre><span></span><code><span class="c1"># 秋水逸冰</span>
-wget -qO- bench.sh <span class="p">|</span> bash
-<span class="c1"># 老鬼</span>
-wget -qO- git.io/superbench.sh <span class="p">|</span> bash
-<span class="c1"># 衍生</span>
-wget -N --no-check-certificate https://raw.githubusercontent.com/FunctionClub/ZBench/master/ZBench-CN.sh <span class="o">&amp;&amp;</span> bash ZBench-CN.sh
-</code></pre></div>
-<h2 id="_4">检测三网回程<a class="headerlink" href="#_4" title="Permanent link">¶</a></h2>
-<div class="highlight"><pre><span></span><code>curl https://raw.githubusercontent.com/zhanghanyun/backtrace/main/install.sh -sSf <span class="p">|</span> sh
-</code></pre></div>
-<h2 id="_5">服务器回程路由<a class="headerlink" href="#_5" title="Permanent link">¶</a></h2>
-<div class="highlight"><pre><span></span><code>wget <span class="s2">"https://raw.githubusercontent.com/hijkpw/testrace/master/testrace.sh"</span> <span class="o">&amp;&amp;</span> chmod +x testrace.sh <span class="o">&amp;&amp;</span> ./testrace.sh
-</code></pre></div>
-<h2 id="chatgpt">检测ChatGPT<a class="headerlink" href="#chatgpt" title="Permanent link">¶</a></h2>
-<div class="highlight"><pre><span></span><code>bash &lt;<span class="o">(</span>curl -Ls https://cpp.li/openai<span class="o">)</span>
-wget -qO- https://github.com/yeahwu/check/raw/main/check.sh <span class="p">|</span> bash
-</code></pre></div>
-<h2 id="ip">查看IP地址信息<a class="headerlink" href="#ip" title="Permanent link">¶</a></h2>
-<div class="highlight"><pre><span></span><code>curl ipinfo.io
-curl ip.p3terx.com
-curl -4 ip.p3terx.com
-curl -6 ip.p3terx.com
-</code></pre></div>
-<h2 id="cloudflare-warp">查看Cloudflare WARP<a class="headerlink" href="#cloudflare-warp" title="Permanent link">¶</a></h2>
-<div class="highlight"><pre><span></span><code>./warp.sh menu
-</code></pre></div>
-<hr/>
+<h1 id="_1">网站连接<a class="headerlink" href="#_1" title="Permanent link">¶</a></h1>
 <p><center>
 <a href="https://tcp.ping.pe/" target="_blank"> 万能检测（Ping/端口） </a>
   /  
@@ -1856,11 +1814,61 @@ curl -6 ip.p3terx.com
   /  
 <a href="https://en.fofa.info/" target="_blank"> 源站查询fofa </a>
 </center></p>
+<p><center>
+<a href="https://bandwagonhost.statuspage.io/" target="_blank"> 查询搬瓦工服务器状态 </a>
+</center></p>
+<p><center>
+<a href="https://github.com/Archeb/opentrace" target="_blank"> Opentrace可视化路由跟踪MTR软件 </a>
+</center></p>
 <hr/>
-<h2 id="vasma">vasma<a class="headerlink" href="#vasma" title="Permanent link">¶</a></h2>
+<h2 id="_2">脚本<a class="headerlink" href="#_2" title="Permanent link">¶</a></h2>
+<h3 id="_3">可用流媒体测试<a class="headerlink" href="#_3" title="Permanent link">¶</a></h3>
+<div class="highlight"><pre><span></span><code>bash &lt;<span class="o">(</span>curl -L -s https://raw.githubusercontent.com/lmc999/RegionRestrictionCheck/main/check.sh<span class="o">)</span>
+</code></pre></div>
+<h3 id="bbr">开启bbr<a class="headerlink" href="#bbr" title="Permanent link">¶</a></h3>
+<div class="highlight"><pre><span></span><code>wget <span class="s2">"https://github.com/cx9208/Linux-NetSpeed/raw/master/tcp.sh"</span> <span class="o">&amp;&amp;</span> chmod +x tcp.sh <span class="o">&amp;&amp;</span> ./tcp.sh
+</code></pre></div>
+<h3 id="bbr_1">bbr优化<a class="headerlink" href="#bbr_1" title="Permanent link">¶</a></h3>
+<div class="highlight"><pre><span></span><code><span class="c1"># BBR开启和选择模式脚本 </span>
+wget -N --no-check-certificate <span class="s2">"https://github.000060000.xyz/tcpx.sh"</span> <span class="o">&amp;&amp;</span> chmod +x tcpx.sh <span class="o">&amp;&amp;</span> ./tcpx.sh 
+
+<span class="c1"># BBR优化脚本 </span>
+bash &lt;<span class="o">(</span>curl -Ls https://github.com/lanziii/bbr-/releases/download/123/tools.sh<span class="o">)</span>
+</code></pre></div>
+<h3 id="_4">服务器性能检测<a class="headerlink" href="#_4" title="Permanent link">¶</a></h3>
+<div class="highlight"><pre><span></span><code><span class="c1"># 秋水逸冰</span>
+wget -qO- bench.sh <span class="p">|</span> bash
+<span class="c1"># 老鬼</span>
+wget -qO- git.io/superbench.sh <span class="p">|</span> bash
+<span class="c1"># 衍生</span>
+wget -N --no-check-certificate https://raw.githubusercontent.com/FunctionClub/ZBench/master/ZBench-CN.sh <span class="o">&amp;&amp;</span> bash ZBench-CN.sh
+</code></pre></div>
+<h3 id="_5">检测三网回程<a class="headerlink" href="#_5" title="Permanent link">¶</a></h3>
+<div class="highlight"><pre><span></span><code>curl https://raw.githubusercontent.com/zhanghanyun/backtrace/main/install.sh -sSf <span class="p">|</span> sh
+</code></pre></div>
+<h3 id="_6">服务器回程路由<a class="headerlink" href="#_6" title="Permanent link">¶</a></h3>
+<div class="highlight"><pre><span></span><code>wget <span class="s2">"https://raw.githubusercontent.com/hijkpw/testrace/master/testrace.sh"</span> <span class="o">&amp;&amp;</span> chmod +x testrace.sh <span class="o">&amp;&amp;</span> ./testrace.sh
+</code></pre></div>
+<h3 id="chatgpt">检测ChatGPT<a class="headerlink" href="#chatgpt" title="Permanent link">¶</a></h3>
+<div class="highlight"><pre><span></span><code>bash &lt;<span class="o">(</span>curl -Ls https://cpp.li/openai<span class="o">)</span>
+wget -qO- https://github.com/yeahwu/check/raw/main/check.sh <span class="p">|</span> bash
+</code></pre></div>
+<h3 id="ip">查看IP地址信息<a class="headerlink" href="#ip" title="Permanent link">¶</a></h3>
+<div class="highlight"><pre><span></span><code>curl ipinfo.io
+curl ip.p3terx.com
+curl -4 ip.p3terx.com
+curl -6 ip.p3terx.com
+</code></pre></div>
+<h3 id="cloudflare-warp">查看Cloudflare WARP<a class="headerlink" href="#cloudflare-warp" title="Permanent link">¶</a></h3>
+<div class="highlight"><pre><span></span><code>./warp.sh menu
+</code></pre></div>
+<h3 id="_7">测速脚本<a class="headerlink" href="#_7" title="Permanent link">¶</a></h3>
+<div class="highlight"><pre><span></span><code>bash &lt;<span class="o">(</span>curl -sL https://raw.githubusercontent.com/i-abc/Speedtest/main/speedtest.sh<span class="o">)</span>
+</code></pre></div>
+<h3 id="vasma">vasma<a class="headerlink" href="#vasma" title="Permanent link">¶</a></h3>
 <div class="highlight"><pre><span></span><code>wget -P /root -N --no-check-certificate <span class="s2">"https://raw.githubusercontent.com/mack-a/v2ray-agent/master/install.sh"</span> <span class="o">&amp;&amp;</span> chmod <span class="m">700</span> /root/install.sh <span class="o">&amp;&amp;</span> /root/install.sh
 </code></pre></div>
-<h2 id="x-ui">X-UI<a class="headerlink" href="#x-ui" title="Permanent link">¶</a></h2>
+<h3 id="x-ui">X-UI<a class="headerlink" href="#x-ui" title="Permanent link">¶</a></h3>
 <div class="highlight"><pre><span></span><code><span class="c1"># 直接安装</span>
 bash &lt;<span class="o">(</span>curl -Ls https://raw.githubusercontent.com/vaxilu/x-ui/master/install.sh<span class="o">)</span>
 
@@ -1872,7 +1880,7 @@ docker run -itd --network<span class="o">=</span>host <span class="se">\</span>
     --name x-ui --restart<span class="o">=</span>unless-stopped <span class="se">\</span>
     enwaiax/x-ui:latest
 </code></pre></div>
-<h2 id="_6">八合一一键脚本<a class="headerlink" href="#_6" title="Permanent link">¶</a></h2>
+<h3 id="_8">八合一一键脚本<a class="headerlink" href="#_8" title="Permanent link">¶</a></h3>
 <div class="highlight"><pre><span></span><code><span class="c1"># 官網 https://www.v2ray-agent.com/</span>
 <span class="c1"># https://www.v2ray-agent.com/archives/1682491479771</span>
 <span class="c1"># github</span>
@@ -1880,7 +1888,7 @@ wget -P /root -N --no-check-certificate <span class="s2">"https://raw.githubuser
 <span class="c1"># 備用</span>
 wget -P /root -N --no-check-certificate <span class="s2">"https://www.v2ray-agent.com/v2ray-agent/install.sh"</span> <span class="o">&amp;&amp;</span> chmod <span class="m">700</span> /root/install.sh <span class="o">&amp;&amp;</span> /root/install.sh
 </code></pre></div>
-<h2 id="wireguard">Wireguard<a class="headerlink" href="#wireguard" title="Permanent link">¶</a></h2>
+<h3 id="wireguard">Wireguard<a class="headerlink" href="#wireguard" title="Permanent link">¶</a></h3>
 <div class="highlight"><pre><span></span><code>docker run -d <span class="se">\</span>
   --name<span class="o">=</span>wg-easy <span class="se">\</span>
   -e <span class="nv">WG_HOST</span><span class="o">=</span><span class="m">123</span>.123.123.123 <span class="o">(</span>🚨这里输入服务器的公网IP<span class="o">)</span> <span class="se">\</span>
@@ -1899,15 +1907,22 @@ wget -P /root -N --no-check-certificate <span class="s2">"https://www.v2ray-agen
   --restart unless-stopped <span class="se">\</span>
   weejewel/wg-easy
 </code></pre></div>
-<h2 id="dd">一键DD脚本<a class="headerlink" href="#dd" title="Permanent link">¶</a></h2>
+<h3 id="dd">一键DD脚本<a class="headerlink" href="#dd" title="Permanent link">¶</a></h3>
 <div class="highlight"><pre><span></span><code><span class="c1">#DD debian 11示例：</span>
 <span class="c1">#Debian/Ubuntu:</span>
 apt update
 apt-get install -y xz-utils openssl gawk file
 wget -N --no-check-certificate https://raw.githubusercontent.com/veip007/dd/master/InstallNET.sh <span class="o">&amp;&amp;</span> chmod +x InstallNET.sh <span class="o">&amp;&amp;</span> ./InstallNET.sh -d <span class="m">11</span> -v <span class="m">64</span> -p <span class="s2">"自定义root密码"</span> -port <span class="s2">"自定义ssh端口"</span>
 </code></pre></div>
-<h2 id="warp">WARP+脚本<a class="headerlink" href="#warp" title="Permanent link">¶</a></h2>
+<h3 id="warp">WARP+脚本<a class="headerlink" href="#warp" title="Permanent link">¶</a></h3>
 <div class="highlight"><pre><span></span><code>wget -N https://raw.githubusercontent.com/fscarmen/warp/main/warp-go.sh <span class="o">&amp;&amp;</span> bash warp-go.sh
+
+<span class="c1"># 项目地址</span>
+https://github.com/fscarmen/warp
+https://github.com/P3TERX/warp.sh
+https://gitlab.com/ProjectWARP/warp-go/-/tree/master/
+https://github.com/yonggekkk/warp-yg
+https://gitlab.com/Misaka-blog/warp-script
 </code></pre></div>
 </article>
 </div>
