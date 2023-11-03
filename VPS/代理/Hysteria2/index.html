@@ -707,13 +707,18 @@
       </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="../../../Software/Linux/Linux/%E5%91%BD%E4%BB%A4/find/">
+        find
+      </a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="../../../Software/Linux/Linux/%E5%91%BD%E4%BB%A4/Screen/">
         Screen
       </a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../../../Software/Linux/Linux/%E5%91%BD%E4%BB%A4/rsync/">
-        Rsync
+        rsync
       </a>
 </li>
 <li class="md-nav__item">
@@ -1539,22 +1544,22 @@
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
 <a class="md-nav__link" href="#_1">
-    参考文档
+    一、参考文档
   </a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#_2">
-    直接安装
+    二、直接安装
   </a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#docker">
-    Docker安装
+    三、Docker安装
   </a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#_3">
-    注意
+    四、注意
   </a>
 </li>
 </ul>
@@ -1689,13 +1694,18 @@
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../Other/JetBrains/">
-        JetBrains
+<a class="md-nav__link" href="../../../Other/%E5%BE%85%E7%9C%8B/">
+        待看
       </a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../../../Other/timetogo/">
         TimeToGo
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Other/JetBrains/">
+        JetBrains
       </a>
 </li>
 <li class="md-nav__item">
@@ -1765,9 +1775,9 @@
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"></path></svg>
 </a>
 <h1 id="hysteria2">Hysteria2<a class="headerlink" href="#hysteria2" title="Permanent link">¶</a></h1>
-<h2 id="_1">参考文档<a class="headerlink" href="#_1" title="Permanent link">¶</a></h2>
+<h2 id="_1">一、参考文档<a class="headerlink" href="#_1" title="Permanent link">¶</a></h2>
 <p><a href="https://v2.hysteria.network/" target="_blank"> Hysteria文档 </a></p>
-<h2 id="_2">直接安装<a class="headerlink" href="#_2" title="Permanent link">¶</a></h2>
+<h2 id="_2">二、直接安装<a class="headerlink" href="#_2" title="Permanent link">¶</a></h2>
 <p>Linux 服务端部署脚本
 提供了一个 bash 脚本，可以在常见的 Linux 发行版上自动下载最新版本的 Hysteria 并配置 systemd 服务。
 安装或升级到最新版本：
@@ -1793,7 +1803,7 @@
 
 <span class="c1"># DNS</span><span class="w"></span>
 <span class="nt">resolver</span><span class="p">:</span><span class="w"></span>
-<span class="w">  </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https</span><span class="w"></span>
+<span class="w">  </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">udp</span><span class="w"></span>
 <span class="w">  </span><span class="nt">tcp</span><span class="p">:</span><span class="w"></span>
 <span class="w">    </span><span class="nt">addr</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">8.8.8.8:53</span><span class="w"> </span>
 <span class="w">    </span><span class="nt">timeout</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">4s</span><span class="w"> </span>
@@ -1805,7 +1815,6 @@
 <span class="w">    </span><span class="nt">timeout</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">10s</span><span class="w"></span>
 <span class="w">    </span><span class="nt">sni</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">cloudflare-dns.com</span><span class="w"> </span>
 <span class="w">    </span><span class="nt">insecure</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span><span class="w"> </span>
-<span class="w">  </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https</span><span class="w"></span>
 <span class="w">  </span><span class="nt">https</span><span class="p">:</span><span class="w"></span>
 <span class="w">    </span><span class="nt">addr</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">8.8.8.8:443</span><span class="w"></span>
 <span class="w">    </span><span class="nt">timeout</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">10s</span><span class="w"></span>
@@ -1818,7 +1827,7 @@ nohup /usr/local/bin/hysteria server &gt; /etc/hysteria/hysteria.log <span class
 <span class="c1"># 重启</span>
 nohup /usr/local/bin/hysteria server restart &gt; /etc/hysteria/hysteria.log <span class="m">2</span>&gt;<span class="p">&amp;</span><span class="m">1</span> <span class="p">&amp;</span>
 </code></pre></div></p>
-<h2 id="docker">Docker安装<a class="headerlink" href="#docker" title="Permanent link">¶</a></h2>
+<h2 id="docker">三、Docker安装<a class="headerlink" href="#docker" title="Permanent link">¶</a></h2>
 <p>创建docker-compose.yaml配置文件,示例，创建/etc/hysteria/hysteria.yaml文件、/etc/hysteria/acme 文件夹，acme用于存放证书信息</p>
 <div class="highlight"><pre><span></span><code><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="s">"3.9"</span><span class="w"></span>
 <span class="nt">services</span><span class="p">:</span><span class="w"></span>
@@ -1841,7 +1850,7 @@ docker compose up -d
 <span class="c1"># 停止</span>
 docker compose down
 </code></pre></div></p>
-<h2 id="_3">注意<a class="headerlink" href="#_3" title="Permanent link">¶</a></h2>
+<h2 id="_3">四、注意<a class="headerlink" href="#_3" title="Permanent link">¶</a></h2>
 <p>如果有使用防火墙的，要开启listen配置的端口号</p>
 <p>docker之所以不用映射端口号，是因为使用了host模式，无需映射端口</p>
 </article>
