@@ -1920,9 +1920,34 @@ tar jxvf FileName.tar.bz
 <h3 id="zip">.zip<a class="headerlink" href="#zip" title="Permanent link">¶</a></h3>
 <div class="highlight"><pre><span></span><code><span class="c1"># 解压：</span>
 unzip FileName.zip
-<span class="c1"># 压缩：</span>
-zip FileName.zip DirName
+<span class="c1"># 基本压缩： 压缩一个名为 example 的文件夹到名为 example.zip 的压缩文件中。</span>
+zip -r example.zip example
+<span class="c1"># 加密压缩： 创建一个加密的压缩文件 secure.zip，包含 example 文件夹的内容。执行此命令后，系统会提示输入密码。</span>
+zip -r -e secure.zip example
+<span class="c1"># 无压缩打包： 将 example 文件夹的内容打包到 archive.zip 中，但不进行压缩处理。</span>
+zip -r -0 archive.zip example
+<span class="c1"># 更新压缩文件： 向现有的 example.zip 压缩文件中添加新的或已更改的文件。</span>
+zip -r -u example.zip example
+<span class="c1"># 删除压缩文件中的文件： 从 example.zip 压缩文件中删除名为 file.txt 的文件。</span>
+zip -d example.zip file.txt
+<span class="c1"># 查看压缩文件内容： 列出 example.zip 压缩文件中的文件。</span>
+unzip -l example.zip
+<span class="c1"># 最大压缩比例： 使用最高的压缩率压缩 example 文件夹。</span>
+zip -r -9 max_compression.zip example
+<span class="c1"># 安静模式压缩： 压缩 example 文件夹到 example.zip，但不显示任何过程信息。</span>
+zip -r -q quiet_example.zip example
 </code></pre></div>
+<p>-r：递归地压缩目录。用于压缩文件夹及其所有子目录和文件。</p>
+<p>-q：安静模式，不显示压缩过程中的任何输出。</p>
+<p>-e：创建加密的压缩文件。使用此选项后，系统会提示你输入密码。</p>
+<p>-o：保留原文件的最后修改时间。</p>
+<p>-m：移动模式。压缩文件后，原始文件会被删除。</p>
+<p>-0：存储模式。不进行压缩，只是将文件打包到压缩文件中。</p>
+<p>-9：最大压缩。使用最慢的压缩方法来获取最小的压缩文件。</p>
+<p>-v：详细模式。显示压缩过程的详细信息。</p>
+<p>-u：更新模式。只压缩自上次压缩后已更改或新增的文件。</p>
+<p>-d：从压缩文件中删除指定的文件。</p>
+<p>-f：强制压缩。覆盖现有的压缩文件。</p>
 <hr/>
 <h3 id="rar">.rar<a class="headerlink" href="#rar" title="Permanent link">¶</a></h3>
 <div class="highlight"><pre><span></span><code><span class="c1"># 解压：</span>
