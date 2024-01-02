@@ -7,10 +7,10 @@
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <meta content="陪伴，無論你需不需要我一直都在..." name="description"/>
 <meta content="qhx" name="author"/>
-<link href="https://wiki.lyricn.com/Software/Shell/%E8%B6%85%E5%A5%BD%E7%94%A8%E7%9A%84shell%E5%91%BD%E4%BB%A4/" rel="canonical"/>
+<link href="https://wiki.lyricn.com/Software/DNS/dns/" rel="canonical"/>
 <link href="../../../assets/images/logo.png" rel="icon"/>
 <meta content="mkdocs-1.4.2, mkdocs-material-8.5.8" name="generator"/>
-<title>Shell命令 - Lyricn Wiki</title>
+<title>DNS - Lyricn Wiki</title>
 <link href="../../../assets/stylesheets/main.20d9efc8.min.css" rel="stylesheet"/>
 <link href="../../../assets/stylesheets/palette.815d1a91.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
@@ -35,7 +35,7 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#shell">
+<a class="md-skip" href="#dns">
           跳转至
         </a>
 </div>
@@ -59,7 +59,7 @@
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              Shell命令
+              DNS
             
           </span>
 </div>
@@ -415,8 +415,8 @@
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--section md-nav__item--nested">
-<input checked="" class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_4_4" id="__nav_4_4" type="checkbox"/>
+<li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_4" id="__nav_4_4" type="checkbox"/>
 <label class="md-nav__link" for="__nav_4_4">
           DNS
           <span class="md-nav__icon md-icon"></span>
@@ -427,10 +427,101 @@
           DNS
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../DNS/dns/">
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+          DNS
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
         DNS
       </a>
+<nav aria-label="目录" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_1">
+    常用的
+  </a>
+<nav aria-label="常用的" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#dnsdnspod-public-dns">
+    腾讯DNS（DNSPod Public DNS+）推荐
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#114dns">
+    114DNS
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#dns_1">
+    阿里DNS
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#dns_2">
+    诺顿DNS
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#opendns">
+    OpenDNS
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#cloudflare">
+    Cloudflare
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#google">
+    Google
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#dotdoh">
+    DoT/DoH
+  </a>
+<nav aria-label="DoT/DoH" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#dotdoh-alidns">
+    阿里 DoT/DoH (Alidns)
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#dotdoh-dnspod">
+    腾讯 DoT/DoH (DNSPod)
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#google-public-dotdoh">
+    Google Public DoT/DoH
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#cloudflare-dotdoh">
+    Cloudflare DoT/DoH
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#quad9-dotdoh">
+    Quad9 DoT/DoH
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
 </li>
 </ul>
 </nav>
@@ -775,8 +866,8 @@
         Redis
       </a>
 </li>
-<li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
-<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_13" id="__nav_4_13" type="checkbox"/>
+<li class="md-nav__item md-nav__item--section md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_4_13" id="__nav_4_13" type="checkbox"/>
 <label class="md-nav__link" for="__nav_4_13">
           Shell
           <span class="md-nav__icon md-icon"></span>
@@ -788,62 +879,14 @@
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../shell/">
+<a class="md-nav__link" href="../../Shell/shell/">
         Shell
       </a>
 </li>
-<li class="md-nav__item md-nav__item--active">
-<input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
-<label class="md-nav__link md-nav__link--active" for="__toc">
-          Shell命令
-          <span class="md-nav__icon md-icon"></span>
-</label>
-<a class="md-nav__link md-nav__link--active" href="./">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Shell/%E8%B6%85%E5%A5%BD%E7%94%A8%E7%9A%84shell%E5%91%BD%E4%BB%A4/">
         Shell命令
       </a>
-<nav aria-label="目录" class="md-nav md-nav--secondary">
-<label class="md-nav__title" for="__toc">
-<span class="md-nav__icon md-icon"></span>
-      目录
-    </label>
-<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#1sudo">
-    1.以sudo运行上条命令
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#2http">
-    2.以HTTP方式共享当前文件夹的文件
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#3vimroot">
-    3.在以普通用户打开的vim当中保存一个root用户文件
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#4">
-    4.切换回上一个目录
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#5">
-    5.替换上一条命令中的一个短语
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#6">
-    6.快速备份一个文件
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#7ssh">
-    7.免密码ssh登录主机
-  </a>
-</li>
-</ul>
-</nav>
 </li>
 </ul>
 </nav>
@@ -1889,52 +1932,74 @@
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
 <nav class="md-tags">
-<a class="md-tag" href="../../../Other/tags/#linux">Linux</a>
-<a class="md-tag" href="../../../Other/tags/#shell">Shell</a>
+<a class="md-tag" href="../../../Other/tags/#nns">NNS</a>
+<a class="md-tag" href="../../../Other/tags/#dot">DoT</a>
+<a class="md-tag" href="../../../Other/tags/#doh">DoH</a>
 </nav>
-<a class="md-content__button md-icon" href="https://github.com/lyricer/love/edit/master/docs/Software/Shell/超好用的shell命令.md" title="编辑此页">
+<a class="md-content__button md-icon" href="https://github.com/lyricer/love/edit/master/docs/Software/DNS/dns.md" title="编辑此页">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"></path></svg>
 </a>
-<h1 id="shell">超好用的shell命令<a class="headerlink" href="#shell" title="Permanent link">¶</a></h1>
-<p>来源：<a href="https://plantegg.github.io/2017/01/01/top_linux_commands/">最牛B的Linux Shell命令</a></p>
-<h2 id="1sudo">1.以sudo运行上条命令<a class="headerlink" href="#1sudo" title="Permanent link">¶</a></h2>
-<p>如果你登陆的Linux没有root权限，在执行命令的时候一般要加上sudo进行操作，不然就会报错。</p>
-<p>通常出现的情况是，敲完命令执行后报错才发现忘了sudo，这时候，新手用户就会：按上箭头，按左箭头，盯着光标回到开始处，输入sudo，回车；高手用户直接按Ctrl-p，按Ctrl-a，输入sudo，回车。</p>
-<p>神级用户就直接<code>sudo !!</code>,当然这几种解决方式效果是完全一样的。</p>
-<p>两个感叹号其实是bash的一个特性，称为事件引用符（event designators）。!!其实相当于!-1，引用前一条命令，当然也可以!-2，!-50。默认情况下bash会在~/.bash_history文件内记录用户执行的最近500条命令，history命令可以显示这些命令。</p>
-<h2 id="2http">2.以HTTP方式共享当前文件夹的文件<a class="headerlink" href="#2http" title="Permanent link">¶</a></h2>
-<p>如果Linux安装了Python了，就可以执行这个命令，这命令启动了Python的SimpleHTTPServer模块，执行后将在本机8000端口开放HTTP服务，在其他能访问本机的机器的浏览器打开<code>http://ip:8000</code>即打开一个目录列表，点击即可下载。</p>
-<p><code>python -m SimpleHTTPServer 8080</code></p>
-<p>python3</p>
-<p><code>python3 -m http.server 8080</code></p>
-<h2 id="3vimroot">3.在以普通用户打开的vim当中保存一个root用户文件<a class="headerlink" href="#3vimroot" title="Permanent link">¶</a></h2>
-<p>在没有root权限，在使用vim保存的文件时没加sudo，导致系统提示无法保存。曲线方法是先保存个临时文件，退出后再sudo cp回去。</p>
-<p>不过实际上在vim里面可以直接完成这个过程的，查阅vim的文档（输入:help :w），会提到命令:w!{cmd}，让vim执行一个外部命令{cmd}，然后把当前缓冲区的内容从stdin传入。</p>
-<p><code>:w !sudo tee %</code></p>
-<p>tee是一个把stdin保存到文件的小工具,而%，是vim当中一个只读寄存器的名字，总保存着当前编辑文件的文件路径,执行这个命令，就相当于从vim外部修改了当前编辑的文件。</p>
-<h2 id="4">4.切换回上一个目录<a class="headerlink" href="#4" title="Permanent link">¶</a></h2>
-<p><code>cd -</code>
-在Linux中，横杆-代表上一个目录的路径。</p>
-<p>实际上cd -就是cd <span class="arithmatex"><span class="MathJax_Preview">OLDPWD的简写，bash的固定变量</span><script type="math/tex">OLDPWD的简写，bash的固定变量</script></span>OLDPWD总保存着之前一个目录的路径。</p>
-<p>相对地，$PWD总保存着当前目录的路径。这些变量在编写shell脚本时候相当有用。</p>
-<h2 id="5">5.替换上一条命令中的一个短语<a class="headerlink" href="#5" title="Permanent link">¶</a></h2>
-<p><code>^nginx^domains^</code></p>
-<p>使用事件引用符（event designator），可以把上一条命令当中的nginx替换成domains。</p>
-<p>在需要重复运行调试一道长长的命令，需要测试某个参数时候，用这个命令会比较实用；但多数人会首先选择按上箭头提出上道命令，再移动光标去修改某参数，这样更直观，但效率上就不够使用引用符高，而且在脚本中用这个方法可以简化很多。</p>
-<p>这道命令的原始样式应该是这样的:<code>!!:s/nginx/domains/</code></p>
-<h2 id="6">6.快速备份一个文件<a class="headerlink" href="#6" title="Permanent link">¶</a></h2>
-<p><code>cp filename{,.bak}</code></p>
-<p>这道命令把filename文件拷贝成filename.bak，大家应该在一些比较复杂的安装教程里面见过这样的用法。其原理就在于bash对大括号的展开操作，filename{,.bak}这一段会被展开成filename filename.bak再传给cp，于是就有了备份的命令了。</p>
-<p>大括号在bash里面是一个排列的意义，可以试试这个： <code>echo {1,2,3}{1,2,3}{1,2,3}</code>，输出三个集合的全排列。</p>
-<h2 id="7ssh">7.免密码ssh登录主机<a class="headerlink" href="#7ssh" title="Permanent link">¶</a></h2>
-<p><code>ssh-copy-id remote-machine</code></p>
-<p>这个命令把当前用户的公钥串写入到远程主机的~/.ssh/authorized_keys内，这样下次使用ssh登录的时候，远程主机就直接根据这串密钥完成身份校验，不再询问密码了。前提是当前用户有生成了公钥，默认是没有的，先执行<code>ssh-keygen</code></p>
-<p>这个命令如果用手工完成，是这样的：</p>
-<div class="highlight"><pre><span></span><code>scp ~/.ssh/identity.pub remote-machine:your-machine
-ssh remote-machine remote-machine
-cat identity.pub &gt;&gt; ~/.ssh/authorized_keys
-</code></pre></div>
-<p>如果你想删掉远程主机上的密钥，直接打开authorized_keys，搜索你的用户名，删除那行，即可。</p>
+<h1 id="dns">DNS<a class="headerlink" href="#dns" title="Permanent link">¶</a></h1>
+<h2 id="_1">常用的<a class="headerlink" href="#_1" title="Permanent link">¶</a></h2>
+<h3 id="dnsdnspod-public-dns">腾讯DNS（DNSPod Public DNS+）推荐<a class="headerlink" href="#dnsdnspod-public-dns" title="Permanent link">¶</a></h3>
+<p>使用同一个服务IP，号称拥有安全零劫持、准确不丢包、快速无等待、稳定多容灾的优势。
+IPv4: 119.29.29.29
+IPv6: 2402:4e00::</p>
+<h3 id="114dns">114DNS<a class="headerlink" href="#114dns" title="Permanent link">¶</a></h3>
+<p>纯净 无劫持
+ipv4：114.114.114.114 / 114.114.115.115</p>
+<p>拦截钓鱼病毒木马网站
+服务地址为：114.114.114.119 / 114.114.115.119</p>
+<p>学校或家长可选拦截 色情网站
+服务地址为：114.114.114.110 / 114.114.115.110</p>
+<h3 id="dns_1">阿里DNS<a class="headerlink" href="#dns_1" title="Permanent link">¶</a></h3>
+<p>ipv4: 223.5.5.5 / 223.6.6.6
+ipv6: 2400:3200::1 / 2400:3200:baba::1</p>
+<h3 id="dns_2">诺顿DNS<a class="headerlink" href="#dns_2" title="Permanent link">¶</a></h3>
+<p>主打防病毒之类，加入了安全功能,对带毒和挂马以及有恶意代码的网站会进行拦截
+官网：<a href="http://status.nortondns.com/">http://status.nortondns.com/</a>
+ipv4：198.153.192.1 / 198.153.194.1</p>
+<h3 id="opendns">OpenDNS<a class="headerlink" href="#opendns" title="Permanent link">¶</a></h3>
+<p>OpenDNS是一个提供免费DNS服务的网站，口号是更安全、更快速、更智能
+以下为OpenDNS的免费DNS解析服务器：</p>
+<p>208.67.222.222 （Resolver1.OpenDNS.com）
+208.67.220.220 （Resolver2.OpenDNS.com）
+208.67.222.220 （Resolver3.OpenDNS.com）
+208.67.220.222 （Resolver4.OpenDNS.com）</p>
+<p>以下为Family Shield Servers。可以阻挡成人网站和含有恶意软件网站：</p>
+<p>208.67.222.123 （resolver1-fs.opendns.com）
+208.67.220.123 （resolver2-fs.opendns.com）</p>
+<h3 id="cloudflare">Cloudflare<a class="headerlink" href="#cloudflare" title="Permanent link">¶</a></h3>
+<p>ipv4：1.1.1.1 / 1.0.0.1
+ipv6: 2606:4700:4700::1111 / 2606:4700:4700::1001</p>
+<h3 id="google">Google<a class="headerlink" href="#google" title="Permanent link">¶</a></h3>
+<p>ipv4: 8.8.8.8 / 8.8.4.4
+ipv6: 2001:4860:4860::8888 / 2001:4860:4860::8844</p>
+<h2 id="dotdoh">DoT/DoH<a class="headerlink" href="#dotdoh" title="Permanent link">¶</a></h2>
+<p>DoT 和 DoH 都是加密DNS的一种方式，区别在于它们采用不同的协议和端口，两个都是域名解析安全扩展协议的一种。
+概念：
+DoT 全称 DNS over TLS，它使用 TLS 来传输 DNS 协议。
+DoH 全称 DNS over HTTPS，它使用 HTTPS 来传输 DNS 协议。</p>
+<h3 id="dotdoh-alidns">阿里 DoT/DoH (Alidns)<a class="headerlink" href="#dotdoh-alidns" title="Permanent link">¶</a></h3>
+<p>阿里 DNS 提供的 DoT/DoH 服务器
+DoT 地址: dns.alidns.com</p>
+<p>DoH 地址: 
+<a href="https://dns.alidns.com/dns-query">https://dns.alidns.com/dns-query</a></p>
+<h3 id="dotdoh-dnspod">腾讯 DoT/DoH (DNSPod)<a class="headerlink" href="#dotdoh-dnspod" title="Permanent link">¶</a></h3>
+<p>腾讯旗下 DNSPod 提供的 DoT/DoH 服务器
+DoT 地址: dot.pub</p>
+<p>DoH 地址: <a href="https://doh.pub/dns-query">https://doh.pub/dns-query</a></p>
+<p>DoH (国密 SM2,基于腾讯云政企国密解决方案) 地址: <a href="https://sm2.doh.pub/dns-query">https://sm2.doh.pub/dns-query</a></p>
+<h3 id="google-public-dotdoh">Google Public DoT/DoH<a class="headerlink" href="#google-public-dotdoh" title="Permanent link">¶</a></h3>
+<p>DoT 地址: dns.google</p>
+<p>DoH 地址: <a href="https://dns.google/dns-query">https://dns.google/dns-query</a></p>
+<h3 id="cloudflare-dotdoh">Cloudflare DoT/DoH<a class="headerlink" href="#cloudflare-dotdoh" title="Permanent link">¶</a></h3>
+<p>DoT 地址: cloudflare-dns.com</p>
+<p>DoH 地址: <a href="https://1dot1dot1dot1.cloudflare-dns.com/">https://1dot1dot1dot1.cloudflare-dns.com/</a></p>
+<h3 id="quad9-dotdoh">Quad9 DoT/DoH<a class="headerlink" href="#quad9-dotdoh" title="Permanent link">¶</a></h3>
+<p>IBM 发起的 Quad9 提供的公共免费 DoT/DoH 服务器。</p>
+<p>DoT 地址: dns.quad9.net</p>
+<p>DoH 地址: <a href="https://dns.quad9.net/dns-query">https://dns.quad9.net/dns-query</a></p>
 </article>
 </div>
 </div>
@@ -1945,7 +2010,7 @@ cat identity.pub &gt;&gt; ~/.ssh/authorized_keys
 </main>
 <footer class="md-footer">
 <nav aria-label="页脚" class="md-footer__inner md-grid">
-<a aria-label="上一页: Shell" class="md-footer__link md-footer__link--prev" href="../shell/" rel="prev">
+<a aria-label="上一页: 使用" class="md-footer__link md-footer__link--prev" href="../../Cloudflare/Cloudflare%E4%BD%BF%E7%94%A8/" rel="prev">
 <div class="md-footer__button md-icon">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"></path></svg>
 </div>
@@ -1954,11 +2019,11 @@ cat identity.pub &gt;&gt; ~/.ssh/authorized_keys
 <span class="md-footer__direction">
                 上一页
               </span>
-              Shell
+              使用
             </div>
 </div>
 </a>
-<a aria-label="下一页: 基础" class="md-footer__link md-footer__link--next" href="../../SQL/MySQL/mysql%E5%9F%BA%E7%A1%80/" rel="next">
+<a aria-label="下一页: 基础" class="md-footer__link md-footer__link--next" href="../../Docker/%E5%9F%BA%E7%A1%80/" rel="next">
 <div class="md-footer__title">
 <div class="md-ellipsis">
 <span class="md-footer__direction">
