@@ -7,10 +7,10 @@
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <meta content="陪伴，無論你需不需要我一直都在..." name="description"/>
 <meta content="qhx" name="author"/>
-<link href="https://wiki.lyricn.com/Ops/Linux/Linux/%E5%91%BD%E4%BB%A4/%E8%A7%A3%E5%8E%8B%E7%BC%A9/" rel="canonical"/>
+<link href="https://wiki.lyricn.com/Ops/Linux/Linux/command/Log/" rel="canonical"/>
 <link href="../../../../../assets/images/logo.png" rel="icon"/>
 <meta content="mkdocs-1.4.2, mkdocs-material-8.5.8" name="generator"/>
-<title>解压缩 - Lyricn Wiki</title>
+<title>Log - Lyricn Wiki</title>
 <link href="../../../../../assets/stylesheets/main.20d9efc8.min.css" rel="stylesheet"/>
 <link href="../../../../../assets/stylesheets/palette.815d1a91.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
@@ -35,7 +35,7 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#_1">
+<a class="md-skip" href="#log">
           跳转至
         </a>
 </div>
@@ -59,7 +59,7 @@
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              解压缩
+              Log
             
           </span>
 </div>
@@ -1283,10 +1283,42 @@
         SSH
       </a>
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../Log/">
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+          Log
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
         Log
       </a>
+<nav aria-label="目录" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#find">
+    find 查找匹配
+  </a>
+<nav aria-label="find 查找匹配" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_1">
+    参数
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#find_1">
+    find 删除日志文件
+  </a>
+</li>
+</ul>
+</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../find/">
@@ -1304,86 +1336,19 @@
       </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="../sysctl/">
+        sysctl
+      </a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="../%E6%96%87%E4%BB%B6/">
         文件
       </a>
 </li>
-<li class="md-nav__item md-nav__item--active">
-<input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
-<label class="md-nav__link md-nav__link--active" for="__toc">
-          解压缩
-          <span class="md-nav__icon md-icon"></span>
-</label>
-<a class="md-nav__link md-nav__link--active" href="./">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../%E8%A7%A3%E5%8E%8B%E7%BC%A9/">
         解压缩
       </a>
-<nav aria-label="目录" class="md-nav md-nav--secondary">
-<label class="md-nav__title" for="__toc">
-<span class="md-nav__icon md-icon"></span>
-      目录
-    </label>
-<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_2">
-    相关命令
-  </a>
-<nav aria-label="相关命令" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#tar">
-    .tar
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#gz">
-    .gz
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#7z">
-    .7z
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#targz-tgz">
-    .tar.gz 和 .tgz
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#bz2">
-    .bz2
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#tarbz2">
-    .tar.bz2
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#bz">
-    .bz
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#tarbz">
-    .tar.bz
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#zip">
-    .zip
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#rar">
-    .rar
-  </a>
-</li>
-</ul>
-</nav>
-</li>
-</ul>
-</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../%E9%98%B2%E7%81%AB%E5%A2%99/">
@@ -1720,13 +1685,18 @@
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../../../VPS/%E4%BB%A3%E7%90%86/Hysteria2/">
+<a class="md-nav__link" href="../../../../../VPS/proxy/Hysteria2/">
         Hysteria2
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../../../VPS/%E4%BB%A3%E7%90%86/V2ray/">
+<a class="md-nav__link" href="../../../../../VPS/proxy/V2ray/">
         V2ray
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../../VPS/proxy/Gost/">
+        Gost
       </a>
 </li>
 </ul>
@@ -1940,112 +1910,66 @@
 <nav class="md-tags">
 <a class="md-tag" href="../../../../../Other/tags/#linux">Linux</a>
 </nav>
-<a class="md-content__button md-icon" href="https://github.com/lyricer/Wiki/edit/master/docs/Ops/Linux/Linux/命令/解压缩.md" title="编辑此页">
+<a class="md-content__button md-icon" href="https://github.com/lyricer/Wiki/edit/master/docs/Ops/Linux/Linux/command/Log.md" title="编辑此页">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"></path></svg>
 </a>
-<h1 id="_1">解压缩<a class="headerlink" href="#_1" title="Permanent link">¶</a></h1>
-<h2 id="_2">相关命令<a class="headerlink" href="#_2" title="Permanent link">¶</a></h2>
-<h3 id="tar">.tar<a class="headerlink" href="#tar" title="Permanent link">¶</a></h3>
-<div class="highlight"><pre><span></span><code><span class="c1"># 解包：</span>
-tar xvf FileName.tar
-<span class="c1"># 打包：</span>
-tar cvf FileName.tar DirName
+<h1 id="log">Log<a class="headerlink" href="#log" title="Permanent link">¶</a></h1>
+<h2 id="find">find 查找匹配<a class="headerlink" href="#find" title="Permanent link">¶</a></h2>
+<div class="highlight"><pre><span></span><code>find . -type f -exec ls -l <span class="o">{</span> <span class="o">}</span> <span class="p">;</span>
 </code></pre></div>
-<hr/>
-<h3 id="gz">.gz<a class="headerlink" href="#gz" title="Permanent link">¶</a></h3>
-<div class="highlight"><pre><span></span><code><span class="c1"># 解压：</span>
-gunzip FileName.gz
-gzip -d FileName.gz
-<span class="c1"># 压缩：</span>
-gzip FileName
+<h3 id="_1">参数<a class="headerlink" href="#_1" title="Permanent link">¶</a></h3>
+<div class="highlight"><pre><span></span><code>pathname: find命令所查找的目录路径。例如用.来表示当前目录，用/来表示系统根目录。
+-print： find命令将匹配的文件输出到标准输出。
+-exec： find命令对匹配的文件执行该参数所给出的shell命令。相应命令的形式为'command' { } ;，注意{ }和；之间的空格。
+-ok： 和-exec的作用相同，只不过以一种更为安全的模式来执行该参数所给出的shell命令，在执行每一个命令之前，都会给出提示，让用户来确定是否执行。
+-name
+按照文件名查找文件。
+-perm
+按照文件权限来查找文件。
+-prune
+使用这一选项可以使find命令不在当前指定的目录中查找，如果同时使用-depth选项，那么-prune将被find命令忽略。
+-user
+按照文件属主来查找文件。
+-group
+按照文件所属的组来查找文件。
+-mtime -n +n
+按照文件的更改时间来查找文件， - n表示文件更改时间距现在n天以内，+ n表示文件更改时间距现在n天以前。find命令还有-atime和-ctime 选项，但它们都和-m time选项。
+-nogroup
+查找无有效所属组的文件，即该文件所属的组在/etc/groups中不存在。
+-nouser
+查找无有效属主的文件，即该文件的属主在/etc/passwd中不存在。
+-newer file1 ! file2
+查找更改时间比文件file1新但比文件file2旧的文件。
+-type
+查找某一类型的文件，诸如：
+b - 块设备文件。
+d - 目录。
+c - 字符设备文件。
+p - 管道文件。
+l - 符号链接文件。
+f - 普通文件。
+-size n：[c] 查找文件长度为n块的文件，带有c时表示文件长度以字节计。-depth：在查找文件时，首先查找当前目录中的文件，然后再在其子目录中查找。
+-fstype：查找位于某一类型文件系统中的文件，这些文件系统类型通常可以在配置文件/etc/fstab中找到，该配置文件中包含了本系统中有关文件系统的信息。
+-mount：在查找文件时不跨越文件系统mount点。
+-follow：如果find命令遇到符号链接文件，就跟踪至链接所指向的文件。
+-cpio：对匹配的文件使用cpio命令，将这些文件备份到磁带设备中。
+另外,下面三个的区别:
+-amin n
+查找系统中最后N分钟访问的文件
+-atime n
+查找系统中最后n*24小时访问的文件
+-cmin n
+查找系统中最后N分钟被改变文件状态的文件
+-ctime n
+查找系统中最后n*24小时被改变文件状态的文件
+-mmin n
+查找系统中最后N分钟被改变文件数据的文件
+-mtime n
+查找系统中最后n*24小时被改变文件数据的文件
 </code></pre></div>
-<hr/>
-<h3 id="7z">.7z<a class="headerlink" href="#7z" title="Permanent link">¶</a></h3>
-<div class="highlight"><pre><span></span><code><span class="c1"># 安装</span>
-sudo apt-get install p7zip-full
-sudo yum install p7zip
-<span class="c1"># 解压：</span>
-7z x your_file.7z
-<span class="c1"># 解压到指定目录</span>
-7z x your_file.7z -o /path/to/extracted/folder
-<span class="c1"># 压缩：其中，compressed_file.7z是要创建的压缩文件的名称，file_to_compress是要压缩的文件或目录的名称。</span>
-7z a compressed_file.7z file_to_compress
+<h2 id="find_1">find 删除日志文件<a class="headerlink" href="#find_1" title="Permanent link">¶</a></h2>
+<div class="highlight"><pre><span></span><code> find /root/*/logs/ -type f -mtime +7 -name <span class="s2">"*log*"</span> -exec rm -rf <span class="o">{}</span> <span class="se">\;</span>
 </code></pre></div>
-<hr/>
-<h3 id="targz-tgz">.tar.gz 和 .tgz<a class="headerlink" href="#targz-tgz" title="Permanent link">¶</a></h3>
-<div class="highlight"><pre><span></span><code><span class="c1"># 解压：</span>
-tar zxvf FileName.tar.gz
-<span class="c1"># 解压到指定目录</span>
-tar -zxvf 压缩包名称  -C  指定的文件夹
-<span class="c1"># 压缩：</span>
-tar zcvf FileName.tar.gz DirName
-</code></pre></div>
-<hr/>
-<h3 id="bz2">.bz2<a class="headerlink" href="#bz2" title="Permanent link">¶</a></h3>
-<div class="highlight"><pre><span></span><code><span class="c1"># 解压：</span>
-bzip2 -d FileName.bz2
-bunzip2 FileName.bz2
-<span class="c1"># 压缩： </span>
-bzip2 -z FileName
-</code></pre></div>
-<hr/>
-<h3 id="tarbz2">.tar.bz2<a class="headerlink" href="#tarbz2" title="Permanent link">¶</a></h3>
-<div class="highlight"><pre><span></span><code><span class="c1"># 解压：</span>
-tar jxvf FileName.tar.bz2
-<span class="c1"># 压缩：</span>
-tar jcvf FileName.tar.bz2 DirName
-</code></pre></div>
-<hr/>
-<h3 id="bz">.bz<a class="headerlink" href="#bz" title="Permanent link">¶</a></h3>
-<div class="highlight"><pre><span></span><code><span class="c1"># 解压：</span>
-bzip2 -d FileName.bz
-bunzip2 FileName.bz
-</code></pre></div>
-<hr/>
-<h3 id="tarbz">.tar.bz<a class="headerlink" href="#tarbz" title="Permanent link">¶</a></h3>
-<div class="highlight"><pre><span></span><code><span class="c1"># 解压：</span>
-tar jxvf FileName.tar.bz
-</code></pre></div>
-<hr/>
-<h3 id="zip">.zip<a class="headerlink" href="#zip" title="Permanent link">¶</a></h3>
-<div class="highlight"><pre><span></span><code><span class="c1"># 解压：</span>
-unzip FileName.zip
-<span class="c1"># 基本压缩： 压缩一个名为 example 的文件夹到名为 example.zip 的压缩文件中。</span>
-zip -r example.zip example
-<span class="c1"># 加密压缩： 创建一个加密的压缩文件 secure.zip，包含 example 文件夹的内容。执行此命令后，系统会提示输入密码。</span>
-zip -r -e secure.zip example
-<span class="c1"># 无压缩打包： 将 example 文件夹的内容打包到 archive.zip 中，但不进行压缩处理。</span>
-zip -r -0 archive.zip example
-<span class="c1"># 更新压缩文件： 向现有的 example.zip 压缩文件中添加新的或已更改的文件。</span>
-zip -r -u example.zip example
-<span class="c1"># 删除压缩文件中的文件： 从 example.zip 压缩文件中删除名为 file.txt 的文件。</span>
-zip -d example.zip file.txt
-<span class="c1"># 查看压缩文件内容： 列出 example.zip 压缩文件中的文件。</span>
-unzip -l example.zip
-<span class="c1"># 最大压缩比例： 使用最高的压缩率压缩 example 文件夹。</span>
-zip -r -9 max_compression.zip example
-<span class="c1"># 安静模式压缩： 压缩 example 文件夹到 example.zip，但不显示任何过程信息。</span>
-zip -r -q quiet_example.zip example
-</code></pre></div>
-<p>-r：递归地压缩目录。用于压缩文件夹及其所有子目录和文件。</p>
-<p>-q：安静模式，不显示压缩过程中的任何输出。</p>
-<p>-e：创建加密的压缩文件。使用此选项后，系统会提示你输入密码。</p>
-<p>-o：保留原文件的最后修改时间。</p>
-<p>-m：移动模式。压缩文件后，原始文件会被删除。</p>
-<p>-0：存储模式。不进行压缩，只是将文件打包到压缩文件中。</p>
-<p>-9：最大压缩。使用最慢的压缩方法来获取最小的压缩文件。</p>
-<p>-v：详细模式。显示压缩过程的详细信息。</p>
-<p>-u：更新模式。只压缩自上次压缩后已更改或新增的文件。</p>
-<p>-d：从压缩文件中删除指定的文件。</p>
-<p>-f：强制压缩。覆盖现有的压缩文件。</p>
-<hr/>
-<h3 id="rar">.rar<a class="headerlink" href="#rar" title="Permanent link">¶</a></h3>
-<div class="highlight"><pre><span></span><code><span class="c1"># 解压：</span>
-rar x FileName.rar
-<span class="c1">#压缩：</span>
-rar a FileName.rar DirName
-</code></pre></div>
-<hr/>
 </article>
 </div>
 </div>
@@ -2056,7 +1980,7 @@ rar a FileName.rar DirName
 </main>
 <footer class="md-footer">
 <nav aria-label="页脚" class="md-footer__inner md-grid">
-<a aria-label="上一页: 文件" class="md-footer__link md-footer__link--prev" href="../%E6%96%87%E4%BB%B6/" rel="prev">
+<a aria-label="上一页: SSH" class="md-footer__link md-footer__link--prev" href="../ssh/" rel="prev">
 <div class="md-footer__button md-icon">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"></path></svg>
 </div>
@@ -2065,17 +1989,17 @@ rar a FileName.rar DirName
 <span class="md-footer__direction">
                 上一页
               </span>
-              文件
+              SSH
             </div>
 </div>
 </a>
-<a aria-label="下一页: 防火墙" class="md-footer__link md-footer__link--next" href="../%E9%98%B2%E7%81%AB%E5%A2%99/" rel="next">
+<a aria-label="下一页: find" class="md-footer__link md-footer__link--next" href="../find/" rel="next">
 <div class="md-footer__title">
 <div class="md-ellipsis">
 <span class="md-footer__direction">
                 下一页
               </span>
-              防火墙
+              find
             </div>
 </div>
 <div class="md-footer__button md-icon">

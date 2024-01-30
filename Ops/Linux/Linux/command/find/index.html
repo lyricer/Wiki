@@ -7,10 +7,10 @@
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <meta content="陪伴，無論你需不需要我一直都在..." name="description"/>
 <meta content="qhx" name="author"/>
-<link href="https://wiki.lyricn.com/Ops/Linux/Linux/%E5%91%BD%E4%BB%A4/%E6%96%87%E4%BB%B6/" rel="canonical"/>
+<link href="https://wiki.lyricn.com/Ops/Linux/Linux/command/find/" rel="canonical"/>
 <link href="../../../../../assets/images/logo.png" rel="icon"/>
 <meta content="mkdocs-1.4.2, mkdocs-material-8.5.8" name="generator"/>
-<title>文件 - Lyricn Wiki</title>
+<title>find - Lyricn Wiki</title>
 <link href="../../../../../assets/stylesheets/main.20d9efc8.min.css" rel="stylesheet"/>
 <link href="../../../../../assets/stylesheets/palette.815d1a91.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
@@ -35,7 +35,7 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#_1">
+<a class="md-skip" href="#find">
           跳转至
         </a>
 </div>
@@ -59,7 +59,7 @@
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              文件
+              find
             
           </span>
 </div>
@@ -1288,10 +1288,42 @@
         Log
       </a>
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../find/">
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+          find
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
         find
       </a>
+<nav aria-label="目录" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_1">
+    语法
+  </a>
+<nav aria-label="语法" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_2">
+    参数说明 :
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_3">
+    常用
+  </a>
+</li>
+</ul>
+</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../Screen/">
@@ -1303,37 +1335,15 @@
         rsync
       </a>
 </li>
-<li class="md-nav__item md-nav__item--active">
-<input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
-<label class="md-nav__link md-nav__link--active" for="__toc">
-          文件
-          <span class="md-nav__icon md-icon"></span>
-</label>
-<a class="md-nav__link md-nav__link--active" href="./">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../sysctl/">
+        sysctl
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../%E6%96%87%E4%BB%B6/">
         文件
       </a>
-<nav aria-label="目录" class="md-nav md-nav--secondary">
-<label class="md-nav__title" for="__toc">
-<span class="md-nav__icon md-icon"></span>
-      目录
-    </label>
-<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_2">
-    查询文件大小
-  </a>
-<nav aria-label="查询文件大小" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#du">
-    du
-  </a>
-</li>
-</ul>
-</nav>
-</li>
-</ul>
-</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../%E8%A7%A3%E5%8E%8B%E7%BC%A9/">
@@ -1675,13 +1685,18 @@
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../../../VPS/%E4%BB%A3%E7%90%86/Hysteria2/">
+<a class="md-nav__link" href="../../../../../VPS/proxy/Hysteria2/">
         Hysteria2
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../../../VPS/%E4%BB%A3%E7%90%86/V2ray/">
+<a class="md-nav__link" href="../../../../../VPS/proxy/V2ray/">
         V2ray
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../../VPS/proxy/Gost/">
+        Gost
       </a>
 </li>
 </ul>
@@ -1895,29 +1910,43 @@
 <nav class="md-tags">
 <a class="md-tag" href="../../../../../Other/tags/#linux">Linux</a>
 </nav>
-<a class="md-content__button md-icon" href="https://github.com/lyricer/Wiki/edit/master/docs/Ops/Linux/Linux/命令/文件.md" title="编辑此页">
+<a class="md-content__button md-icon" href="https://github.com/lyricer/Wiki/edit/master/docs/Ops/Linux/Linux/command/find.md" title="编辑此页">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"></path></svg>
 </a>
-<h1 id="_1">文件<a class="headerlink" href="#_1" title="Permanent link">¶</a></h1>
-<h2 id="_2">查询文件大小<a class="headerlink" href="#_2" title="Permanent link">¶</a></h2>
-<h3 id="du">du<a class="headerlink" href="#du" title="Permanent link">¶</a></h3>
-<p>du 命令一般用于文件和目录所占用的空间大小。
-<div class="highlight"><pre><span></span><code>du <span class="o">[</span>-参数<span class="o">]</span> 文件或目录名称
-
-<span class="c1"># 一个目录下所有文件占用空间的总大小</span>
-du 目标目录 -sh
-
-<span class="c1"># 查看当前目录下各文件、文件夹的大小</span>
-du -h --max-depth<span class="o">=</span><span class="m">1</span> *
-</code></pre></div></p>
-<ul>
-<li>-a :列出所有的文件与目录容量，因为默认仅统计目录底下的文件量而已。</li>
-<li>-h :以人们较易读的容量格式(G/M)显示;</li>
-<li>-s :列出总量而已，而不列出每个各别的目录占用容量;</li>
-<li>-S:不包括子目录下的总计，与-s有点差别。 </li>
-<li>-k :以KBytes列出容量显示; </li>
-<li>-m :以MBytes 列出容量显示;</li>
-</ul>
+<h1 id="find">find<a class="headerlink" href="#find" title="Permanent link">¶</a></h1>
+<p>find 命令用于在指定目录下查找文件和目录。</p>
+<h2 id="_1">语法<a class="headerlink" href="#_1" title="Permanent link">¶</a></h2>
+<div class="highlight"><pre><span></span><code>find <span class="o">[</span>path<span class="o">]</span> <span class="o">[</span>expression<span class="o">]</span>
+</code></pre></div>
+<h3 id="_2">参数说明 :<a class="headerlink" href="#_2" title="Permanent link">¶</a></h3>
+<p>path 是要查找的目录路径，可以是一个目录或文件名，也可以是多个路径，多个路径之间用空格分隔，如果未指定路径，则默认为当前目录。</p>
+<p>expression 是可选参数，用于指定查找的条件，可以是文件名、文件类型、文件大小等等。</p>
+<p>expression 中可使用的选项有二三十个之多，以下列出最常用的部份：</p>
+<p>-name pattern：按文件名查找，支持使用通配符 * 和 ?。</p>
+<p>-type type：按文件类型查找，可以是 f（普通文件）、d（目录）、l（符号链接）等。</p>
+<p>-size [+-]size[cwbkMG]：按文件大小查找，支持使用 + 或 - 表示大于或小于指定大小，单位可以是 c（字节）、w（字数）、b（块数）、k（KB）、M（MB）或 G（GB）。</p>
+<p>-mtime days：按修改时间查找，支持使用 + 或 - 表示在指定天数前或后，days 是一个整数表示天数。</p>
+<p>-user username：按文件所有者查找。</p>
+<p>-group groupname：按文件所属组查找。</p>
+<p>find 命令中用于时间的参数如下：</p>
+<p>-amin n：查找在 n 分钟内被访问过的文件。</p>
+<p>-atime n：查找在 n*24 小时内被访问过的文件。</p>
+<p>-cmin n：查找在 n 分钟内状态发生变化的文件（例如权限）。</p>
+<p>-ctime n：查找在 n*24 小时内状态发生变化的文件（例如权限）。</p>
+<p>-mmin n：查找在 n 分钟内被修改过的文件。</p>
+<p>-mtime n：查找在 n*24 小时内被修改过的文件。</p>
+<p>在这些参数中，n 可以是一个正数、负数或零。正数表示在指定的时间内修改或访问过的文件，负数表示在指定的时间之前修改或访问过的文件，零表示在当前时间点上修改或访问过的文件。</p>
+<p>例如：在/root目录下的所有子目录中查找文件，这些文件的名称包含"log"（不区分大小写），并且它们的最后修改时间距离当前时间超过7天</p>
+<div class="highlight"><pre><span></span><code> find /root/*/logs/ -type f -mtime +7 -name <span class="s2">"*log*"</span>
+</code></pre></div>
+<h2 id="_3">常用<a class="headerlink" href="#_3" title="Permanent link">¶</a></h2>
+<p>查找大文件：</p>
+<div class="highlight"><pre><span></span><code>find /path/to/search -type f -size +500M
+</code></pre></div>
+<p>find: 这是查找文件和目录的命令。
+/path/to/search: 这是您希望开始搜索的路径。您可以将其替换为您要搜索的实际目录路径。
+-type f: 这表示您要查找的是文件，而不是目录。
+-size +500M: 这是条件，表示查找文件大小大于500MB的文件。</p>
 </article>
 </div>
 </div>
@@ -1928,7 +1957,7 @@ du -h --max-depth<span class="o">=</span><span class="m">1</span> *
 </main>
 <footer class="md-footer">
 <nav aria-label="页脚" class="md-footer__inner md-grid">
-<a aria-label="上一页: rsync" class="md-footer__link md-footer__link--prev" href="../rsync/" rel="prev">
+<a aria-label="上一页: Log" class="md-footer__link md-footer__link--prev" href="../Log/" rel="prev">
 <div class="md-footer__button md-icon">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"></path></svg>
 </div>
@@ -1937,17 +1966,17 @@ du -h --max-depth<span class="o">=</span><span class="m">1</span> *
 <span class="md-footer__direction">
                 上一页
               </span>
-              rsync
+              Log
             </div>
 </div>
 </a>
-<a aria-label="下一页: 解压缩" class="md-footer__link md-footer__link--next" href="../%E8%A7%A3%E5%8E%8B%E7%BC%A9/" rel="next">
+<a aria-label="下一页: Screen" class="md-footer__link md-footer__link--next" href="../Screen/" rel="next">
 <div class="md-footer__title">
 <div class="md-ellipsis">
 <span class="md-footer__direction">
                 下一页
               </span>
-              解压缩
+              Screen
             </div>
 </div>
 <div class="md-footer__button md-icon">

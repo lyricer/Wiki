@@ -7,10 +7,10 @@
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <meta content="陪伴，無論你需不需要我一直都在..." name="description"/>
 <meta content="qhx" name="author"/>
-<link href="https://wiki.lyricn.com/Ops/Linux/Linux/%E5%91%BD%E4%BB%A4/Log/" rel="canonical"/>
+<link href="https://wiki.lyricn.com/Ops/Linux/Linux/command/Screen/" rel="canonical"/>
 <link href="../../../../../assets/images/logo.png" rel="icon"/>
 <meta content="mkdocs-1.4.2, mkdocs-material-8.5.8" name="generator"/>
-<title>Log - Lyricn Wiki</title>
+<title>Screen - Lyricn Wiki</title>
 <link href="../../../../../assets/stylesheets/main.20d9efc8.min.css" rel="stylesheet"/>
 <link href="../../../../../assets/stylesheets/palette.815d1a91.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
@@ -35,7 +35,7 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#log">
+<a class="md-skip" href="#screen">
           跳转至
         </a>
 </div>
@@ -59,7 +59,7 @@
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              Log
+              Screen
             
           </span>
 </div>
@@ -1283,56 +1283,30 @@
         SSH
       </a>
 </li>
-<li class="md-nav__item md-nav__item--active">
-<input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
-<label class="md-nav__link md-nav__link--active" for="__toc">
-          Log
-          <span class="md-nav__icon md-icon"></span>
-</label>
-<a class="md-nav__link md-nav__link--active" href="./">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Log/">
         Log
       </a>
-<nav aria-label="目录" class="md-nav md-nav--secondary">
-<label class="md-nav__title" for="__toc">
-<span class="md-nav__icon md-icon"></span>
-      目录
-    </label>
-<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#find">
-    find 查找匹配
-  </a>
-<nav aria-label="find 查找匹配" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_1">
-    参数
-  </a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#find_1">
-    find 删除日志文件
-  </a>
-</li>
-</ul>
-</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../find/">
         find
       </a>
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../Screen/">
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
+<a class="md-nav__link md-nav__link--active" href="./">
         Screen
       </a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../rsync/">
         rsync
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../sysctl/">
+        sysctl
       </a>
 </li>
 <li class="md-nav__item">
@@ -1680,13 +1654,18 @@
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../../../VPS/%E4%BB%A3%E7%90%86/Hysteria2/">
+<a class="md-nav__link" href="../../../../../VPS/proxy/Hysteria2/">
         Hysteria2
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../../../VPS/%E4%BB%A3%E7%90%86/V2ray/">
+<a class="md-nav__link" href="../../../../../VPS/proxy/V2ray/">
         V2ray
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../../VPS/proxy/Gost/">
+        Gost
       </a>
 </li>
 </ul>
@@ -1899,66 +1878,38 @@
 <article class="md-content__inner md-typeset">
 <nav class="md-tags">
 <a class="md-tag" href="../../../../../Other/tags/#linux">Linux</a>
+<a class="md-tag" href="../../../../../Other/tags/#">命令</a>
 </nav>
-<a class="md-content__button md-icon" href="https://github.com/lyricer/Wiki/edit/master/docs/Ops/Linux/Linux/命令/Log.md" title="编辑此页">
+<a class="md-content__button md-icon" href="https://github.com/lyricer/Wiki/edit/master/docs/Ops/Linux/Linux/command/Screen.md" title="编辑此页">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"></path></svg>
 </a>
-<h1 id="log">Log<a class="headerlink" href="#log" title="Permanent link">¶</a></h1>
-<h2 id="find">find 查找匹配<a class="headerlink" href="#find" title="Permanent link">¶</a></h2>
-<div class="highlight"><pre><span></span><code>find . -type f -exec ls -l <span class="o">{</span> <span class="o">}</span> <span class="p">;</span>
+<h1 id="screen">Screen<a class="headerlink" href="#screen" title="Permanent link">¶</a></h1>
+<p>語法：</p>
+<p><code>screen [-AmRvx -ls -wipe][-d &lt;作业名称&gt;][-h &lt;行数&gt;][-r &lt;作业名称&gt;][-s &lt;shell&gt;][-S &lt;作业名称&gt;]</code></p>
+<div class="highlight"><pre><span></span><code>-A 　将所有的视窗都调整为目前终端机的大小。
+-d&lt;作业名称&gt; 　将指定的screen作业离线。
+-h&lt;行数&gt; 　指定视窗的缓冲区行数。
+-m 　即使目前已在作业中的screen作业，仍强制建立新的screen作业。
+-r&lt;作业名称&gt; 　恢复离线的screen作业。
+-R 　先试图恢复离线的作业。若找不到离线的作业，即建立新的screen作业。
+-s&lt;shell&gt; 　指定建立新视窗时，所要执行的shell。
+-S&lt;作业名称&gt; 　指定screen作业的名称。
+-v 　显示版本信息。
+-x 　恢复之前离线的screen作业。
+-ls或--list 　显示目前所有的screen作业。
+-wipe 　检查目前所有的screen作业，并删除已经无法使用的screen作业。
 </code></pre></div>
-<h3 id="_1">参数<a class="headerlink" href="#_1" title="Permanent link">¶</a></h3>
-<div class="highlight"><pre><span></span><code>pathname: find命令所查找的目录路径。例如用.来表示当前目录，用/来表示系统根目录。
--print： find命令将匹配的文件输出到标准输出。
--exec： find命令对匹配的文件执行该参数所给出的shell命令。相应命令的形式为'command' { } ;，注意{ }和；之间的空格。
--ok： 和-exec的作用相同，只不过以一种更为安全的模式来执行该参数所给出的shell命令，在执行每一个命令之前，都会给出提示，让用户来确定是否执行。
--name
-按照文件名查找文件。
--perm
-按照文件权限来查找文件。
--prune
-使用这一选项可以使find命令不在当前指定的目录中查找，如果同时使用-depth选项，那么-prune将被find命令忽略。
--user
-按照文件属主来查找文件。
--group
-按照文件所属的组来查找文件。
--mtime -n +n
-按照文件的更改时间来查找文件， - n表示文件更改时间距现在n天以内，+ n表示文件更改时间距现在n天以前。find命令还有-atime和-ctime 选项，但它们都和-m time选项。
--nogroup
-查找无有效所属组的文件，即该文件所属的组在/etc/groups中不存在。
--nouser
-查找无有效属主的文件，即该文件的属主在/etc/passwd中不存在。
--newer file1 ! file2
-查找更改时间比文件file1新但比文件file2旧的文件。
--type
-查找某一类型的文件，诸如：
-b - 块设备文件。
-d - 目录。
-c - 字符设备文件。
-p - 管道文件。
-l - 符号链接文件。
-f - 普通文件。
--size n：[c] 查找文件长度为n块的文件，带有c时表示文件长度以字节计。-depth：在查找文件时，首先查找当前目录中的文件，然后再在其子目录中查找。
--fstype：查找位于某一类型文件系统中的文件，这些文件系统类型通常可以在配置文件/etc/fstab中找到，该配置文件中包含了本系统中有关文件系统的信息。
--mount：在查找文件时不跨越文件系统mount点。
--follow：如果find命令遇到符号链接文件，就跟踪至链接所指向的文件。
--cpio：对匹配的文件使用cpio命令，将这些文件备份到磁带设备中。
-另外,下面三个的区别:
--amin n
-查找系统中最后N分钟访问的文件
--atime n
-查找系统中最后n*24小时访问的文件
--cmin n
-查找系统中最后N分钟被改变文件状态的文件
--ctime n
-查找系统中最后n*24小时被改变文件状态的文件
--mmin n
-查找系统中最后N分钟被改变文件数据的文件
--mtime n
-查找系统中最后n*24小时被改变文件数据的文件
-</code></pre></div>
-<h2 id="find_1">find 删除日志文件<a class="headerlink" href="#find_1" title="Permanent link">¶</a></h2>
-<div class="highlight"><pre><span></span><code> find /root/*/logs/ -type f -mtime +7 -name <span class="s2">"*log*"</span> -exec rm -rf <span class="o">{}</span> <span class="se">\;</span>
+<div class="highlight"><pre><span></span><code># screen //创建 screen 终端
+
+# screen vi ~/main.c //创建 screen 终端 ，并执行 vi命令
+
+# screen -ls  //显示已创建的screen终端 
+
+screen -S yourname -&gt; 新建一个叫yourname的session
+screen -ls -&gt; 列出当前所有的session
+screen -r yourname -&gt; 回到yourname这个session
+screen -d yourname -&gt; 远程detach某个session
+screen -d -r yourname -&gt; 结束当前session并回到yourname这个session
 </code></pre></div>
 </article>
 </div>
@@ -1970,7 +1921,7 @@ f - 普通文件。
 </main>
 <footer class="md-footer">
 <nav aria-label="页脚" class="md-footer__inner md-grid">
-<a aria-label="上一页: SSH" class="md-footer__link md-footer__link--prev" href="../ssh/" rel="prev">
+<a aria-label="上一页: find" class="md-footer__link md-footer__link--prev" href="../find/" rel="prev">
 <div class="md-footer__button md-icon">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"></path></svg>
 </div>
@@ -1979,17 +1930,17 @@ f - 普通文件。
 <span class="md-footer__direction">
                 上一页
               </span>
-              SSH
+              find
             </div>
 </div>
 </a>
-<a aria-label="下一页: find" class="md-footer__link md-footer__link--next" href="../find/" rel="next">
+<a aria-label="下一页: rsync" class="md-footer__link md-footer__link--next" href="../rsync/" rel="next">
 <div class="md-footer__title">
 <div class="md-ellipsis">
 <span class="md-footer__direction">
                 下一页
               </span>
-              find
+              rsync
             </div>
 </div>
 <div class="md-footer__button md-icon">

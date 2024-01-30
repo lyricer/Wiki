@@ -7,10 +7,10 @@
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <meta content="陪伴，無論你需不需要我一直都在..." name="description"/>
 <meta content="qhx" name="author"/>
-<link href="https://wiki.lyricn.com/Ops/Linux/Linux/%E5%91%BD%E4%BB%A4/ssh/" rel="canonical"/>
+<link href="https://wiki.lyricn.com/Ops/Linux/Linux/command/%E9%98%B2%E7%81%AB%E5%A2%99/" rel="canonical"/>
 <link href="../../../../../assets/images/logo.png" rel="icon"/>
 <meta content="mkdocs-1.4.2, mkdocs-material-8.5.8" name="generator"/>
-<title>SSH - Lyricn Wiki</title>
+<title>防火墙 - Lyricn Wiki</title>
 <link href="../../../../../assets/stylesheets/main.20d9efc8.min.css" rel="stylesheet"/>
 <link href="../../../../../assets/stylesheets/palette.815d1a91.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
@@ -35,7 +35,7 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#ssh">
+<a class="md-skip" href="#_1">
           跳转至
         </a>
 </div>
@@ -59,7 +59,7 @@
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              SSH
+              防火墙
             
           </span>
 </div>
@@ -1278,28 +1278,10 @@
           命令
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item md-nav__item--active">
-<input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
-<label class="md-nav__link md-nav__link--active" for="__toc">
-          SSH
-          <span class="md-nav__icon md-icon"></span>
-</label>
-<a class="md-nav__link md-nav__link--active" href="./">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../ssh/">
         SSH
       </a>
-<nav aria-label="目录" class="md-nav md-nav--secondary">
-<label class="md-nav__title" for="__toc">
-<span class="md-nav__icon md-icon"></span>
-      目录
-    </label>
-<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#ssh_1">
-    生成SSH密钥
-  </a>
-</li>
-</ul>
-</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../Log/">
@@ -1322,6 +1304,11 @@
       </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="../sysctl/">
+        sysctl
+      </a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="../%E6%96%87%E4%BB%B6/">
         文件
       </a>
@@ -1331,10 +1318,57 @@
         解压缩
       </a>
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../%E9%98%B2%E7%81%AB%E5%A2%99/">
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+          防火墙
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
         防火墙
       </a>
+<nav aria-label="目录" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#iptables">
+    iptables
+  </a>
+<nav aria-label="iptables" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_2">
+    开启防火墙
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#ubuntuiptables">
+    在Ubuntu上永久保存iptables
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#ip">
+    限制ip访问
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_3">
+    删除规则
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#ping">
+    禁止PING
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
 </li>
 </ul>
 </nav>
@@ -1666,13 +1700,18 @@
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../../../VPS/%E4%BB%A3%E7%90%86/Hysteria2/">
+<a class="md-nav__link" href="../../../../../VPS/proxy/Hysteria2/">
         Hysteria2
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../../../VPS/%E4%BB%A3%E7%90%86/V2ray/">
+<a class="md-nav__link" href="../../../../../VPS/proxy/V2ray/">
         V2ray
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../../VPS/proxy/Gost/">
+        Gost
       </a>
 </li>
 </ul>
@@ -1885,17 +1924,73 @@
 <article class="md-content__inner md-typeset">
 <nav class="md-tags">
 <a class="md-tag" href="../../../../../Other/tags/#linux">Linux</a>
-<a class="md-tag" href="../../../../../Other/tags/#ssh">SSH</a>
 </nav>
-<a class="md-content__button md-icon" href="https://github.com/lyricer/Wiki/edit/master/docs/Ops/Linux/Linux/命令/ssh.md" title="编辑此页">
+<a class="md-content__button md-icon" href="https://github.com/lyricer/Wiki/edit/master/docs/Ops/Linux/Linux/command/防火墙.md" title="编辑此页">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"></path></svg>
 </a>
-<h1 id="ssh">SSH<a class="headerlink" href="#ssh" title="Permanent link">¶</a></h1>
-<h2 id="ssh_1">生成SSH密钥<a class="headerlink" href="#ssh_1" title="Permanent link">¶</a></h2>
-<div class="highlight"><pre><span></span><code>ssh-keygen
-<span class="c1"># 如果你想要生成RSA密钥对，可以使用 -t 选项来指定算法</span>
-ssh-keygen -t rsa
+<h1 id="_1">防火墙<a class="headerlink" href="#_1" title="Permanent link">¶</a></h1>
+<h2 id="iptables">iptables<a class="headerlink" href="#iptables" title="Permanent link">¶</a></h2>
+<h3 id="_2">开启防火墙<a class="headerlink" href="#_2" title="Permanent link">¶</a></h3>
+<div class="highlight"><pre><span></span><code>//查看防火墙开启端口情况
+sudo iptables -L -n
+//开启端口 如3306
+sudo iptables -A INPUT -m state --state NEW -m tcp -p tcp --dport <span class="m">3306</span> -j ACCEPT
+//查看指定端口信息
+sudo iptables -L -n <span class="p">|</span> grep <span class="m">3306</span>
+//重启
+service iptables restart
+//重启ufw防火墙，使命令生效
+sudo ufw reload  
 </code></pre></div>
+<h3 id="ubuntuiptables">在Ubuntu上永久保存iptables<a class="headerlink" href="#ubuntuiptables" title="Permanent link">¶</a></h3>
+<div class="highlight"><pre><span></span><code>sudo apt-get update
+sudo apt-get install iptables-persistent
+<span class="c1"># 启动服务</span>
+service iptables-persistent start｜stop｜restart｜reload
+<span class="c1"># 遇到问题</span>
+<span class="c1">## Failed to start iptables-persistent.service: Unit iptables-persistent.service not found.</span>
+<span class="c1">## 从 Ubuntu 16.04 开始，iptables-persistent 已被 netfilter-persistent 取代。由于依赖关系，该软件包仍然存在并自动安装 netfilter-persistent。</span>
+sudo service netfilter-persistent start
+
+<span class="c1"># 将IPTABLES保存在/etc/IPTABLES/rules.v4文件中：</span>
+iptables-save &gt; /etc/iptables/rules.v4
+<span class="c1"># 当我们使用IPv6的iptables时，请遵循相同的方法步骤</span>
+ip6tables-save &gt; /etc/iptables/rules.v6
+</code></pre></div>
+<h3 id="ip">限制ip访问<a class="headerlink" href="#ip" title="Permanent link">¶</a></h3>
+<div class="highlight"><pre><span></span><code><span class="c1"># 设置允许访问的ip。</span>
+sudo iptables -I INPUT -p tcp --dport <span class="m">8090</span> -j DROP <span class="c1">#禁止除8090端口以外的访问</span>
+sudo iptables -I INPUT -p tcp -s <span class="m">192</span>.168.1.1 --dport <span class="m">8090</span> -j ACCEPT
+
+<span class="c1"># 查看是否添加了规则。</span>
+iptables -L -n
+
+<span class="c1"># 保存设置。</span>
+service iptables save
+
+<span class="c1"># 最后重启防火墙即可。</span>
+service iptables restart
+</code></pre></div>
+<h3 id="_3">删除规则<a class="headerlink" href="#_3" title="Permanent link">¶</a></h3>
+<div class="highlight"><pre><span></span><code><span class="c1"># 列出规则，包括序号</span>
+iptables -t nat -L -n --line-numbers
+<span class="c1"># 根据序号删除，这里假如它的序号是1</span>
+iptables -D INPUT <span class="m">1</span>
+</code></pre></div>
+<h3 id="ping">禁止PING<a class="headerlink" href="#ping" title="Permanent link">¶</a></h3>
+<div class="highlight"><pre><span></span><code><span class="c1"># 修改iptables设置,禁止PING</span>
+iptables -A INPUT -p icmp --icmp-type <span class="m">8</span> -s <span class="m">0</span>/0 -j DROP
+<span class="c1"># 如果需要启动，删除之前配置的规则就好</span>
+iptables -D INPUT -p icmp --icmp-type <span class="m">8</span> -s <span class="m">0</span>/0 -j DROP
+</code></pre></div>
+<p>如果你不想使用防火墙禁止PING，还可以直接禁用PING
+<div class="highlight"><pre><span></span><code><span class="c1"># 修改文件,将0改成1即可</span>
+nano /proc/sys/net/ipv4/icmp_echo_ignore_all
+<span class="c1"># 或者我们直接写入设置禁止PING</span>
+<span class="nb">echo</span> <span class="m">1</span> &gt; /proc/sys/net/ipv4/icmp_echo_ignore_all
+<span class="c1"># 启动则是</span>
+<span class="nb">echo</span> <span class="m">0</span> &gt; /proc/sys/net/ipv4/icmp_echo_ignore_all
+</code></pre></div></p>
 </article>
 </div>
 </div>
@@ -1906,7 +2001,7 @@ ssh-keygen -t rsa
 </main>
 <footer class="md-footer">
 <nav aria-label="页脚" class="md-footer__inner md-grid">
-<a aria-label="上一页: 安全" class="md-footer__link md-footer__link--prev" href="../../%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%AE%89%E5%85%A8/" rel="prev">
+<a aria-label="上一页: 解压缩" class="md-footer__link md-footer__link--prev" href="../%E8%A7%A3%E5%8E%8B%E7%BC%A9/" rel="prev">
 <div class="md-footer__button md-icon">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"></path></svg>
 </div>
@@ -1915,17 +2010,17 @@ ssh-keygen -t rsa
 <span class="md-footer__direction">
                 上一页
               </span>
-              安全
+              解压缩
             </div>
 </div>
 </a>
-<a aria-label="下一页: Log" class="md-footer__link md-footer__link--next" href="../Log/" rel="next">
+<a aria-label="下一页: frp" class="md-footer__link md-footer__link--next" href="../../software/frp/" rel="next">
 <div class="md-footer__title">
 <div class="md-ellipsis">
 <span class="md-footer__direction">
                 下一页
               </span>
-              Log
+              frp
             </div>
 </div>
 <div class="md-footer__button md-icon">
