@@ -1064,30 +1064,65 @@
           Wordpress
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_4_18_1" id="__nav_4_18_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_4_18_1">
+          常規
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="常規" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_4_18_1">
+<span class="md-nav__icon md-icon"></span>
+          常規
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../WordPress/wordpress%E5%9F%BA%E7%A1%80/">
+<a class="md-nav__link" href="../../WordPress/%E5%B8%B8%E8%A6%8F/wordpress%E5%9F%BA%E7%A1%80/">
         基础
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../WordPress/wordpress%E5%AE%89%E5%85%A8/">
+<a class="md-nav__link" href="../../WordPress/%E5%B8%B8%E8%A6%8F/wordpress%E5%AE%89%E5%85%A8/">
         安全
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../WordPress/wordpress%E8%BF%81%E7%A7%BB/">
+<a class="md-nav__link" href="../../WordPress/%E5%B8%B8%E8%A6%8F/wordpress%E8%BF%81%E7%A7%BB/">
         迁移
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../WordPress/wordpress%E6%8F%92%E4%BB%B6/">
+<a class="md-nav__link" href="../../WordPress/%E5%B8%B8%E8%A6%8F/wordpress%E6%8F%92%E4%BB%B6/">
         插件
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../WordPress/wordpress%E9%85%8D%E7%BD%AE/">
+<a class="md-nav__link" href="../../WordPress/%E5%B8%B8%E8%A6%8F/wordpress%E9%85%8D%E7%BD%AE/">
         配置
       </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_4_18_2" id="__nav_4_18_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_4_18_2">
+          主題
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="主題" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_4_18_2">
+<span class="md-nav__icon md-icon"></span>
+          主題
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../WordPress/%E4%B8%BB%E9%A1%8C/%E4%B8%BB%E9%A1%8C%E9%85%8D%E7%BD%AE/">
+        配置
+      </a>
+</li>
+</ul>
+</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../../WordPress/%E5%BE%9E%E9%9B%B6%E9%96%8B%E5%A7%8B/">
@@ -1920,28 +1955,56 @@
 </a>
 <h1 id="nginx">Nginx使用<a class="headerlink" href="#nginx" title="Permanent link">¶</a></h1>
 <h2 id="cloudflareip">使用了Cloudflare后看日志获取不到真实IP<a class="headerlink" href="#cloudflareip" title="Permanent link">¶</a></h2>
+<p><a href="https://developers.cloudflare.com/support/troubleshooting/restoring-visitor-ips/restoring-original-visitor-ips/" target="_blank"> 官方参考文档 </a></p>
 <h3 id="1nginxhttp">1.最简的在nginx配置文件http段配置<a class="headerlink" href="#1nginxhttp" title="Permanent link">¶</a></h3>
 <div class="highlight"><pre><span></span><code>set_real_ip_from 0.0.0.0/0;
-real_ip_header X-Forwarded-For;
+real_ip_header X-Forwarded-For
+# 是否递归地排除直至得到用户ip，默认off
+real_ip_recursive on;
+#real_ip_header CF-Connecting-IP; 
+#real_ip_header  CF-Connecting-IPv6;
 </code></pre></div>
 <h3 id="2cloudflareip">2.优化一下,从Cloudflare那里获取IP<a class="headerlink" href="#2cloudflareip" title="Permanent link">¶</a></h3>
 <p>http配置
 <div class="highlight"><pre><span></span><code>real_ip_header X-Forwarded-For;
+real_ip_recursive on;
 include vhost/cloudflare_ips.conf;
 </code></pre></div></p>
 <p>编写sh脚本
 <div class="highlight"><pre><span></span><code><span class="ch">#!/bin/bash</span>
 
-<span class="c1"># 网址</span>
-<span class="nv">URL</span><span class="o">=</span><span class="s2">"https://www.cloudflare.com/ips-v4"</span>
+<span class="c1"># IPv4 和 IPv6 地址列表的网址</span>
+<span class="nv">URL_V4</span><span class="o">=</span><span class="s2">"https://www.cloudflare.com/ips-v4"</span>
+<span class="nv">URL_V6</span><span class="o">=</span><span class="s2">"https://www.cloudflare.com/ips-v6"</span>
 
-<span class="c1"># 使用curl获取内容，并使用awk格式化输出，然后保存到cloudflare_ips.conf</span>
-curl -s <span class="nv">$URL</span> <span class="p">|</span> awk <span class="s1">'{print "set_real_ip_from " $1 ";"}'</span> &gt; /vhost/cloudflare_ips.conf
+<span class="c1"># 配置文件路径</span>
+<span class="nv">CONF_FILE</span><span class="o">=</span><span class="s2">"/usr/local/nginx/conf/vhost/cloudflare_ips.conf"</span>
 
-<span class="c1"># 检查curl命令是否成功执行</span>
+<span class="c1"># 使用curl获取IPv4地址列表，并使用awk格式化输出</span>
+curl -s <span class="nv">$URL_V4</span> <span class="p">|</span> awk <span class="s1">'{print "set_real_ip_from " $1 ";"}'</span> &gt; <span class="nv">$CONF_FILE</span>
+
+<span class="c1"># 检查IPv4地址列表获取是否成功</span>
+<span class="k">if</span> <span class="o">[</span> <span class="nv">$?</span> -ne <span class="m">0</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
+    <span class="nb">echo</span> <span class="s2">"获取IPv4地址列表失败，请检查网络连接或URL地址。"</span>
+    <span class="nb">exit</span> <span class="m">1</span>
+<span class="k">fi</span>
+
+<span class="c1"># 使用curl获取IPv6地址列表，并追加到配置文件</span>
+curl -s <span class="nv">$URL_V6</span> <span class="p">|</span> awk <span class="s1">'{print "set_real_ip_from " $1 ";"}'</span> &gt;&gt; <span class="nv">$CONF_FILE</span>
+
+<span class="c1"># 检查IPv6地址列表获取是否成功</span>
+<span class="k">if</span> <span class="o">[</span> <span class="nv">$?</span> -ne <span class="m">0</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
+    <span class="nb">echo</span> <span class="s2">"获取IPv6地址列表失败，请检查网络连接或URL地址。"</span>
+    <span class="nb">exit</span> <span class="m">1</span>
+<span class="k">fi</span>
+
+<span class="nb">echo</span> <span class="s2">"IP列表已更新，正在测试nginx配置..."</span>
+
+<span class="c1"># 测试nginx配置</span>
+sudo nginx -t
 <span class="k">if</span> <span class="o">[</span> <span class="nv">$?</span> -eq <span class="m">0</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
-    <span class="nb">echo</span> <span class="s2">"IP列表已更新，正在尝试重新加载nginx配置..."</span>
-    nginx -s reload
+    <span class="nb">echo</span> <span class="s2">"nginx配置测试通过，正在重新加载..."</span>
+    sudo nginx -s reload
 
     <span class="c1"># 检查nginx是否成功重新加载</span>
     <span class="k">if</span> <span class="o">[</span> <span class="nv">$?</span> -eq <span class="m">0</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
@@ -1950,7 +2013,7 @@ curl -s <span class="nv">$URL</span> <span class="p">|</span> awk <span class="s
         <span class="nb">echo</span> <span class="s2">"nginx配置重新加载失败，请检查错误信息。"</span>
     <span class="k">fi</span>
 <span class="k">else</span>
-    <span class="nb">echo</span> <span class="s2">"获取IP列表失败，请检查网络连接或URL地址。"</span>
+    <span class="nb">echo</span> <span class="s2">"nginx配置测试失败，请检查配置文件。"</span>
 <span class="k">fi</span>
 </code></pre></div></p>
 <p>添加定时任务
@@ -1959,7 +2022,6 @@ curl -s <span class="nv">$URL</span> <span class="p">|</span> awk <span class="s
 <p>给与权限
 <div class="highlight"><pre><span></span><code>chmod <span class="m">755</span> /data/tools/cloudflare_ips.sh
 </code></pre></div></p>
-<p>这是ipv4的例子，ipv6也是一样，由于我的服务器禁止ipv6访问，这里我就不配置了</p>
 </article>
 </div>
 </div>

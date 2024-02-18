@@ -1032,30 +1032,65 @@
           Wordpress
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_4_18_1" id="__nav_4_18_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_4_18_1">
+          常規
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="常規" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_4_18_1">
+<span class="md-nav__icon md-icon"></span>
+          常規
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../../Software/WordPress/wordpress%E5%9F%BA%E7%A1%80/">
+<a class="md-nav__link" href="../../../../Software/WordPress/%E5%B8%B8%E8%A6%8F/wordpress%E5%9F%BA%E7%A1%80/">
         基础
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../../Software/WordPress/wordpress%E5%AE%89%E5%85%A8/">
+<a class="md-nav__link" href="../../../../Software/WordPress/%E5%B8%B8%E8%A6%8F/wordpress%E5%AE%89%E5%85%A8/">
         安全
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../../Software/WordPress/wordpress%E8%BF%81%E7%A7%BB/">
+<a class="md-nav__link" href="../../../../Software/WordPress/%E5%B8%B8%E8%A6%8F/wordpress%E8%BF%81%E7%A7%BB/">
         迁移
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../../Software/WordPress/wordpress%E6%8F%92%E4%BB%B6/">
+<a class="md-nav__link" href="../../../../Software/WordPress/%E5%B8%B8%E8%A6%8F/wordpress%E6%8F%92%E4%BB%B6/">
         插件
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../../Software/WordPress/wordpress%E9%85%8D%E7%BD%AE/">
+<a class="md-nav__link" href="../../../../Software/WordPress/%E5%B8%B8%E8%A6%8F/wordpress%E9%85%8D%E7%BD%AE/">
         配置
       </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_4_18_2" id="__nav_4_18_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_4_18_2">
+          主題
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="主題" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_4_18_2">
+<span class="md-nav__icon md-icon"></span>
+          主題
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../Software/WordPress/%E4%B8%BB%E9%A1%8C/%E4%B8%BB%E9%A1%8C%E9%85%8D%E7%BD%AE/">
+        配置
+      </a>
+</li>
+</ul>
+</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../../../../Software/WordPress/%E5%BE%9E%E9%9B%B6%E9%96%8B%E5%A7%8B/">
@@ -1283,11 +1318,16 @@
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#_3">
-    查找文件
+    核数
   </a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#_4">
+    查找文件
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_5">
     清理历史命令
   </a>
 </li>
@@ -1968,7 +2008,20 @@ uname --p
 <span class="c1"># 查看隐藏文件</span>
 ls -a
 </code></pre></div>
-<h2 id="_3">查找文件<a class="headerlink" href="#_3" title="Permanent link">¶</a></h2>
+<h2 id="_3">核数<a class="headerlink" href="#_3" title="Permanent link">¶</a></h2>
+<div class="highlight"><pre><span></span><code><span class="c1"># 总核数 = 物理CPU个数 X 每颗物理CPU的核数 </span>
+<span class="c1"># 总逻辑CPU数 = 物理CPU个数 X 每颗物理CPU的核数 X 超线程数</span>
+
+<span class="c1"># 查看物理CPU个数</span>
+cat /proc/cpuinfo<span class="p">|</span> grep <span class="s2">"physical id"</span><span class="p">|</span> sort<span class="p">|</span> uniq<span class="p">|</span> wc -l
+
+<span class="c1"># 查看每个物理CPU中core的个数(即核数)</span>
+cat /proc/cpuinfo<span class="p">|</span> grep <span class="s2">"cpu cores"</span><span class="p">|</span> uniq
+
+<span class="c1"># 查看逻辑CPU的个数</span>
+cat /proc/cpuinfo<span class="p">|</span> grep <span class="s2">"processor"</span><span class="p">|</span> wc -l
+</code></pre></div>
+<h2 id="_4">查找文件<a class="headerlink" href="#_4" title="Permanent link">¶</a></h2>
 <div class="highlight"><pre><span></span><code><span class="c1"># find是在指定的目录下遍历查找，如果目录使用 / 则表示在所有目录下查找，find方式查找文件消耗资源比较大，速度也慢一点</span>
 <span class="c1"># find / -name +文件名</span>
 find / -name php.ini
@@ -1978,7 +2031,7 @@ find / -name php.ini
 <span class="c1"># 使用which命令，就可以看到某个系统命令是否存在，以及执行的到底是哪一个位置的命令。</span>
 which ssh
 </code></pre></div>
-<h2 id="_4">清理历史命令<a class="headerlink" href="#_4" title="Permanent link">¶</a></h2>
+<h2 id="_5">清理历史命令<a class="headerlink" href="#_5" title="Permanent link">¶</a></h2>
 <div class="highlight"><pre><span></span><code><span class="nb">history</span> -c
 </code></pre></div>
 <h2 id="ipv4">优先使用IPv4<a class="headerlink" href="#ipv4" title="Permanent link">¶</a></h2>

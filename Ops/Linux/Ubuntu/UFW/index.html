@@ -1032,30 +1032,65 @@
           Wordpress
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_4_18_1" id="__nav_4_18_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_4_18_1">
+          常規
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="常規" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_4_18_1">
+<span class="md-nav__icon md-icon"></span>
+          常規
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../../Software/WordPress/wordpress%E5%9F%BA%E7%A1%80/">
+<a class="md-nav__link" href="../../../../Software/WordPress/%E5%B8%B8%E8%A6%8F/wordpress%E5%9F%BA%E7%A1%80/">
         基础
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../../Software/WordPress/wordpress%E5%AE%89%E5%85%A8/">
+<a class="md-nav__link" href="../../../../Software/WordPress/%E5%B8%B8%E8%A6%8F/wordpress%E5%AE%89%E5%85%A8/">
         安全
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../../Software/WordPress/wordpress%E8%BF%81%E7%A7%BB/">
+<a class="md-nav__link" href="../../../../Software/WordPress/%E5%B8%B8%E8%A6%8F/wordpress%E8%BF%81%E7%A7%BB/">
         迁移
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../../Software/WordPress/wordpress%E6%8F%92%E4%BB%B6/">
+<a class="md-nav__link" href="../../../../Software/WordPress/%E5%B8%B8%E8%A6%8F/wordpress%E6%8F%92%E4%BB%B6/">
         插件
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../../Software/WordPress/wordpress%E9%85%8D%E7%BD%AE/">
+<a class="md-nav__link" href="../../../../Software/WordPress/%E5%B8%B8%E8%A6%8F/wordpress%E9%85%8D%E7%BD%AE/">
         配置
       </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_4_18_2" id="__nav_4_18_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_4_18_2">
+          主題
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="主題" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_4_18_2">
+<span class="md-nav__icon md-icon"></span>
+          主題
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../Software/WordPress/%E4%B8%BB%E9%A1%8C/%E4%B8%BB%E9%A1%8C%E9%85%8D%E7%BD%AE/">
+        配置
+      </a>
+</li>
+</ul>
+</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../../../../Software/WordPress/%E5%BE%9E%E9%9B%B6%E9%96%8B%E5%A7%8B/">
@@ -1494,6 +1529,11 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="#ping">
     禁止Ping
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#cloudflareip443">
+    只允許Cloudflare的IP訪問443端口
   </a>
 </li>
 </ul>
@@ -2007,6 +2047,50 @@ nano /etc/ufw/before.rules
 -A ufw-before-input -p icmp --icmp-type echo-request -j DROP
 
 <span class="c1"># 让配置生效</span>
+ufw reload
+</code></pre></div>
+<h3 id="cloudflareip443">只允許Cloudflare的IP訪問443端口<a class="headerlink" href="#cloudflareip443" title="Permanent link">¶</a></h3>
+<div class="highlight"><pre><span></span><code><span class="ch">#!/bin/bash</span>
+
+<span class="c1"># IPv4 和 IPv6 地址列表的网址</span>
+<span class="nv">URL_V4</span><span class="o">=</span><span class="s2">"https://www.cloudflare.com/ips-v4"</span>
+<span class="nv">URL_V6</span><span class="o">=</span><span class="s2">"https://www.cloudflare.com/ips-v6"</span>
+
+<span class="c1"># 配置文件路径</span>
+<span class="nv">CONF_FILE</span><span class="o">=</span><span class="s2">"/data/ip.txt"</span>
+
+<span class="c1"># 使用curl获取IPv4和IPv6地址列表，并追加到配置文件</span>
+curl -sS <span class="s2">"</span><span class="nv">$URL_V4</span><span class="s2">"</span> &gt; <span class="s2">"</span><span class="nv">$CONF_FILE</span><span class="s2">"</span>  <span class="c1"># 获取IPv4地址列表</span>
+<span class="k">if</span> <span class="o">[</span> <span class="nv">$?</span> -ne <span class="m">0</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
+    <span class="nb">echo</span> <span class="s2">"获取IPv4地址列表失败，请检查网络连接或URL地址。"</span>
+    <span class="nb">exit</span> <span class="m">1</span>
+<span class="k">fi</span>
+
+<span class="c1"># 手动添加一个换行符</span>
+<span class="nb">echo</span> <span class="s2">""</span> &gt;&gt; <span class="s2">"</span><span class="nv">$CONF_FILE</span><span class="s2">"</span>
+
+curl -sS <span class="s2">"</span><span class="nv">$URL_V6</span><span class="s2">"</span> &gt;&gt; <span class="s2">"</span><span class="nv">$CONF_FILE</span><span class="s2">"</span>  <span class="c1"># 获取IPv6地址列表</span>
+<span class="k">if</span> <span class="o">[</span> <span class="nv">$?</span> -ne <span class="m">0</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
+    <span class="nb">echo</span> <span class="s2">"获取IPv6地址列表失败，请检查网络连接或URL地址。"</span>
+    <span class="nb">exit</span> <span class="m">1</span>
+<span class="k">fi</span>
+
+<span class="c1"># 获取443端口的规则编号</span>
+<span class="nv">rule_number</span><span class="o">=</span><span class="k">$(</span>ufw status numbered <span class="p">|</span> grep <span class="m">443</span> <span class="p">|</span> awk -F<span class="s1">'[][]'</span> <span class="s1">'{print $2}'</span><span class="k">)</span>
+
+<span class="k">if</span> <span class="o">[</span> -n <span class="s2">"</span><span class="nv">$rule_number</span><span class="s2">"</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
+    <span class="c1"># 删除443端口的规则</span>
+     <span class="nb">echo</span> <span class="s2">"y"</span> <span class="p">|</span> ufw delete <span class="nv">$rule_number</span>
+<span class="k">fi</span>
+
+<span class="c1"># 循环读取新的IP地址列表文件，并添加规则</span>
+<span class="k">while</span> <span class="nv">IFS</span><span class="o">=</span> <span class="nb">read</span> -r ip<span class="p">;</span> <span class="k">do</span>
+    <span class="k">if</span> <span class="o">[</span> -n <span class="s2">"</span><span class="nv">$ip</span><span class="s2">"</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
+        ufw allow from <span class="s2">"</span><span class="nv">$ip</span><span class="s2">"</span> to any port <span class="m">443</span>
+    <span class="k">fi</span>
+<span class="k">done</span> &lt; <span class="s2">"</span><span class="nv">$CONF_FILE</span><span class="s2">"</span>
+
+<span class="c1"># 重新加载规则</span>
 ufw reload
 </code></pre></div>
 </article>

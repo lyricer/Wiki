@@ -1032,30 +1032,65 @@
           Wordpress
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_4_18_1" id="__nav_4_18_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_4_18_1">
+          常規
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="常規" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_4_18_1">
+<span class="md-nav__icon md-icon"></span>
+          常規
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../wordpress%E5%9F%BA%E7%A1%80/">
+<a class="md-nav__link" href="../%E5%B8%B8%E8%A6%8F/wordpress%E5%9F%BA%E7%A1%80/">
         基础
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../wordpress%E5%AE%89%E5%85%A8/">
+<a class="md-nav__link" href="../%E5%B8%B8%E8%A6%8F/wordpress%E5%AE%89%E5%85%A8/">
         安全
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../wordpress%E8%BF%81%E7%A7%BB/">
+<a class="md-nav__link" href="../%E5%B8%B8%E8%A6%8F/wordpress%E8%BF%81%E7%A7%BB/">
         迁移
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../wordpress%E6%8F%92%E4%BB%B6/">
+<a class="md-nav__link" href="../%E5%B8%B8%E8%A6%8F/wordpress%E6%8F%92%E4%BB%B6/">
         插件
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../wordpress%E9%85%8D%E7%BD%AE/">
+<a class="md-nav__link" href="../%E5%B8%B8%E8%A6%8F/wordpress%E9%85%8D%E7%BD%AE/">
         配置
       </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_4_18_2" id="__nav_4_18_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_4_18_2">
+          主題
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="主題" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_4_18_2">
+<span class="md-nav__icon md-icon"></span>
+          主題
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../%E4%B8%BB%E9%A1%8C/%E4%B8%BB%E9%A1%8C%E9%85%8D%E7%BD%AE/">
+        配置
+      </a>
+</li>
+</ul>
+</nav>
 </li>
 <li class="md-nav__item md-nav__item--active">
 <input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
@@ -1921,17 +1956,11 @@ screen -S develop
 <p>下载 Nginx 和必要的库：
 下载 Nginx 的源码，apt安裝的openssl、PCRE以及 quiche（用于 HTTP/3 和 QUIC 支持）：</p>
 <div class="highlight"><pre><span></span><code><span class="c1"># 替换为最新版本</span>
-wget http://nginx.org/download/nginx-1.25.3.tar.gz  
-tar -zxvf nginx-1.25.3.tar.gz
+wget http://nginx.org/download/nginx-1.25.4.tar.gz  
+tar -zxvf nginx-1.25.4.tar.gz
 <span class="c1">#wget https://sourceforge.net/projects/pcre/files/pcre/8.45/pcre-8.45.tar.gz</span>
 <span class="c1">#tar -zxvf pcre-8.45.tar.gz</span>
 <span class="c1">#git clone --recursive https://github.com/cloudflare/quiche</span>
-
-hg clone https://hg.nginx.org/nginx
-<span class="nb">cd</span> nginx
-./auto/configure --user<span class="o">=</span>www --group<span class="o">=</span>www --prefix<span class="o">=</span>/www/server/nginx --with-pcre  --add-module<span class="o">=</span>/root/ngx_brotli --with-http_v2_module --with-stream --with-stream_ssl_module --with-http_ssl_module --with-http_gzip_static_module --with-http_gunzip_module --with-http_sub_module --with-http_flv_module --with-http_addition_module --with-http_realip_module --with-http_mp4_module --with-ld-opt<span class="o">=</span>-Wl,-E --with-cc-opt<span class="o">=</span>-Wno-error --with-ld-opt<span class="o">=</span>-ljemalloc --with-http_dav_module --with-http_v3_module --with-cc-opt<span class="o">=</span>-I../boringssl/include --with-ld-opt<span class="o">=</span><span class="s1">'-L../boringssl/build/ssl -L../boringssl/build/crypto'</span>
-make
-make install
 </code></pre></div>
 <p>编译 Nginx：
 使用提供的 configure 参数编译 Nginx，并包含 QUIC 和 HTTP/3 的支持：</p>
@@ -1942,7 +1971,7 @@ useradd -g www -s /sbin/nologin www
 <span class="c1">#查看新增用户</span>
 id www
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><span class="nb">cd</span> nginx-1.25.3
+<div class="highlight"><pre><span></span><code><span class="nb">cd</span> nginx-1.25.4
 ./configure --prefix<span class="o">=</span>/usr/local/nginx --user<span class="o">=</span>www --group<span class="o">=</span>www --with-http_stub_status_module --with-http_sub_module --with-http_v2_module --with-http_ssl_module --with-stream --with-stream_ssl_preread_module --with-stream_ssl_module --with-http_gzip_static_module --with-http_realip_module --with-http_flv_module --with-http_mp4_module --with-pcre-jit --with-ld-opt<span class="o">=</span>-ljemalloc --with-http_v3_module 
 make -j <span class="k">$(</span>nproc<span class="k">)</span> 
 sudo make install
@@ -1994,9 +2023,9 @@ sudo systemctl status nginx
 sudo apt install build-essential autoconf bison re2c libxml2-dev libldap2-dev libedit-dev libcurl4-openssl-dev libpng-dev libonig-dev libsqlite3-dev libssl-dev libpspell-dev aspell aspell-en libzip-dev libicu-dev libreadline-dev libfreetype6-dev libgmp-dev libgd-dev libexif-dev libgettextpo-dev libffi-dev libpq-dev libmemcached-dev libmagickwand-dev libxslt-dev libzip-dev -y
 </code></pre></div></p>
 <p>下载PHP源代码</p>
-<div class="highlight"><pre><span></span><code>wget https://www.php.net/distributions/php-8.3.1.tar.gz
-tar -xzf php-8.3.1.tar.gz
-<span class="nb">cd</span> php-8.3.1
+<div class="highlight"><pre><span></span><code>wget https://www.php.net/distributions/php-8.3.2.tar.gz
+tar -xzf php-8.3.2.tar.gz
+<span class="nb">cd</span> php-8.3.2
 </code></pre></div>
 <p>配置PHP</p>
 <div class="highlight"><pre><span></span><code>./configure --prefix<span class="o">=</span>/usr/local/php <span class="se">\</span>
@@ -2114,7 +2143,7 @@ sudo systemctl status php-fpm.service
 </main>
 <footer class="md-footer">
 <nav aria-label="页脚" class="md-footer__inner md-grid">
-<a aria-label="上一页: 配置" class="md-footer__link md-footer__link--prev" href="../wordpress%E9%85%8D%E7%BD%AE/" rel="prev">
+<a aria-label="上一页: 配置" class="md-footer__link md-footer__link--prev" href="../%E4%B8%BB%E9%A1%8C/%E4%B8%BB%E9%A1%8C%E9%85%8D%E7%BD%AE/" rel="prev">
 <div class="md-footer__button md-icon">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"></path></svg>
 </div>

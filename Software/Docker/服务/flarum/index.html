@@ -536,7 +536,7 @@
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#_2">
-    汉化
+    扩展
   </a>
 </li>
 <li class="md-nav__item">
@@ -547,6 +547,11 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="#_4">
     卸载
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#flarum-search-by-sonic">
+    Flarum Search By Sonic
   </a>
 </li>
 </ul>
@@ -1085,30 +1090,65 @@
           Wordpress
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_4_18_1" id="__nav_4_18_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_4_18_1">
+          常規
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="常規" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_4_18_1">
+<span class="md-nav__icon md-icon"></span>
+          常規
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../WordPress/wordpress%E5%9F%BA%E7%A1%80/">
+<a class="md-nav__link" href="../../../WordPress/%E5%B8%B8%E8%A6%8F/wordpress%E5%9F%BA%E7%A1%80/">
         基础
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../WordPress/wordpress%E5%AE%89%E5%85%A8/">
+<a class="md-nav__link" href="../../../WordPress/%E5%B8%B8%E8%A6%8F/wordpress%E5%AE%89%E5%85%A8/">
         安全
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../WordPress/wordpress%E8%BF%81%E7%A7%BB/">
+<a class="md-nav__link" href="../../../WordPress/%E5%B8%B8%E8%A6%8F/wordpress%E8%BF%81%E7%A7%BB/">
         迁移
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../WordPress/wordpress%E6%8F%92%E4%BB%B6/">
+<a class="md-nav__link" href="../../../WordPress/%E5%B8%B8%E8%A6%8F/wordpress%E6%8F%92%E4%BB%B6/">
         插件
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../WordPress/wordpress%E9%85%8D%E7%BD%AE/">
+<a class="md-nav__link" href="../../../WordPress/%E5%B8%B8%E8%A6%8F/wordpress%E9%85%8D%E7%BD%AE/">
         配置
       </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_4_18_2" id="__nav_4_18_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_4_18_2">
+          主題
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="主題" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_4_18_2">
+<span class="md-nav__icon md-icon"></span>
+          主題
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../WordPress/%E4%B8%BB%E9%A1%8C/%E4%B8%BB%E9%A1%8C%E9%85%8D%E7%BD%AE/">
+        配置
+      </a>
+</li>
+</ul>
+</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../../../WordPress/%E5%BE%9E%E9%9B%B6%E9%96%8B%E5%A7%8B/">
@@ -1955,7 +1995,7 @@ nano docker-compose.yml
 
 services:
   flarum:
-    image: mondedie/flarum:stable
+    image: mondedie/flarum:latest
     container_name: flarum
     env_file:
       - /data/flarum/flarum/flarum.env   # 创建一个flarum.env
@@ -1999,7 +2039,7 @@ nano /data/flarum/flarum/flarum.env
 <span class="nv">DB_USER</span><span class="o">=</span>flarum
 <span class="nv">DB_PASS</span><span class="o">=</span>Q35hflarumXXXX    <span class="c1"># 可以自行修改，但是要与docker-compose上面的一致</span>
 <span class="nv">DB_PREF</span><span class="o">=</span>flarum_
-<span class="nv">DB_PORT</span><span class="o">=</span><span class="m">8898</span>
+<span class="nv">DB_PORT</span><span class="o">=</span><span class="m">3306</span>
 
 <span class="c1"># User admin flarum (environment variable for first installation)</span>
 <span class="c1"># /!\ admin password must contain at least 8 characters /!\</span>
@@ -2035,8 +2075,19 @@ server <span class="o">{</span>
    <span class="o">}</span>
 <span class="o">}</span>
 </code></pre></div>
-<h2 id="_2">汉化<a class="headerlink" href="#_2" title="Permanent link">¶</a></h2>
-<p><div class="highlight"><pre><span></span><code>docker <span class="nb">exec</span> -ti flarum extension require flarum-lang/chinese-simplified
+<h2 id="_2">扩展<a class="headerlink" href="#_2" title="Permanent link">¶</a></h2>
+<p><div class="highlight"><pre><span></span><code><span class="c1"># 汉化</span>
+docker <span class="nb">exec</span> -ti flarum extension require flarum-lang/chinese-simplified
+<span class="c1"># 文件上传</span>
+docker <span class="nb">exec</span> -ti flarum extension require fof/upload
+<span class="c1"># FoF 导航栏链接</span>
+docker <span class="nb">exec</span> -ti flarum extension require fof/links
+<span class="c1"># 邀请码</span>
+docker <span class="nb">exec</span> -ti flarum extension require fof/doorman
+<span class="c1"># 列出所有安装的扩展</span>
+docker <span class="nb">exec</span> -ti flarum extension list
+<span class="c1">#移除</span>
+docker <span class="nb">exec</span> -ti flarum extension remove some/extension
 </code></pre></div>
 使用管理员账户登录后台&gt;左边导航栏里最下边会多出来一个汉化包&gt;点击启用即可,在常规设置里，可以修改默认的语言。</p>
 <h2 id="_3">升级<a class="headerlink" href="#_3" title="Permanent link">¶</a></h2>
@@ -2054,6 +2105,92 @@ docker-compose up -d   <span class="c1"># 重新更新当前镜像</span>
 docker-compose down    <span class="c1"># 停止容器，此时不会删除映射到本地的数据</span>
 
 rm -rf /data/flarum  <span class="c1"># 完全删除映射到本地的数据</span>
+</code></pre></div>
+<h2 id="flarum-search-by-sonic">Flarum Search By Sonic<a class="headerlink" href="#flarum-search-by-sonic" title="Permanent link">¶</a></h2>
+<p>目的使得Flarum支持中文的搜索</p>
+<p>1.创建sonic目录 <code>mkdir sonic</code></p>
+<p>2.创建config.cfg配置文件 <code>vim /data/flarum/sonic/config.cfg</code></p>
+<p>config.cfg 内容：</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># Sonic</span><span class="w"></span>
+<span class="c1"># Fast, lightweight and schema-less search backend</span><span class="w"></span>
+<span class="c1"># Configuration file</span><span class="w"></span>
+<span class="c1"># Example: https://github.com/valeriansaliou/sonic/blob/master/config.cfg</span><span class="w"></span>
+
+
+<span class="k">[server]</span><span class="w"></span>
+
+<span class="na">log_level</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"debug"</span><span class="w"></span>
+
+
+<span class="k">[channel]</span><span class="w"></span>
+
+<span class="na">inet</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"0.0.0.0:1491"</span><span class="w"></span>
+<span class="na">tcp_timeout</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">300</span><span class="w"></span>
+
+<span class="na">auth_password</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"SecretPassword"</span><span class="w"></span>
+
+<span class="k">[channel.search]</span><span class="w"></span>
+
+<span class="na">query_limit_default</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">10</span><span class="w"></span>
+<span class="na">query_limit_maximum</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">100</span><span class="w"></span>
+<span class="na">query_alternates_try</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">4</span><span class="w"></span>
+
+<span class="na">suggest_limit_default</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">5</span><span class="w"></span>
+<span class="na">suggest_limit_maximum</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">20</span><span class="w"></span>
+
+<span class="na">list_limit_default</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">100</span><span class="w"></span>
+<span class="na">list_limit_maximum</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">500</span><span class="w"></span>
+
+
+<span class="k">[store]</span><span class="w"></span>
+
+<span class="k">[store.kv]</span><span class="w"></span>
+
+<span class="na">path</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"./data/store/kv/"</span><span class="w"></span>
+
+<span class="na">retain_word_objects</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">1000</span><span class="w"></span>
+
+<span class="k">[store.kv.pool]</span><span class="w"></span>
+
+<span class="na">inactive_after</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">1800</span><span class="w"></span>
+
+<span class="k">[store.kv.database]</span><span class="w"></span>
+
+<span class="na">flush_after</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">900</span><span class="w"></span>
+
+<span class="na">compress</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">true</span><span class="w"></span>
+<span class="na">parallelism</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">2</span><span class="w"></span>
+<span class="na">max_files</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">100</span><span class="w"></span>
+<span class="na">max_compactions</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">1</span><span class="w"></span>
+<span class="na">max_flushes</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">1</span><span class="w"></span>
+<span class="na">write_buffer</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">16384</span><span class="w"></span>
+<span class="na">write_ahead_log</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">true</span><span class="w"></span>
+
+<span class="k">[store.fst]</span><span class="w"></span>
+
+<span class="na">path</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"./data/store/fst/"</span><span class="w"></span>
+
+<span class="k">[store.fst.pool]</span><span class="w"></span>
+
+<span class="na">inactive_after</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">300</span><span class="w"></span>
+
+<span class="k">[store.fst.graph]</span><span class="w"></span>
+
+<span class="na">consolidate_after</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">180</span><span class="w"></span>
+
+<span class="na">max_size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">2048</span><span class="w"></span>
+<span class="na">max_words</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">250000</span><span class="w"></span>
+</code></pre></div>
+<p>3.启动并配置插件</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># 启动容器</span>
+docker run --restart<span class="o">=</span>always -d -p <span class="m">1491</span>:1491 -v /data/flarum/sonic/config.cfg:/etc/sonic.cfg -v /data/flarum/sonic/store/:/var/lib/sonic/store/ valeriansaliou/sonic:v1.4.8
+
+<span class="c1"># 安装sonic插件</span>
+docker <span class="nb">exec</span> -ti flarum extension require ganuonglachanh/sonic
+
+<span class="c1"># 进入Flarum后台，启用sonic插件后再创建索引</span>
+<span class="c1"># 创建索引</span>
+docker <span class="nb">exec</span> -ti flarum php flarum sonic:addtoindex
 </code></pre></div>
 </article>
 </div>
